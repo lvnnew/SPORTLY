@@ -7,6 +7,7 @@ import styles from "./Banner.module.css";
 const Banner = () => {
   return (
     <Box
+      variant="section"
       sx={{
         pt: { xs: "30px", md: "100px", lg: "150px" },
         pb: { xs: "53px", md: "140px", lg: "192px" },
@@ -14,7 +15,7 @@ const Banner = () => {
         backgroundRepeat: "no-repeat",
         backgroundPosition: {xs: "0 -50px", lg: "top right"},
         backgroundSize: {xs: "100%", lg: "contain"},
-        minHeight: {xs: "auto", lg: "calc(100vh - 58px)"}
+        minHeight: {xs: "auto", lg: "calc(100vh - 58px)", xl: "auto"}
       }}
     >
       <Container maxWidth="lg">

@@ -1,13 +1,11 @@
 import { Box, Container, Grid } from "@mui/material";
 import React from "react";
-import { useKeenSlider } from "keen-slider/react";
-import "keen-slider/keen-slider.min.css";
 import Title from "../Title";
 import AboutItem from "./AboutItem";
 
 const About = () => {
   return (
-    <Box sx={{
+    <Box variant="section" sx={{
       padding: "40px 0"
     }}>
       <Container maxWidth="lg">

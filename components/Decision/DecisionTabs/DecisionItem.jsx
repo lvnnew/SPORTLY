@@ -9,11 +9,12 @@ const DecisionItem = ({no, ok}) => {
       <Grid
         container
         sx={{
-          padding: "12px",
-          pl: "17px",
+          padding: {xs: "12px", lg: "20px"},
+          pl: {xs: "17px", lg: "25px"},
           backgroundColor: "#7DAEFF",
           borderRadius: "20px 20px 0 0",
-          alignItems: "start"
+          alignItems: "start",
+          minHeight: {xs: "auto", lg: "106px"}
         }}
       >
         <Grid item xs={1}>
@@ -25,9 +26,9 @@ const DecisionItem = ({no, ok}) => {
         <Typography
             variant="p"
             sx={{
-              fontSize: "16px",
+              fontSize: {xs: "16px", lg: "17px"},
               fontWeight: 700,
-              lineHeight: "19px",
+              lineHeight: {xs: "19px", lg: "22px"},
               color: "#fff",
             }}
           >
@@ -38,11 +39,12 @@ const DecisionItem = ({no, ok}) => {
       <Grid
         container
         sx={{
-          padding: "12px",
-          pl: "17px",
+          padding: {xs: "12px", lg: "20px"},
+          pl: {xs: "17px", lg: "25px"},
           backgroundColor: "#fff",
           borderRadius: "0 0 20px 20px",
-          alignItems: "start"
+          alignItems: "start",
+          minHeight: {xs: "auto", lg: "315px"}
         }}
       >
         <Grid item xs={1}>
@@ -54,9 +56,9 @@ const DecisionItem = ({no, ok}) => {
         <Typography
             variant="p"
             sx={{
-              fontSize: "16px",
+              fontSize: {xs: "16px", lg: "17px"},
               fontWeight: 400,
-              lineHeight: "21px",
+              lineHeight: {xs: "21px", lg: "25px"},
               color: "#16192C",
             }}
           >
