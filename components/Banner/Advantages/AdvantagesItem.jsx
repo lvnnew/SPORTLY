@@ -2,47 +2,52 @@ import { Box, Grid, Typography } from "@mui/material";
 import Image from "next/image";
 import React from "react";
 
-const AdvantagesItem = ({num, title}) => {
+const AdvantagesItem = ({ num, title }) => {
   return (
     <Grid container>
       <Grid
         item
-        xs={3}
+        xs={3} lg={1}
         sx={{
           position: "relative",
         }}
       >
-        <Typography sx={{
-          fontSize: "32px",
-          fontWeight: 700,
-          lineHeight: "38px",
-          color: "#16192C80",
-          position: "absolute",
-          right: "22px",
-          top: "-14px",
-          zIndex: 2,
-        }}>{num}</Typography>
+        <Typography
+          sx={{
+            fontSize: {xs: "32px", lg: "48px"},
+            fontWeight: 700,
+            lineHeight: {xs: "38px", lg: "58px"},
+            color: "#16192C80",
+            position: "absolute",
+            right: {xs: "22px", lg: "15px"},
+            top: {xs: "-15px", lg: "-25px"},
+            zIndex: 2,
+          }}
+        >
+          {num}
+        </Typography>
         <Box
           sx={{
             position: "absolute",
-            top: "38%",
-            right: "-10px",
-            transform: "translateY(-50%)",
-            zIndex: 1
+            top: "-10px",
+            right: {xs: "-15px", lg: "-15px"},
+            zIndex: 1,
           }}
         >
           <Image src="/advantages-img.svg" alt="adv" width="53" height="60" />
         </Box>
       </Grid>
-      <Grid item xs={9}>
+      <Grid item xs={9} lg={11}>
         <Typography
           sx={{
+            fontFamily: "Nunito Sans",
             fontSize: "18px",
-            fontWeight: { xs: "400" },
+            fontWeight: { xs: 400, lg: 700 },
             lineHeight: { xs: "22px" },
             color: "#16192C",
             position: "relative",
-            zIndex: 3
+            zIndex: 3,
+            maxWidth: {lg: "248px"},
           }}
         >
           {title}

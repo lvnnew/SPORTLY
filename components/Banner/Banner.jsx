@@ -9,15 +9,16 @@ const Banner = () => {
     <Box
       sx={{
         pt: { xs: "30px", md: "100px", lg: "150px" },
-        pb: { xs: "53px", md: "140px", lg: "190px" },
-        backgroundImage: "url(/banner-bg.svg)",
+        pb: { xs: "53px", md: "140px", lg: "192px" },
+        backgroundImage: {xs: "url(/banner-bg.svg)", lg: "url(/banner-bg-big.svg)", xl: "none"},
         backgroundRepeat: "no-repeat",
-        backgroundPosition: "0 -50px",
-        backgroundSize: "100%",
+        backgroundPosition: {xs: "0 -50px", lg: "top right"},
+        backgroundSize: {xs: "100%", lg: "contain"},
+        minHeight: {xs: "auto", lg: "calc(100vh - 58px)"}
       }}
     >
       <Container maxWidth="lg">
-        <Grid container>
+        <Grid container sx={{alignItems: "center"}}>
           <Grid
             item
             xs={12}
@@ -25,7 +26,6 @@ const Banner = () => {
             md={6}
             sx={{
               margin: "0 auto",
-              
             }}
           >
             <Typography
