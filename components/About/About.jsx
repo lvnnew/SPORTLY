@@ -1,19 +1,18 @@
-import { Box, Container } from "@mui/material";
+import { Box, Button, Container } from "@mui/material";
 import React from "react";
 import Title from "../Title";
 import AboutItem from "./AboutItem";
 import { Swiper, SwiperSlide } from "swiper/react";
-
-// Import Swiper styles
 import "swiper/css";
 import "swiper/css/grid";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-
-// import required modules
-import SwiperCore, { Grid, Pagination, Navigation } from "swiper";
+import { Grid, Pagination, Navigation } from "swiper";
+import AboutData from "./AboutData";
 const About = () => {
   const swiperRef = React.useRef(null);
+  const [indexSlide, setIndexSlide] = React.useState(0);
+  const [lastSlide, setLastSlide] = React.useState(undefined);
 
   return (
     <Box
@@ -33,7 +32,7 @@ const About = () => {
           }}
         >
           <Box
-            className="arrow prev"
+            className={`arrow prev ${indexSlide === 0 ? "disabled" : ""}`}
             onClick={() => swiperRef.current.swiper.slidePrev()}
             sx={{
               position: "absolute",
@@ -45,6 +44,11 @@ const About = () => {
             
           </Box>
           <Swiper
+          onRealIndexChange={(el) => {
+            setIndexSlide(el.activeIndex);
+            setLastSlide(el.imagesLoaded);
+            console.log(el);
+          }}
             slidesPerView={2}
             grid={{
               rows: 2,
@@ -59,6 +63,7 @@ const About = () => {
               1200: {
                 spaceBetween: 22,
                 slidesPerView: 4,
+                slidesPerGroup: 4,
                 grid: {
                   rows: 1,
                 },
@@ -67,42 +72,28 @@ const About = () => {
             className="aboutSwiper"
             ref={swiperRef}
           >
-            <SwiperSlide>
-              <AboutItem img="/about-fight.svg" title="asdsadasd" />
-            </SwiperSlide>
-            <SwiperSlide>
-              <AboutItem img="/about-fight.svg" title="asdsadasd" />
-            </SwiperSlide>
-            <SwiperSlide>
-              <AboutItem img="/about-fight.svg" title="asdsadasd" />
-            </SwiperSlide>
-            <SwiperSlide>
-              <AboutItem img="/about-fight.svg" title="asdsadasd" />
-            </SwiperSlide>
-            <SwiperSlide>
-              <AboutItem img="/about-fight.svg" title="asdsadasd" />
-            </SwiperSlide>
-            <SwiperSlide>
-              <AboutItem img="/about-fight.svg" title="asdsadasd" />
-            </SwiperSlide>
-            <SwiperSlide>
-              <AboutItem img="/about-fight.svg" title="asdsadasd" />
-            </SwiperSlide>
-            <SwiperSlide>
-              <AboutItem img="/about-fight.svg" title="asdsadasd" />
-            </SwiperSlide>
+            {
+              AboutData.map((item, index) => {
+                return(
+                  <SwiperSlide key={index}>
+                    <AboutItem img={item.img} title={item.title} />
+                  </SwiperSlide>
+                )
+              })
+            }
           </Swiper>
           <Box
-            className="arrow next"
+            className={`arrow next ${indexSlide === lastSlide - 4 ? "disabled": ""}`}
             onClick={() => swiperRef.current.swiper.slideNext()}
             sx={{
+              display: "inline-block",
               position: "absolute",
               top: "43%",
               right: "0",
               transform: "translateY(-50%)",
             }}
           >
-            
+      
           </Box>
         </Box>
       </Container>

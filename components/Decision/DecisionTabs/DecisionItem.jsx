@@ -44,7 +44,7 @@ const DecisionItem = ({no, ok}) => {
           backgroundColor: "#fff",
           borderRadius: "0 0 20px 20px",
           alignItems: "start",
-          minHeight: {xs: "auto", lg: "315px"}
+          minHeight: "auto"
         }}
       >
         <Grid item xs={1}>

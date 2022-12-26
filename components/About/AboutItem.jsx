@@ -13,6 +13,7 @@ const AboutItem = ({ img, title }) => {
         maxWidth: {
           lg: "234px",
         },
+        justifyContent: "center"
       }}
     >
       <Grid
@@ -21,27 +22,19 @@ const AboutItem = ({ img, title }) => {
         sx={{
           display: "grid",
           justifyContent: "center",
-          alignItems: "center",
+          alignItems: "start",
         }}
       >
         <Box sx={{
           width: {xs: "81px", lg: "120px"},
           height: {xs: "81px", lg: "120px"},
-          position: "relative"
+          position: "relative",
+          maxHeight: {lg: "180px"},
+          mt: {xs: "34px", lg: "38px"}
         }}>
           <Image src={img} alt={title} fill={true} />
         </Box>
       </Grid>
-      <Grid
-        item
-        xs={12}
-        sx={{
-          display: "grid",
-          justifyContent: "center",
-          alignItems: "center",
-          marginBottom: "auto",
-        }}
-      >
         <Typography
           variant="span"
           sx={{
@@ -50,11 +43,12 @@ const AboutItem = ({ img, title }) => {
             fontSize: "18px",
             fontWeight: 700,
             lineHeight: "22px",
+            mb: "100%",
+            mt: {xs: "26px", lg: "45px"}
           }}
         >
           {title}
         </Typography>
-      </Grid>
     </Grid>
   );
 };

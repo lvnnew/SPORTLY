@@ -142,6 +142,7 @@ a {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  cursor: pointer
 }
 
 .arrow.prev {
@@ -150,6 +151,14 @@ a {
 
 .arrow.next {
   background-image: url("/arrow-right.svg");
+}
+
+.arrow.prev.disabled {
+  background-image: url("/arrow-left-dis.svg");
+}
+
+.arrow.next.disabled {
+  background-image: url("/arrow-right-dis.svg");
 }
 
 
