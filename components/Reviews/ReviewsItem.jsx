@@ -1,4 +1,4 @@
-import { Grid, Rating, Typography } from "@mui/material";
+import { Box, Grid, Rating, Typography } from "@mui/material";
 import Image from "next/image";
 import React from "react";
 import StarRateIcon from "@mui/icons-material/StarRate";
@@ -12,28 +12,29 @@ const ReviewsItem = ({ name, specialization, text, rating }) => {
         boxShadow: "0px 1px 15px rgba(22, 25, 44, 0.18)",
         borderRadius: "10px",
         padding: { xs: "14px", lg: "20px"},
-        minHeight: {lg: "233px"},
+        maxHeight: {lg: "233px"}
       }}
     >
-      <Grid item container>
+      <Grid item container sx={{
+        justifyContent: "start",
+        alignItems: "center"
+      }}>
         <Grid
           item
-          xs={2}
+          xs={1}
+          lg={2}
           sx={{
             position: "relative",
+            height: "100%"
           }}
         >
           <Image
             src="/avatar.svg"
             alt="avatar"
             fill={true}
-            style={{
-              transform: "translateY(-50%)",
-              top: "50%",
-            }}
           />
         </Grid>
-        <Grid item xs={9} sx={{
+        <Grid item xs={10} lg={9} sx={{
           ml: "12px"
         }}>
           <Typography
@@ -62,6 +63,9 @@ const ReviewsItem = ({ name, specialization, text, rating }) => {
           </Typography>
         </Grid>
       </Grid>
+      <Grid item xs={12} sx={{
+        mt: "12px",
+      }}>
       <Rating
         name="text-feedback"
         value={rating}
@@ -70,14 +74,18 @@ const ReviewsItem = ({ name, specialization, text, rating }) => {
         emptyIcon={<StarRateIcon sx={{ color: "#fff" }} fontSize="inherit" />}
         sx={{
           color: "#F2D11D",
-          mt: "12px",
+          height: "max-content"
         }}
       />
+      </Grid>
       <Grid
         item
         xs={12}
         sx={{
-          mt: "12px",
+          mt: {xs: "12px", lg: "0"},
+          mb: {
+            lg: "100%"
+          }
         }}
       >
         <Typography

@@ -6,7 +6,14 @@ import ReviewsData from "./ReviewsData";
 
 const Reviews = () => {
   return (
-    <Grid component="section" container>
+    <Grid id="reviews" component="section" container sx={{
+      pb: {xs: "60px", lg: "120px"},
+      borderRadius: "0 0 20px 20px",
+      backgroundColor: "#fff",
+      mb: "-20px",
+      position: "relative",
+      zIndex: 3
+    }}>
       <Container maxWidth="lg">
         <Title title="Польза от использования CRM " subTitle="которую отметили участники в ходе CustDev исследования" left={true} />
         <Grid container spacing="18px" sx={{

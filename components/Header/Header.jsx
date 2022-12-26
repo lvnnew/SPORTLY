@@ -41,7 +41,7 @@ const Header = () => {
               sx={{
                 alignItems: "center",
 
-                display: {xs: "none", lg: "flex"}
+                display: {xs: "none", md: "flex"}
               }}
             >
               <Menu />

@@ -5,7 +5,7 @@ import AboutItem from "./AboutItem";
 
 const About = () => {
   return (
-    <Box variant="section" sx={{
+    <Box variant="section" id="about" sx={{
       padding: "40px 0"
     }}>
       <Container maxWidth="lg">

@@ -6,6 +6,7 @@ import About from '../components/About/About';
 import Decision from '../components/Decision/Decision';
 import Test from '../components/Test/Test';
 import Reviews from '../components/Reviews/Reviews';
+import Footer from '../components/Footer/Footer';
 
 
 export default function Home() {
@@ -23,6 +24,7 @@ export default function Home() {
       <Decision />
       <Test />
       <Reviews />
+      <Footer />
     </>
   )
 }

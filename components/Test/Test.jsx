@@ -7,7 +7,8 @@ import Form from "../Form/Form";
 
 const Test = () => {
   return (
-    <Box
+    <Box 
+      id="test"
       variant="section"
       sx={{
         padding: "60px 0",
