@@ -5,6 +5,7 @@ import Banner from '../components/Banner/Banner';
 import About from '../components/About/About';
 import Decision from '../components/Decision/Decision';
 import Test from '../components/Test/Test';
+import Reviews from '../components/Reviews/Reviews';
 
 
 export default function Home() {
@@ -21,6 +22,7 @@ export default function Home() {
       <About />
       <Decision />
       <Test />
+      <Reviews />
     </>
   )
 }

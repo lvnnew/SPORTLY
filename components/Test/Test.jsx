@@ -17,29 +17,7 @@ const Test = () => {
       }}
     >
       <Container maxWidth="lg">
-        <Typography
-          variant="h3"
-          sx={{
-            fontSize: { xs: "24px", lg: "48px" },
-            fontWeight: 700,
-            lineHeight: { xs: "29px", lg: "58px" },
-            textAlign: {xs: "left", md: "center"}
-          }}
-        >
-          Тестовый запуск CRM
-        </Typography>
-        <Typography
-          variant="h4"
-          sx={{
-            mt: {xs: "6px", lg: "12px"},
-            fontSize: {xs: "16px", lg: "24px"},
-            fontWeight: 700,
-            lineHeight: {xs: "19px", lg: "24px"},
-            textAlign: {xs: "left", md: "center"}
-          }}
-        >
-          включает в себя
-        </Typography>
+        <Title title="Тестовый запуск CRM" subTitle="включает в себя " left={true} />
 
         <Box
           sx={{
