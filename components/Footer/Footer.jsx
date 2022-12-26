@@ -33,10 +33,12 @@ const Footer = () => {
         backgroundColor: "#E6F1FF",
         pt: "80px",
         pb: "40px",
-        display: {xs: "none", md: "grid"}
+        display: {xs: "none", md: "grid"},
       }}>
         <Container maxWidth="lg">
-          <Grid container>
+          <Grid container sx={{
+            alignItems: "center"
+          }}>
             <Grid item md={2}>
               <Logo />
             </Grid>
