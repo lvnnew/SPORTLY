@@ -21,6 +21,7 @@ const TestItem = ({ num, title, pos }) => {
       <Typography
         variant="span"
         sx={{
+          display: "inline-block",
           position: "absolute",
           top: "50%",
           left: "50%",
@@ -36,6 +37,7 @@ const TestItem = ({ num, title, pos }) => {
       <Typography
         variant="h6"
         sx={{
+          fontFamily: "Nunito Sans",
           position: "absolute",
           right: {xs: "40px", lg: "62px"},
           top: "50%",

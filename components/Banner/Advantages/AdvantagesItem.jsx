@@ -13,7 +13,9 @@ const AdvantagesItem = ({ num, title }) => {
         }}
       >
         <Typography
+        variant="span"
           sx={{
+            display: "inline-block",
             fontSize: {xs: "32px", lg: "48px"},
             fontWeight: 700,
             lineHeight: {xs: "38px", lg: "58px"},

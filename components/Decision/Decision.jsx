@@ -29,6 +29,7 @@ const Decision = () => {
         <Typography
           variant="h3"
           sx={{
+            fontFamily: "Nunito Sans",
             fontSize: {xs: "24px", lg: "48px"},
             fontWeight: 700,
             lineHeight: {xs: "29px", lg: "58px"},

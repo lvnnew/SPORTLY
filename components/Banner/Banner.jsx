@@ -1,8 +1,6 @@
 import { Box, Button, Container, Grid, Typography } from "@mui/material";
-import Image from "next/image";
 import React from "react";
 import Advantages from "./Advantages/Advantages";
-import styles from "./Banner.module.css";
 
 const Banner = () => {
   return (
@@ -15,7 +13,7 @@ const Banner = () => {
         backgroundRepeat: "no-repeat",
         backgroundPosition: {xs: "0 -50px", lg: "top right"},
         backgroundSize: {xs: "100%", lg: "contain"},
-        minHeight: {xs: "auto", lg: "calc(100vh - 58px)", xl: "auto"}
+        minHeight: {xs: "auto", lg: "calc(100vh - 58px)", xl: "auto"},
       }}
     >
       <Container maxWidth="lg">
@@ -32,6 +30,7 @@ const Banner = () => {
             <Typography
               variant="h1"
               sx={{
+                fontFamily: "Nunito Sans",
                 fontSize: { xs: "26px", md: "35px", lg: "60px" },
                 fontWeight: 700,
                 lineHeight: { xs: "31px", lg: "66px" },
@@ -44,6 +43,7 @@ const Banner = () => {
               variant="contained"
               disableElevation
               sx={{
+                fontFamily: "Nunito Sans",
                 mt: { xs: "30px", md: "50px" },
                 maxWidth: { xs: "100%", sm: "293px" },
                 width: { xs: "100%" },

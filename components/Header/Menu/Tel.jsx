@@ -12,7 +12,6 @@ const Tel = ({ left = false, mt, right=false }) => {
         alignItems: left ? "start" : "center",
         mt: { xs: mt ? mt : "43px", md: "0" },
         gap: "3px",
-        alignItems: {xs: "center", md: right ? "end" : "center"}
       }}
     >
       <Box
@@ -25,7 +24,9 @@ const Tel = ({ left = false, mt, right=false }) => {
         <Image src="/tel.svg" alt="tel" width="19" height="19" />
         <Link href="tel:79877655432">
           <Typography
+          variant="span"
             sx={{
+              display: "inline-block",
               fontSize: "16px",
               fontWeight: 700,
               lineHeight: "19px",
@@ -37,7 +38,9 @@ const Tel = ({ left = false, mt, right=false }) => {
         </Link>
       </Box>
       <Typography
+      variant="span"
         sx={{
+          display: "inline-block",
           fontSize: "14px",
           lineHeight: "18px",
           color: "#16192C",

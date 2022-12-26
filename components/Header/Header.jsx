@@ -1,7 +1,7 @@
 import { AppBar, Box, Container } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseOutlinedIcon from "@mui/icons-material/CloseOutlined";
-import styles from "./Header.module.css";
+import styles from "../../styles/Header.module.css";
 import Logo from "../Logo";
 import React from "react";
 import Menu from "./Menu/Menu";

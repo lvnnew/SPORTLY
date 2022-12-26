@@ -6,7 +6,9 @@ const MenuItem = ({ href, title }) => {
   return (
     <Link href={href}>
       <Typography
+      variant="span"
         sx={{
+          display: "inline-block",
           fontSize: "18px",
           fontWeight: 700,
           lineHeight: "22px",

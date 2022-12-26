@@ -32,7 +32,7 @@ const AboutItem = ({ img, title }) => {
           maxHeight: {lg: "180px"},
           mt: {xs: "34px", lg: "38px"}
         }}>
-          <Image src={img} alt={title} fill={true} />
+          <Image src={img} alt={title} fill={true} loading="lazy" />
         </Box>
       </Grid>
         <Typography
