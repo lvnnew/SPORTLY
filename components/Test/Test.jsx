@@ -7,7 +7,7 @@ import Form from "../Form/Form";
 
 const Test = () => {
   return (
-    <Box 
+    <Box
       id="test"
       variant="section"
       sx={{
@@ -18,7 +18,11 @@ const Test = () => {
       }}
     >
       <Container maxWidth="lg">
-        <Title title="Тестовый запуск CRM" subTitle="включает в себя " left={true} />
+        <Title
+          title="Тестовый запуск CRM"
+          subTitle="включает в себя "
+          left={true}
+        />
 
         <Box
           sx={{
@@ -27,7 +31,7 @@ const Test = () => {
             alignItems: "center",
             gap: "67px",
             position: "relative",
-            mt: {xs: "34px"},
+            mt: { xs: "34px" },
 
             "::after": {
               content: '""',
@@ -42,13 +46,9 @@ const Test = () => {
             },
           }}
         >
-          {
-            TestData.map((item, index) => {
-              return(
-                <TestItem key={index} num={item.num} title={item.title} />
-              )
-            })
-          }
+          {TestData.map((item, index) => {
+            return <TestItem key={index} num={item.num} title={item.title} />;
+          })}
         </Box>
         <Form />
       </Container>

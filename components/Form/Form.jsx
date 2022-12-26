@@ -43,8 +43,8 @@ const Form = () => {
               padding: "10px 0",
               pt: "0px",
               "::placeholder": {
-                fontFamily: "Nunito Sans"
-              }
+                fontFamily: "Nunito Sans",
+              },
             }}
           />
         </Grid>
@@ -59,8 +59,8 @@ const Form = () => {
               padding: "10px 0",
               pt: "0px",
               "::placeholder": {
-                fontFamily: "Nunito Sans"
-              }
+                fontFamily: "Nunito Sans",
+              },
             }}
           />
         </Grid>
@@ -75,8 +75,8 @@ const Form = () => {
               padding: "10px 0",
               pt: "0px",
               "::placeholder": {
-                fontFamily: "Nunito Sans"
-              }
+                fontFamily: "Nunito Sans",
+              },
             }}
           />
         </Grid>
@@ -91,8 +91,8 @@ const Form = () => {
               padding: "10px 0",
               pt: "0px",
               "::placeholder": {
-                fontFamily: "Nunito Sans"
-              }
+                fontFamily: "Nunito Sans",
+              },
             }}
           />
         </Grid>

@@ -9,10 +9,10 @@ const FooterMenu = () => {
       spacing="13"
       sx={{
         display: "flex",
-        flexDirection: {xs: "column", md: "row"},
-        justifyContent: {xs: "end", md: "center"},
-        alignItems: {xs: "end", md: "center"},
-        gap: {xs: "13px", md: "32px"},
+        flexDirection: { xs: "column", md: "row" },
+        justifyContent: { xs: "end", md: "center" },
+        alignItems: { xs: "end", md: "center" },
+        gap: { xs: "13px", md: "32px" },
       }}
     >
       <FooterMenuItem href="#about" title="О CRM" />

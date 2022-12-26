@@ -22,7 +22,7 @@ const Decision = () => {
         pt: "24px",
         pb: "60px",
         backgroundColor: "#E6F1FF",
-        borderRadius: "20px 20px 0 0"
+        borderRadius: "20px 20px 0 0",
       }}
     >
       <Container maxWidth="lg">
@@ -30,9 +30,9 @@ const Decision = () => {
           variant="h3"
           sx={{
             fontFamily: "Nunito Sans",
-            fontSize: {xs: "24px", lg: "48px"},
+            fontSize: { xs: "24px", lg: "48px" },
             fontWeight: 700,
-            lineHeight: {xs: "29px", lg: "58px"},
+            lineHeight: { xs: "29px", lg: "58px" },
           }}
         >
           Какие проблемы решает наша CRM?
@@ -78,19 +78,27 @@ const Decision = () => {
             />
           </Grid>
         </Grid>
-        <Grid container spacing="20" sx={{
-          mt: "0"
-        }}>
-          {
-            filteredItems.map((item, index) => {
-              return (
-                <Grid key={index} item xs={12} sm={6} lg={(activeEl === 0 || activeEl === 2) ? 4 : 6}>
-                  <DecisionItem no={item.no} ok={item.ok} />
-                </Grid>
-              )              
-            })
-          }
-          </Grid>
+        <Grid
+          container
+          spacing="20"
+          sx={{
+            mt: "0",
+          }}
+        >
+          {filteredItems.map((item, index) => {
+            return (
+              <Grid
+                key={index}
+                item
+                xs={12}
+                sm={6}
+                lg={activeEl === 0 || activeEl === 2 ? 4 : 6}
+              >
+                <DecisionItem no={item.no} ok={item.ok} />
+              </Grid>
+            );
+          })}
+        </Grid>
       </Container>
     </Box>
   );

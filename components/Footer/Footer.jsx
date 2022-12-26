@@ -14,7 +14,7 @@ const Footer = () => {
           backgroundColor: "#E6F1FF",
           pt: "40px",
           pb: "20px",
-          display: {md: "none"}
+          display: { md: "none" },
         }}
       >
         <Container maxWidth="lg">
@@ -29,16 +29,23 @@ const Footer = () => {
           </Grid>
         </Container>
       </Grid>
-      <Grid component="footer" container sx={{
-        backgroundColor: "#E6F1FF",
-        pt: "80px",
-        pb: "40px",
-        display: {xs: "none", md: "grid"},
-      }}>
+      <Grid
+        component="footer"
+        container
+        sx={{
+          backgroundColor: "#E6F1FF",
+          pt: "80px",
+          pb: "40px",
+          display: { xs: "none", md: "grid" },
+        }}
+      >
         <Container maxWidth="lg">
-          <Grid container sx={{
-            alignItems: "center"
-          }}>
+          <Grid
+            container
+            sx={{
+              alignItems: "center",
+            }}
+          >
             <Grid item md={2}>
               <Logo />
             </Grid>

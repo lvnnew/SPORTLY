@@ -40,15 +40,13 @@ const About = () => {
               left: "0",
               transform: "translateY(-50%)",
             }}
-          >
-            
-          </Box>
+          ></Box>
           <Swiper
-          onRealIndexChange={(el) => {
-            setIndexSlide(el.activeIndex);
-            setLastSlide(el.imagesLoaded);
-            console.log(el);
-          }}
+            onRealIndexChange={(el) => {
+              setIndexSlide(el.activeIndex);
+              setLastSlide(el.imagesLoaded);
+              console.log(el);
+            }}
             slidesPerView={2}
             grid={{
               rows: 2,
@@ -72,18 +70,18 @@ const About = () => {
             className="aboutSwiper"
             ref={swiperRef}
           >
-            {
-              AboutData.map((item, index) => {
-                return(
-                  <SwiperSlide key={index}>
-                    <AboutItem img={item.img} title={item.title} />
-                  </SwiperSlide>
-                )
-              })
-            }
+            {AboutData.map((item, index) => {
+              return (
+                <SwiperSlide key={index}>
+                  <AboutItem img={item.img} title={item.title} />
+                </SwiperSlide>
+              );
+            })}
           </Swiper>
           <Box
-            className={`arrow next ${indexSlide === lastSlide - 4 ? "disabled": ""}`}
+            className={`arrow next ${
+              indexSlide === lastSlide - 4 ? "disabled" : ""
+            }`}
             onClick={() => swiperRef.current.swiper.slideNext()}
             sx={{
               display: "inline-block",
@@ -92,9 +90,7 @@ const About = () => {
               right: "0",
               transform: "translateY(-50%)",
             }}
-          >
-      
-          </Box>
+          ></Box>
         </Box>
       </Container>
     </Box>

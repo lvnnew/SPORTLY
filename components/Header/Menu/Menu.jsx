@@ -5,27 +5,26 @@ import MenuItem from "./MenuItem";
 
 const Menu = () => {
   return (
-      <Box
-        sx={{
-          display: "flex",
-          flexDirection: {xs: "column", md: "row"},
-          justifyContent: "center",
-          alignItems: "center",
-          gap: {xs: "32px", md: "50px"},
-          mt: {xs: "43px", md: "0"},
-          "@media(min-width: 900px)": {
-            mr: {md: "50px"}
-          },
+    <Box
+      sx={{
+        display: "flex",
+        flexDirection: { xs: "column", md: "row" },
+        justifyContent: "center",
+        alignItems: "center",
+        gap: { xs: "32px", md: "50px" },
+        mt: { xs: "43px", md: "0" },
+        "@media(min-width: 900px)": {
+          mr: { md: "50px" },
+        },
 
-          mr: {md: "170px"}
-
-        }}
-      >
-        <MenuItem href="#about" title="О CRM" />
-        <MenuItem href="#test" title="Тестовый запуск" />
-        <MenuItem href="#contacts" title="Контакты" />
-        <MenuItem href="#reviews" title="Отзывы" />
-      </Box>
+        mr: { md: "170px" },
+      }}
+    >
+      <MenuItem href="#about" title="О CRM" />
+      <MenuItem href="#test" title="Тестовый запуск" />
+      <MenuItem href="#contacts" title="Контакты" />
+      <MenuItem href="#reviews" title="Отзывы" />
+    </Box>
   );
 };
 

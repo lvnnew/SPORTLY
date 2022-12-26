@@ -1,52 +1,52 @@
 const AboutData = [
   {
     img: "/about-items/fight.svg",
-    title: "Секции единоборств"
-  }, 
+    title: "Секции единоборств",
+  },
   {
     img: "/about-items/football.svg",
-    title: "Футбол"
+    title: "Футбол",
   },
   {
     img: "/about-items/gymnastic.svg",
-    title: "Гимнастика"
+    title: "Гимнастика",
   },
   {
     img: "/about-items/tennis.svg",
-    title: "Теннис"
+    title: "Теннис",
   },
   {
     img: "/about-items/dances.svg",
-    title: "Танцы"
+    title: "Танцы",
   },
   {
     img: "/about-items/hockey.svg",
-    title: "Хоккей"
+    title: "Хоккей",
   },
   {
     img: "/about-items/swimming.svg",
-    title: "Плавание"
+    title: "Плавание",
   },
   {
     img: "/about-items/child-dev.svg",
-    title: "Центры детского развития"
+    title: "Центры детского развития",
   },
   {
     img: "/about-items/lang-school.svg",
-    title: "Языковые школы"
+    title: "Языковые школы",
   },
   {
     img: "/about-items/mus-school.svg",
-    title: "Музыкальные школы"
+    title: "Музыкальные школы",
   },
   {
     img: "/about-items/robotics.svg",
-    title: "Робототехника"
+    title: "Робототехника",
   },
   {
     img: "/about-items/art-school.svg",
-    title: "Художественные школы"
-  }
-]
+    title: "Художественные школы",
+  },
+];
 
 export default AboutData;

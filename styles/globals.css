@@ -3,9 +3,9 @@
 :root {
   --max-width: 1100px;
   --border-radius: 12px;
-  --font-mono: ui-monospace, Menlo, Monaco, 'Cascadia Mono', 'Segoe UI Mono',
-    'Roboto Mono', 'Oxygen Mono', 'Ubuntu Monospace', 'Source Code Pro',
-    'Fira Mono', 'Droid Sans Mono', 'Courier New', monospace;
+  --font-mono: ui-monospace, Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono",
+    "Roboto Mono", "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro",
+    "Fira Mono", "Droid Sans Mono", "Courier New", monospace;
 
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -88,7 +88,7 @@ body {
 }
 
 body {
-  color: #16192C;
+  color: #16192c;
   background-color: #fff;
   overflow-x: hidden;
 }
@@ -144,7 +144,7 @@ a {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  cursor: pointer
+  cursor: pointer;
 }
 
 .arrow.prev {
@@ -163,14 +163,13 @@ a {
   background-image: url("/arrow-right-dis.svg");
 }
 
-
-@media(max-width: 1200px) {
+@media (max-width: 1200px) {
   .arrow {
-  display: none;
-}
+    display: none;
+  }
 }
 
-@media(min-width: 1200px) {
+@media (min-width: 1200px) {
   .aboutSwiper {
     max-width: 1010px;
   }

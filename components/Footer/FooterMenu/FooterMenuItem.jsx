@@ -9,8 +9,8 @@ const FooterMenuItem = ({ href, title }) => {
         variant="span"
         sx={{
           display: "inline-block",
-          fontSize: {xs: "14px", md: "18px"},
-          lineHeight: {xs: "18px", md: "25px"},
+          fontSize: { xs: "14px", md: "18px" },
+          lineHeight: { xs: "18px", md: "25px" },
           color: "#16192C80",
         }}
       >

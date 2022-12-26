@@ -13,7 +13,7 @@ const AboutItem = ({ img, title }) => {
         maxWidth: {
           lg: "234px",
         },
-        justifyContent: "center"
+        justifyContent: "center",
       }}
     >
       <Grid
@@ -25,30 +25,32 @@ const AboutItem = ({ img, title }) => {
           alignItems: "start",
         }}
       >
-        <Box sx={{
-          width: {xs: "81px", lg: "120px"},
-          height: {xs: "81px", lg: "120px"},
-          position: "relative",
-          maxHeight: {lg: "180px"},
-          mt: {xs: "34px", lg: "38px"}
-        }}>
+        <Box
+          sx={{
+            width: { xs: "81px", lg: "120px" },
+            height: { xs: "81px", lg: "120px" },
+            position: "relative",
+            maxHeight: { lg: "180px" },
+            mt: { xs: "34px", lg: "38px" },
+          }}
+        >
           <Image src={img} alt={title} fill={true} loading="lazy" />
         </Box>
       </Grid>
-        <Typography
-          variant="span"
-          sx={{
-            display: "inline-block",
-            textAlign: "center",
-            fontSize: "18px",
-            fontWeight: 700,
-            lineHeight: "22px",
-            mb: "100%",
-            mt: {xs: "26px", lg: "45px"}
-          }}
-        >
-          {title}
-        </Typography>
+      <Typography
+        variant="span"
+        sx={{
+          display: "inline-block",
+          textAlign: "center",
+          fontSize: "18px",
+          fontWeight: 700,
+          lineHeight: "22px",
+          mb: "100%",
+          mt: { xs: "26px", lg: "45px" },
+        }}
+      >
+        {title}
+      </Typography>
     </Grid>
   );
 };

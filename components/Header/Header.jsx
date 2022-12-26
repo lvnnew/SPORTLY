@@ -15,12 +15,12 @@ const Header = () => {
   };
 
   React.useEffect(() => {
-    if(isOpenMenu) {
-      document.body.style.overflow = "hidden"
+    if (isOpenMenu) {
+      document.body.style.overflow = "hidden";
     } else {
-      document.body.style.overflow = "auto"
+      document.body.style.overflow = "auto";
     }
-  }, [isOpenMenu])
+  }, [isOpenMenu]);
 
   return (
     <>
@@ -49,7 +49,7 @@ const Header = () => {
               sx={{
                 alignItems: "center",
 
-                display: {xs: "none", md: "flex"}
+                display: { xs: "none", md: "flex" },
               }}
             >
               <Menu />

@@ -11,32 +11,37 @@ const ReviewsItem = ({ name, specialization, text, rating }) => {
         backgroundColor: "#E6F1FF",
         boxShadow: "0px 1px 15px rgba(22, 25, 44, 0.18)",
         borderRadius: "10px",
-        padding: { xs: "14px", lg: "20px"},
-        maxHeight: {lg: "233px"}
+        padding: { xs: "14px", lg: "20px" },
+        maxHeight: { lg: "233px" },
       }}
     >
-      <Grid item container sx={{
-        justifyContent: "start",
-        alignItems: "center"
-      }}>
+      <Grid
+        item
+        container
+        sx={{
+          justifyContent: "start",
+          alignItems: "center",
+        }}
+      >
         <Grid
           item
           xs={1}
           lg={2}
           sx={{
             position: "relative",
-            height: "100%"
+            height: "100%",
           }}
         >
-          <Image
-            src="/avatar.svg"
-            alt="avatar"
-            fill={true}
-          />
+          <Image src="/avatar.svg" alt="avatar" fill={true} />
         </Grid>
-        <Grid item xs={10} lg={9} sx={{
-          ml: "12px"
-        }}>
+        <Grid
+          item
+          xs={10}
+          lg={9}
+          sx={{
+            ml: "12px",
+          }}
+        >
           <Typography
             variant="span"
             sx={{
@@ -63,29 +68,33 @@ const ReviewsItem = ({ name, specialization, text, rating }) => {
           </Typography>
         </Grid>
       </Grid>
-      <Grid item xs={12} sx={{
-        mt: "12px",
-      }}>
-      <Rating
-        name="text-feedback"
-        value={rating}
-        readOnly
-        precision={0.5}
-        emptyIcon={<StarRateIcon sx={{ color: "#fff" }} fontSize="inherit" />}
+      <Grid
+        item
+        xs={12}
         sx={{
-          color: "#F2D11D",
-          height: "max-content"
+          mt: "12px",
         }}
-      />
+      >
+        <Rating
+          name="text-feedback"
+          value={rating}
+          readOnly
+          precision={0.5}
+          emptyIcon={<StarRateIcon sx={{ color: "#fff" }} fontSize="inherit" />}
+          sx={{
+            color: "#F2D11D",
+            height: "max-content",
+          }}
+        />
       </Grid>
       <Grid
         item
         xs={12}
         sx={{
-          mt: {xs: "12px", lg: "0"},
+          mt: { xs: "12px", lg: "0" },
           mb: {
-            lg: "100%"
-          }
+            lg: "100%",
+          },
         }}
       >
         <Typography

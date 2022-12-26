@@ -21,7 +21,7 @@ const Advantages = () => {
       <Grid
         item
         sx={{
-          ml: {xs: "30px", lg: "150px"},
+          ml: { xs: "30px", lg: "150px" },
         }}
       >
         <AdvantagesItem
@@ -32,7 +32,7 @@ const Advantages = () => {
       <Grid
         item
         sx={{
-          ml: {xs: "80px", lg: "325px"},
+          ml: { xs: "80px", lg: "325px" },
         }}
       >
         <AdvantagesItem

@@ -9,15 +9,19 @@ const Banner = () => {
       sx={{
         pt: { xs: "30px", md: "100px", lg: "150px" },
         pb: { xs: "53px", md: "140px", lg: "192px" },
-        backgroundImage: {xs: "url(/banner-bg.svg)", lg: "url(/banner-bg-big.svg)", xl: "none"},
+        backgroundImage: {
+          xs: "url(/banner-bg.svg)",
+          lg: "url(/banner-bg-big.svg)",
+          xl: "none",
+        },
         backgroundRepeat: "no-repeat",
-        backgroundPosition: {xs: "0 -50px", lg: "top right"},
-        backgroundSize: {xs: "100%", lg: "contain"},
-        minHeight: {xs: "auto", lg: "calc(100vh - 58px)", xl: "auto"},
+        backgroundPosition: { xs: "0 -50px", lg: "top right" },
+        backgroundSize: { xs: "100%", lg: "contain" },
+        minHeight: { xs: "auto", lg: "calc(100vh - 58px)", xl: "auto" },
       }}
     >
       <Container maxWidth="lg">
-        <Grid container sx={{alignItems: "center"}}>
+        <Grid container sx={{ alignItems: "center" }}>
           <Grid
             item
             xs={12}
@@ -54,16 +58,16 @@ const Banner = () => {
                 minHeight: { xs: "48px", md: "69px" },
                 padding: { xs: "14px 69px", md: "20px 20px" },
                 textTransform: "none",
-                ml: {xs: "auto", md: "0"},
+                ml: { xs: "auto", md: "0" },
                 mr: "auto",
                 display: "flex",
-                borderRadius: "10px"
+                borderRadius: "10px",
               }}
             >
               Начать работу
             </Button>
           </Grid>
-          <Grid item xs={12} sm={8} md={6} sx={{margin: "0 auto"}} >
+          <Grid item xs={12} sm={8} md={6} sx={{ margin: "0 auto" }}>
             <Advantages />
           </Grid>
         </Grid>

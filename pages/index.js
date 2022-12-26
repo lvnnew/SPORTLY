@@ -1,13 +1,12 @@
-import Head from 'next/head'
-import styles from '../styles/Home.module.css';
-import Header from '../components/Header/Header';
-import Banner from '../components/Banner/Banner';
-import About from '../components/About/About';
-import Decision from '../components/Decision/Decision';
-import Test from '../components/Test/Test';
-import Reviews from '../components/Reviews/Reviews';
-import Footer from '../components/Footer/Footer';
-
+import Head from "next/head";
+import styles from "../styles/Home.module.css";
+import Header from "../components/Header/Header";
+import Banner from "../components/Banner/Banner";
+import About from "../components/About/About";
+import Decision from "../components/Decision/Decision";
+import Test from "../components/Test/Test";
+import Reviews from "../components/Reviews/Reviews";
+import Footer from "../components/Footer/Footer";
 
 export default function Home() {
   return (
@@ -25,5 +24,5 @@ export default function Home() {
       <Reviews />
       <Footer />
     </>
-  )
+  );
 }

@@ -7,22 +7,23 @@ const AdvantagesItem = ({ num, title }) => {
     <Grid container>
       <Grid
         item
-        xs={3} lg={1}
+        xs={3}
+        lg={1}
         sx={{
           position: "relative",
         }}
       >
         <Typography
-        variant="span"
+          variant="span"
           sx={{
             display: "inline-block",
-            fontSize: {xs: "32px", lg: "48px"},
+            fontSize: { xs: "32px", lg: "48px" },
             fontWeight: 700,
-            lineHeight: {xs: "38px", lg: "58px"},
+            lineHeight: { xs: "38px", lg: "58px" },
             color: "#16192C80",
             position: "absolute",
-            right: {xs: "22px", lg: "15px"},
-            top: {xs: "-15px", lg: "-25px"},
+            right: { xs: "22px", lg: "15px" },
+            top: { xs: "-15px", lg: "-25px" },
             zIndex: 2,
           }}
         >
@@ -32,7 +33,7 @@ const AdvantagesItem = ({ num, title }) => {
           sx={{
             position: "absolute",
             top: "-10px",
-            right: {xs: "-15px", lg: "-15px"},
+            right: { xs: "-15px", lg: "-15px" },
             zIndex: 1,
           }}
         >
@@ -49,7 +50,7 @@ const AdvantagesItem = ({ num, title }) => {
             color: "#16192C",
             position: "relative",
             zIndex: 3,
-            maxWidth: {lg: "248px"},
+            maxWidth: { lg: "248px" },
           }}
         >
           {title}
