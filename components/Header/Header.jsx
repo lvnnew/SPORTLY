@@ -14,6 +14,14 @@ const Header = () => {
     setIsOpenMenu(!isOpenMenu);
   };
 
+  React.useEffect(() => {
+    if(isOpenMenu) {
+      document.body.style.overflow = "hidden"
+    } else {
+      document.body.style.overflow = "auto"
+    }
+  }, [isOpenMenu])
+
   return (
     <>
       <AppBar
@@ -73,7 +81,7 @@ const Header = () => {
             flexDirection: "column",
 
             backgroundColor: "#E6F1FF",
-            position: "fixed",
+            position: "absolute",
             top: "58px",
             left: 0,
             right: 0,

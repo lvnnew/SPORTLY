@@ -12,7 +12,7 @@ const Tel = ({ left = false, mt, right=false }) => {
         alignItems: left ? "start" : "center",
         mt: { xs: mt ? mt : "43px", md: "0" },
         gap: "3px",
-        alignItems: {md: right ? "end" : "center"}
+        alignItems: {xs: "center", md: right ? "end" : "center"}
       }}
     >
       <Box
