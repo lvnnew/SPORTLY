@@ -2,7 +2,7 @@ import { Container, Grid } from "@mui/material";
 import React from "react";
 import Title from "../Title";
 import ReviewsItem from "./ReviewsItem";
-import ReviewsData from "./ReviewsData";
+import {ReviewsData} from "./ReviewsData";
 
 const Reviews = () => {
   return (

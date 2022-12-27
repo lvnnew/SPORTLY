@@ -1,4 +1,4 @@
-const ReviewsData = [
+export const ReviewsData = [
   {
     name: "Николай",
     specialization: "Тренер футбольной команды",
@@ -36,5 +36,3 @@ const ReviewsData = [
     text: "В CRM можно просматривать необходимые отчеты о выручке, заработной плате сотрудников не тратя время на их составление",
   },
 ];
-
-export default ReviewsData;

@@ -1,4 +1,4 @@
-const AboutData = [
+export const AboutData = [
   {
     img: "/about-items/fight.svg",
     title: "Секции единоборств",
@@ -48,5 +48,3 @@ const AboutData = [
     title: "Художественные школы",
   },
 ];
-
-export default AboutData;

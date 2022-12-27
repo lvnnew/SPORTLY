@@ -1,4 +1,4 @@
-const DecisionData = [
+export const DecisionData = [
   {
     index: 0,
     no: "Неудобно анализировать график предстоящих и совершенных мероприятий",
@@ -61,4 +61,3 @@ const DecisionData = [
   },
 ];
 
-export default DecisionData;

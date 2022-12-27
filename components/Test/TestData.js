@@ -1,4 +1,4 @@
-const TestData = [
+export const TestData = [
   {
     num: 1,
     title: "Интервью и выяснение потребностей",
@@ -25,5 +25,3 @@ const TestData = [
     title: "Первые полгода обслуживания БЕСПЛАТНО!",
   },
 ];
-
-export default TestData;

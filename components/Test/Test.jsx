@@ -2,7 +2,7 @@ import { Box, Container, Typography } from "@mui/material";
 import React from "react";
 import Title from "../Title";
 import TestItem from "./TestItem";
-import TestData from "./TestData";
+import {TestData} from "./TestData";
 import Form from "../Form/Form";
 
 const Test = () => {
