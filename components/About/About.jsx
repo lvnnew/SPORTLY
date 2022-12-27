@@ -8,7 +8,7 @@ import "swiper/css/grid";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { Grid, Pagination, Navigation } from "swiper";
-import {aboutData} from "./aboutData";
+import {aboutData} from "./aboutData.js";
 const About = () => {
   const swiperRef = React.useRef(null);
   const [indexSlide, setIndexSlide] = React.useState(0);

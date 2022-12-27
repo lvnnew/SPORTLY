@@ -1,6 +1,6 @@
 import { Box, Container, Grid, Typography } from "@mui/material";
 import React from "react";
-import {decisionData} from "./decisionData";
+import {decisionData} from "./decisionData.js";
 import DecisionItem from "./DecisionTabs/DecisionItem";
 import DecisionTab from "./DecisionTabs/DecisionTab";
 
