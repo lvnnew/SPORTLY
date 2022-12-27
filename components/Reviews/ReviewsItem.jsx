@@ -20,7 +20,7 @@ const ReviewsItem = ({ name, specialization, text, rating }) => {
         container
         sx={{
           justifyContent: "start",
-          alignItems: "center",
+          alignItems: "start",
         }}
       >
         <Grid
@@ -30,6 +30,7 @@ const ReviewsItem = ({ name, specialization, text, rating }) => {
           sx={{
             position: "relative",
             height: "100%",
+            maxHeight: "42px"
           }}
         >
           <Image src="/avatar.svg" alt="avatar" fill={true} />
