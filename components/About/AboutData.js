@@ -1,4 +1,4 @@
-export const AboutData = [
+export const aboutData = [
   {
     img: "/about-items/fight.svg",
     title: "Секции единоборств",
