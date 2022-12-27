@@ -13,11 +13,7 @@ const Menu = () => {
         alignItems: "center",
         gap: { xs: "32px", md: "50px" },
         mt: { xs: "43px", md: "0" },
-        "@media(min-width: 900px)": {
-          mr: { md: "50px" },
-        },
-
-        mr: { md: "170px" },
+        mr: { md: "50px", lg: "170px" },
       }}
     >
       <MenuItem href="#about" title="О CRM" />
