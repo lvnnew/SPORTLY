@@ -3,7 +3,12 @@ import { breakpoints } from "@mui/system";
 import React from "react";
 import MenuItem from "./MenuItem";
 
-const Menu = () => {
+const Menu = ({setIsOpenMenu}) => {
+
+  const menuItemHandler = () => {
+    setIsOpenMenu(false);
+  }
+
   return (
     <Box
       sx={{
@@ -16,10 +21,10 @@ const Menu = () => {
         mr: { md: "50px", lg: "170px" },
       }}
     >
-      <MenuItem href="#about" title="О CRM" />
-      <MenuItem href="#test" title="Тестовый запуск" />
-      <MenuItem href="#contacts" title="Контакты" />
-      <MenuItem href="#reviews" title="Отзывы" />
+      <MenuItem onClick={menuItemHandler} href="#about" title="О CRM" />
+      <MenuItem onClick={menuItemHandler} href="#test" title="Тестовый запуск" />
+      <MenuItem onClick={menuItemHandler} href="#contacts" title="Контакты" />
+      <MenuItem onClick={menuItemHandler} href="#reviews" title="Отзывы" />
     </Box>
   );
 };

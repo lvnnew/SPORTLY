@@ -27,7 +27,7 @@ const About = () => {
 
         <Box
           sx={{
-            mt: "24px",
+            mt: {xs: "10px", md: "24px"},
             position: "relative",
           }}
         >

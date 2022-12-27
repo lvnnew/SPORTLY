@@ -9,7 +9,7 @@ const Tel = ({ left = false, mt, right = false }) => {
       sx={{
         display: "flex",
         flexDirection: "column",
-        alignItems: left ? "start" : "center",
+        alignItems: {xs: left ? "start" : "center", lg: "start"},
         mt: { xs: mt ? mt : "43px", md: "0" },
         gap: "3px",
       }}
@@ -41,6 +41,7 @@ const Tel = ({ left = false, mt, right = false }) => {
         variant="span"
         sx={{
           display: "inline-block",
+          fontWeight: {xs: 400, lg: 600},
           fontSize: "14px",
           lineHeight: "18px",
           color: "#16192C",

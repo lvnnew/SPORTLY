@@ -11,7 +11,7 @@ const Form = () => {
         boxShadow: "0px 1px 15px rgba(22, 25, 44, 0.18)",
         borderRadius: "20px",
         padding: { xs: "14px 16px", lg: "30px" },
-        mt: { xs: "60px", lg: "75px" },
+        mt: { xs: "55px", lg: "75px" },
         maxWidth: "750px",
         ml: "auto",
         mr: "auto",
@@ -26,12 +26,12 @@ const Form = () => {
           fontWeight: 700,
           lineHeight: "24px",
           textAlign: { xs: "left", md: "center" },
-          mb: { xs: "40px", lg: "57px" },
+          mb: { xs: "20px", lg: "57px" },
         }}
       >
         Заполните форму, и мы перезвоним
       </Typography>
-      <Grid container spacing="55">
+      <Grid container spacing="40">
         <Grid item xs={12} md={6}>
           <TextField
             id="standard-basic"

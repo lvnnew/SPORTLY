@@ -24,10 +24,11 @@ const Reviews = () => {
           title="Польза от использования CRM "
           subTitle="которую отметили участники в ходе CustDev исследования"
           left={true}
+          leftDesk={true}
         />
         <Grid
           container
-          spacing="18px"
+          spacing={{xs: "18px", lg: "26px"}}
           sx={{
             pt: { xs: "24px", lg: "40px" },
           }}

@@ -131,11 +131,15 @@ a {
 }
 
 .aboutSwiper .swiper-wrapper {
-  padding-bottom: 28px;
+  padding-bottom: 16px;
 }
 
 .aboutSwiper .swiper-pagination {
-  bottom: 0;
+  bottom: 0 !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
 }
 
 .arrow {
@@ -163,6 +167,16 @@ a {
   background-image: url("/arrow-right-dis.svg");
 }
 
+.aboutSwiper .swiper-pagination .swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  margin: 0 !important;
+}
+
+.aboutSwiper .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
+  background-color: #205EDC;
+}
+
 @media (max-width: 1200px) {
   .arrow {
     display: none !important;
@@ -173,15 +187,24 @@ a {
   .burgerItem {
     display: none !important;
   }
+
+  .aboutSwiper .swiper-pagination .swiper-pagination-bullet {
+    width: 16px;
+    height: 16px;
+  }
+
+  .aboutSwiper .swiper-pagination {
+    gap: 18px;
+  }
+
+  .aboutSwiper .swiper-wrapper {
+    padding-bottom: 43px;
+  }
 }
 
 @media (min-width: 1200px) {
   .aboutSwiper {
     max-width: 1010px;
-  }
-
-  .aboutSwiper .swiper-wrapper {
-    padding-bottom: 43px;
   }
 }
 

@@ -44,15 +44,16 @@ const Footer = () => {
             container
             sx={{
               alignItems: "center",
+              mt: "-20px",
             }}
           >
             <Grid item md={2}>
               <Logo />
             </Grid>
-            <Grid item md={7}>
+            <Grid item md={8}>
               <FooterMenu />
             </Grid>
-            <Grid item md={3}>
+            <Grid item md={2}>
               <Tel right={true} />
             </Grid>
           </Grid>

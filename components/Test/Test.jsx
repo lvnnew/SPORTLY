@@ -11,7 +11,7 @@ const Test = () => {
       id="test"
       variant="section"
       sx={{
-        padding: "60px 0",
+        padding: {xs: "60px 0 40px", lg: "66px 0 70px"},
         borderRadius: "20px 20px 0 0",
         marginTop: "-20px",
         backgroundColor: "#fff",
@@ -29,7 +29,7 @@ const Test = () => {
             display: "flex",
             flexDirection: "column",
             alignItems: "center",
-            gap: "67px",
+            gap: {xs: "67px", lg: "42px"},
             position: "relative",
             mt: { xs: "34px" },
 

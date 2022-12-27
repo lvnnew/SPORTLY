@@ -2,9 +2,9 @@ import { Typography } from "@mui/material";
 import Link from "next/link";
 import React from "react";
 
-const MenuItem = ({ href, title }) => {
+const MenuItem = ({ href, title, onClick }) => {
   return (
-    <Link href={href}>
+    <Link onClick={onClick} href={href}>
       <Typography
         variant="span"
         sx={{

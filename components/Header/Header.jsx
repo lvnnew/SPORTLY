@@ -90,7 +90,7 @@ const Header = () => {
             height: "100%",
           }}
         >
-          <Menu />
+          <Menu setIsOpenMenu={setIsOpenMenu} />
           <Tel />
         </Box>
       )}

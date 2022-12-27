@@ -19,8 +19,8 @@ const Decision = () => {
     <Box
       variant="section"
       sx={{
-        pt: "24px",
-        pb: "60px",
+        pt: {xs: "24px", lg: "50px"},
+        pb: {xs: "60px", lg: "78px"},
         backgroundColor: "#E6F1FF",
         borderRadius: "20px 20px 0 0",
       }}
@@ -82,7 +82,7 @@ const Decision = () => {
           container
           spacing="20"
           sx={{
-            mt: "0",
+            mt: {xs: "0", lg: "30px"},
           }}
         >
           {filteredItems.map((item, index) => {
