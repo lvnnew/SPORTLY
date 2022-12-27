@@ -12,6 +12,11 @@ const FooterMenuItem = ({ href, title }) => {
           fontSize: { xs: "14px", md: "18px" },
           lineHeight: { xs: "18px", md: "25px" },
           color: "#16192C80",
+          transition: "all 0.2s ease",
+
+          ":hover": {
+            color: "#205EDC"
+          }
         }}
       >
         {title}

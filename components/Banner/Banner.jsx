@@ -62,6 +62,11 @@ const Banner = () => {
                 mr: "auto",
                 display: "flex",
                 borderRadius: "10px",
+                transition: "all 0.2s ease",
+
+                ":hover": {
+                  backgroundColor: "#092553"
+                }
               }}
             >
               Начать работу
