@@ -8,7 +8,7 @@ import "swiper/css/grid";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { Grid, Pagination, Navigation } from "swiper";
-import {AboutData} from "./AboutData";
+import {aboutData} from "./aboutData";
 const About = () => {
   const swiperRef = React.useRef(null);
   const [indexSlide, setIndexSlide] = React.useState(0);
@@ -70,7 +70,7 @@ const About = () => {
             className="aboutSwiper"
             ref={swiperRef}
           >
-            {AboutData.map((item, index) => {
+            {aboutData.map((item, index) => {
               return (
                 <SwiperSlide key={index}>
                   <AboutItem img={item.img} title={item.title} />

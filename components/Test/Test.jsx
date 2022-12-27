@@ -2,7 +2,7 @@ import { Box, Container, Typography } from "@mui/material";
 import React from "react";
 import Title from "../Title";
 import TestItem from "./TestItem";
-import {TestData} from "./TestData";
+import {testData} from "./testData";
 import Form from "../Form/Form";
 
 const Test = () => {
@@ -46,7 +46,7 @@ const Test = () => {
             },
           }}
         >
-          {TestData.map((item, index) => {
+          {testData.map((item, index) => {
             return <TestItem key={index} num={item.num} title={item.title} />;
           })}
         </Box>

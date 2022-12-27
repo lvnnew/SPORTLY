@@ -2,7 +2,7 @@ import { Container, Grid } from "@mui/material";
 import React from "react";
 import Title from "../Title";
 import ReviewsItem from "./ReviewsItem";
-import {ReviewsData} from "./ReviewsData";
+import {reviewsData} from "./reviewsData";
 
 const Reviews = () => {
   return (
@@ -32,7 +32,7 @@ const Reviews = () => {
             pt: { xs: "24px", lg: "40px" },
           }}
         >
-          {ReviewsData.map((item, index) => {
+          {reviewsData.map((item, index) => {
             return (
               <Grid key={index} item xs={12} md={6} lg={4}>
                 <ReviewsItem

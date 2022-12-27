@@ -1,4 +1,4 @@
-export const DecisionData = [
+export const decisionData = [
   {
     index: 0,
     no: "Неудобно анализировать график предстоящих и совершенных мероприятий",

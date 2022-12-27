@@ -1,4 +1,4 @@
-export const TestData = [
+export const testData = [
   {
     num: 1,
     title: "Интервью и выяснение потребностей",

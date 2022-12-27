@@ -1,6 +1,6 @@
 import { Box, Container, Grid, Typography } from "@mui/material";
 import React from "react";
-import {DecisionData} from "./DecisionData";
+import {decisionData} from "./decisionData";
 import DecisionItem from "./DecisionTabs/DecisionItem";
 import DecisionTab from "./DecisionTabs/DecisionTab";
 
@@ -11,7 +11,7 @@ const Decision = () => {
     setActiveEl(parseInt(index));
   };
 
-  const filteredItems = DecisionData.filter((item) => {
+  const filteredItems = decisionData.filter((item) => {
     return item.index === activeEl;
   });
 
