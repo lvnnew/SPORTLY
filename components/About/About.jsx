@@ -58,6 +58,10 @@ const About = () => {
             }}
             modules={[Grid, Pagination, Navigation]}
             breakpoints={{
+              600: {
+                spaceBetween: 25,
+              },
+
               1200: {
                 spaceBetween: 22,
                 slidesPerView: 4,
