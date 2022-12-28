@@ -26,7 +26,7 @@ const Form = () => {
   const changeName = (e) => {
     setName({
       value: e.target.value, 
-      isError: (/^[A-Za-z\s]+$/.test(e.target.value) || e.target.value.length === 0) ? false : true
+      isError: (/^[A-Za-z\s, a-zа-яё]+$/.test(e.target.value) || e.target.value.length === 0) ? false : true
     });
   }
 
