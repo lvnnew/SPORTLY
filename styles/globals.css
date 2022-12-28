@@ -89,7 +89,7 @@ body {
 
 body {
   color: #16192c;
-  background-color: #fff;
+  background-color: #E6F1FF;
   overflow-x: hidden;
 }
 
@@ -183,6 +183,12 @@ a {
   }
 }
 
+@media(min-width: 380px) {
+  .about-item {
+    font-size: 18px;
+  }
+}
+
 @media (min-width: 900px) {
   .burgerItem {
     display: none !important;
@@ -198,7 +204,7 @@ a {
   }
 
   .aboutSwiper .swiper-wrapper {
-    padding-bottom: 43px;
+    padding-bottom: 27px;
   }
 }
 

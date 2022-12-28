@@ -3,6 +3,54 @@ import Link from "next/link";
 import React from "react";
 
 const Form = () => {
+  const [name, setName] = React.useState({
+    value: "",
+    isError: false
+  });
+  
+  const [tel, setTel] = React.useState({
+    value: "",
+    isError: false
+  });
+
+  const [email, setEmail] = React.useState({
+    value: "",
+    isError: false
+  });
+
+  const [website, setWebsite] = React.useState({
+    value: "",
+    isError: false
+  });
+
+  const changeName = (e) => {
+    setName({
+      value: e.target.value, 
+      isError: (/^[A-Za-z\s]+$/.test(e.target.value) || e.target.value.length === 0) ? false : true
+    });
+  }
+
+  const changeTel = (e) => {
+    setTel({
+      value: e.target.value, 
+      isError: (/^[0-9]+$/.test(e.target.value) || e.target.value.length === 0) ? false : true
+    })
+  }
+
+  const changeEmail = (e) => {
+    setEmail({
+      value: e.target.value,
+      isError: (/^\S+@\S+\.\S+$/.test(e.target.value) || e.target.value.length === 0) ? false : true
+    })
+  }
+
+  const changeWebsite = (e) => {
+    setWebsite({
+      value: e.target.value,
+      isError: (/^(ftp|http|https):\/\/[^ "]+$/.test(e.target.value) || e.target.value.length === 0) ? false : true 
+    })
+  }
+
   return (
     <Grid
       container
@@ -37,6 +85,9 @@ const Form = () => {
             id="standard-basic"
             label="Имя"
             variant="standard"
+            value={name.value}
+            onChange={changeName}
+            error={name.isError}
             sx={{
               fontFamily: "Nunito Sans",
               width: "100%",
@@ -53,6 +104,9 @@ const Form = () => {
             id="standard-basic"
             label="Телефон"
             variant="standard"
+            value={tel.value}
+            onChange={changeTel}
+            error={tel.isError}
             sx={{
               fontFamily: "Nunito Sans",
               width: "100%",
@@ -69,6 +123,10 @@ const Form = () => {
             id="standard-basic"
             label="E-mail"
             variant="standard"
+            type="email"
+            value={email.value}
+            onChange={changeEmail}
+            error={email.isError}
             sx={{
               fontFamily: "Nunito Sans",
               width: "100%",
@@ -85,6 +143,9 @@ const Form = () => {
             id="standard-basic"
             label="Ваш сайт"
             variant="standard"
+            value={website.value}
+            onChange={changeWebsite}
+            error={website.isError}
             sx={{
               fontFamily: "Nunito Sans",
               width: "100%",

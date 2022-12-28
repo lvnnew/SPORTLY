@@ -20,6 +20,7 @@ const About = () => {
       id="about"
       sx={{
         padding: "40px 0",
+        backgroundColor: "#fff"
       }}
     >
       <Container maxWidth="lg">

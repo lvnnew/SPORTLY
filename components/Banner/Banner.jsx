@@ -18,6 +18,7 @@ const Banner = () => {
         backgroundPosition: { xs: "0 -50px", lg: "top right" },
         backgroundSize: { xs: "100%", lg: "contain" },
         minHeight: { xs: "auto", lg: "calc(100vh - 58px)", xl: "auto" },
+        backgroundColor: "#fff"
       }}
     >
       <Container maxWidth="lg">

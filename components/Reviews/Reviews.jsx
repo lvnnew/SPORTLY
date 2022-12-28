@@ -12,7 +12,7 @@ const Reviews = () => {
       container
       sx={{
         pb: { xs: "60px", lg: "120px" },
-        borderRadius: "0 0 20px 20px",
+        borderRadius: {xs: "0 0 20px 20px", lg: "0 0 40px 40px"},
         backgroundColor: "#fff",
         mb: "-20px",
         position: "relative",

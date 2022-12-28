@@ -16,13 +16,15 @@ const Decision = () => {
   });
 
   return (
-    <Box
-      variant="section"
+    <Box variant="section" sx={{
+      backgroundColor: "#fff"
+    }}>
+      <Box
       sx={{
         pt: {xs: "24px", lg: "50px"},
         pb: {xs: "60px", lg: "78px"},
         backgroundColor: "#E6F1FF",
-        borderRadius: "20px 20px 0 0",
+        borderRadius: {xs: "20px 20px 0 0", lg: "40px 40px 0 0"},
       }}
     >
       <Container maxWidth="lg">
@@ -42,7 +44,7 @@ const Decision = () => {
           container
           spacing="20"
           sx={{
-            mt: "3px",
+            mt: {xs: "3px", lg: "20px"},
           }}
         >
           <Grid item xs={6} lg={3}>
@@ -100,6 +102,7 @@ const Decision = () => {
           })}
         </Grid>
       </Container>
+    </Box>
     </Box>
   );
 };

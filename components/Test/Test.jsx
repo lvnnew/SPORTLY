@@ -12,7 +12,7 @@ const Test = () => {
       variant="section"
       sx={{
         padding: {xs: "60px 0 40px", lg: "66px 0 70px"},
-        borderRadius: "20px 20px 0 0",
+        borderRadius: {xs: "20px 20px 0 0", lg: "40px 40px 0 0"},
         marginTop: "-20px",
         backgroundColor: "#fff",
       }}
