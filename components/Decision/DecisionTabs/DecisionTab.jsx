@@ -11,7 +11,10 @@ const DecisionTab = ({ onClick, isActive, title, index }) => {
         padding: { xs: "10px", lg: "15px 20px" },
         borderRadius: "20px",
         border: isActive ? "2px solid #16192C" : "2px solid #16192C80",
-        maxHeight: { xs: "108px", sm: "119px" },
+        maxHeight: {sm: "119px" },
+        minHeight: {xs: "108px", sm: "119px"},
+        justifyContent: "center",
+        alignItems: "center",
         cursor: "pointer",
       }}
       index={IndeterminateCheckBoxSharp}
@@ -27,7 +30,7 @@ const DecisionTab = ({ onClick, isActive, title, index }) => {
           variant="p"
           sx={{
             display: "inline-block",
-            fontSize: { xs: "14px", lg: "18px" },
+            fontSize: { xs: "14px", md: "18px" },
             fontWeight: 700,
             lineHeight: { xs: "17px", lg: "22px" },
             color: isActive ? "#16192C" : "#16192C80",

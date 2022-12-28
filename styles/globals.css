@@ -177,12 +177,6 @@ a {
   background-color: #205EDC;
 }
 
-@media (max-width: 1200px) {
-  .arrow {
-    display: none !important;
-  }
-}
-
 @media(min-width: 380px) {
   .about-item {
     font-size: 18px;
@@ -211,6 +205,12 @@ a {
 @media (min-width: 1200px) {
   .aboutSwiper {
     max-width: 1010px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .arrow {
+    display: none !important;
   }
 }
 

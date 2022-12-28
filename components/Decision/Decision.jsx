@@ -59,7 +59,7 @@ const Decision = () => {
             <DecisionTab
               onClick={() => tabHandler(1)}
               isActive={activeEl === 1 ? true : false}
-              title="Проблемы графика и расписания при использовании Exel или блокнота"
+              title="Административные проблемы при отсутствии автоматизации"
               index={1}
             />
           </Grid>
@@ -67,7 +67,7 @@ const Decision = () => {
             <DecisionTab
               onClick={() => tabHandler(2)}
               isActive={activeEl === 2 ? true : false}
-              title="Проблемы графика и расписания при использовании Exel или блокнота"
+              title="Проблемы абонементов"
               index={2}
             />
           </Grid>
@@ -75,7 +75,7 @@ const Decision = () => {
             <DecisionTab
               onClick={() => tabHandler(3)}
               isActive={activeEl === 3 ? true : false}
-              title="Проблемы графика и расписания при использовании Exel или блокнота"
+              title="Страх трудностей в обучении программой, ее сложный интерфейс"
               index={3}
             />
           </Grid>
