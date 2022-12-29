@@ -8,7 +8,7 @@ const AboutItem = ({ img, title }) => {
       container
       sx={{
         height: { xs: "216px", lg: "285px" },
-        boxShadow: "0px 1px 15px rgba(22, 25, 44, 0.18)",
+        boxShadow: "0px 1px 12px rgba(22, 25, 44, 0.18)",
         borderRadius: "10px",
         maxWidth: {
           lg: "234px",

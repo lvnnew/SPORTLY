@@ -1,4 +1,5 @@
 import { Box, Button, Container, Grid, Typography } from "@mui/material";
+import Link from "next/link";
 import React from "react";
 import Advantages from "./Advantages/Advantages";
 
@@ -44,6 +45,7 @@ const Banner = () => {
             >
               CRM для детских спортивных секций и образовательных центов
             </Typography>
+            <Link href="#form">
             <Button
               variant="contained"
               disableElevation
@@ -72,6 +74,7 @@ const Banner = () => {
             >
               Начать работу
             </Button>
+            </Link>
           </Grid>
           <Grid item xs={12} sm={8} md={6} sx={{ margin: "0 auto" }}>
             <Advantages />
