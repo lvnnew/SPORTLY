@@ -53,7 +53,7 @@ const About: FC = () => {
             }}
           ></Box>
           <Swiper
-            onRealIndexChange={(el) => {
+            onRealIndexChange={(el: any) => {
               setIndexSlide(el.activeIndex);
               setLastSlide(el.imagesLoaded);
             }}
