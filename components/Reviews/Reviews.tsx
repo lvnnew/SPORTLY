@@ -1,10 +1,10 @@
 import { Container, Grid } from "@mui/material";
-import React from "react";
+import React, { FC } from "react";
 import Title from "../Title";
 import ReviewsItem from "./ReviewsItem";
-import {reviewsData} from "./reviewsData.js";
+import {reviewsData} from "./reviewsData";
 
-const Reviews = () => {
+const Reviews: FC = () => {
   return (
     <Grid
       id="reviews"

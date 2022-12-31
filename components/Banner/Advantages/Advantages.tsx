@@ -1,8 +1,8 @@
 import { Grid } from "@mui/material";
-import React from "react";
+import React, { FC } from "react";
 import AdvantagesItem from "./AdvantagesItem";
 
-const Advantages = () => {
+const Advantages: FC = () => {
   return (
     <Grid
       container

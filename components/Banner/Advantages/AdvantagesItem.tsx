@@ -1,8 +1,13 @@
 import { Box, Grid, Typography } from "@mui/material";
 import Image from "next/image";
-import React from "react";
+import React, { FC } from "react";
 
-const AdvantagesItem = ({ num, title }) => {
+interface IAdvantagesItem {
+  num: string;
+  title: string;
+}
+
+const AdvantagesItem: FC<IAdvantagesItem> = ({ num, title }) => {
   return (
     <Grid container>
       <Grid
@@ -14,7 +19,7 @@ const AdvantagesItem = ({ num, title }) => {
         }}
       >
         <Typography
-          variant="span"
+          component="span"
           sx={{
             display: "inline-block",
             fontSize: { xs: "32px", lg: "48px" },

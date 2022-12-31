@@ -1,4 +1,11 @@
-export const reviewsData = [
+interface IReviewsDataItem {
+  name: string;
+  specialization: string;
+  rating: number;
+  text: string;
+}
+
+export const reviewsData: IReviewsDataItem[] = [
   {
     name: "Николай",
     specialization: "Тренер футбольной команды",

@@ -1,7 +1,14 @@
 import { Grid, Typography } from "@mui/material";
 import React from "react";
 
-const Title = ({ title, subTitle, left, leftDesk }) => {
+interface ITitle {
+  title: string;
+  subTitle?: string;
+  left?: boolean;
+  leftDesk?: boolean;
+}
+
+const Title = ({ title, subTitle, left, leftDesk }: ITitle) => {
   return (
     <Grid container sx={{ textAlign: "center" }}>
       <Grid item xs={12}>

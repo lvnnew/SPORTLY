@@ -1,15 +1,21 @@
 import { Box, Typography } from "@mui/material";
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
+import React, { FC } from "react";
 
-const Tel = ({ left = false, mt, right = false }) => {
+interface ITel {
+  left?: boolean;
+  mt?: string;
+  right?: boolean;
+}
+
+const Tel: FC<ITel> = ({ left = false, mt, right = false }) => {
   return (
     <Box
       sx={{
         display: "flex",
         flexDirection: "column",
-        alignItems: {xs: left ? "start" : "center", lg: "start"},
+        alignItems: { xs: left ? "start" : "center", lg: "start" },
         mt: { xs: mt ? mt : "43px", md: "0" },
         gap: "3px",
       }}
@@ -24,7 +30,7 @@ const Tel = ({ left = false, mt, right = false }) => {
         <Image src="/tel.svg" alt="tel" width="19" height="19" />
         <Link href="tel:79877655432">
           <Typography
-            variant="span"
+            component="span"
             sx={{
               display: "inline-block",
               fontSize: "16px",
@@ -38,10 +44,10 @@ const Tel = ({ left = false, mt, right = false }) => {
         </Link>
       </Box>
       <Typography
-        variant="span"
+        component="span"
         sx={{
           display: "inline-block",
-          fontWeight: {xs: 400, lg: 600},
+          fontWeight: { xs: 400, lg: 600 },
           fontSize: "14px",
           lineHeight: "18px",
           color: "#16192C",

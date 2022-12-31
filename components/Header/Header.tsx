@@ -2,12 +2,12 @@ import { AppBar, Box, Container } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseOutlinedIcon from "@mui/icons-material/CloseOutlined";
 import Logo from "../Logo";
-import React from "react";
+import React, { FC } from "react";
 import Menu from "./Menu/Menu";
 import Tel from "./Menu/Tel";
 
-const Header = () => {
-  const [isOpenMenu, setIsOpenMenu] = React.useState(false);
+const Header: FC = () => {
+  const [isOpenMenu, setIsOpenMenu] = React.useState<boolean>(false);
 
   const burgerHandler = () => {
     setIsOpenMenu(!isOpenMenu);

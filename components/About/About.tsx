@@ -1,26 +1,29 @@
-import { Box, Button, Container } from "@mui/material";
-import React from "react";
+import { Box, Container } from "@mui/material";
+import React, { FC } from "react";
 import Title from "../Title";
 import AboutItem from "./AboutItem";
-import { Swiper, SwiperSlide } from "swiper/react";
+import { Swiper, SwiperRef, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/grid";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { Grid, Pagination, Navigation } from "swiper";
-import {aboutData} from "./aboutData.js";
-const About = () => {
-  const swiperRef = React.useRef(null);
-  const [indexSlide, setIndexSlide] = React.useState(0);
-  const [lastSlide, setLastSlide] = React.useState(undefined);
+import { aboutData } from "./aboutData";
+
+const About: FC = () => {
+  const swiperRef = React.useRef<SwiperRef | null>(null);
+  const [indexSlide, setIndexSlide] = React.useState<number>(0);
+  const [lastSlide, setLastSlide] = React.useState<undefined | number>(
+    undefined
+  );
 
   return (
     <Box
-      variant="section"
+      component="section"
       id="about"
       sx={{
         padding: "40px 0",
-        backgroundColor: "#fff"
+        backgroundColor: "#fff",
       }}
     >
       <Container maxWidth="lg">
@@ -28,13 +31,17 @@ const About = () => {
 
         <Box
           sx={{
-            mt: {xs: "10px", md: "24px"},
+            mt: { xs: "10px", md: "24px" },
             position: "relative",
           }}
         >
           <Box
             className={`arrow prev ${indexSlide === 0 ? "disabled" : ""}`}
-            onClick={() => swiperRef.current.swiper.slidePrev()}
+            onClick={() => {
+              if (swiperRef.current) {
+                swiperRef.current.swiper.slidePrev();
+              }
+            }}
             sx={{
               position: "absolute",
               top: "43%",
@@ -85,9 +92,13 @@ const About = () => {
           </Swiper>
           <Box
             className={`arrow next ${
-              indexSlide === lastSlide - 4 ? "disabled" : ""
+              lastSlide && indexSlide === lastSlide - 4 ? "disabled" : ""
             }`}
-            onClick={() => swiperRef.current.swiper.slideNext()}
+            onClick={() => {
+              if (swiperRef.current) {
+                swiperRef.current.swiper.slideNext();
+              }
+            }}
             sx={{
               display: "inline-block",
               position: "absolute",

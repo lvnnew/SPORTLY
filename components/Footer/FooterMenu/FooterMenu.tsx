@@ -1,12 +1,10 @@
 import { Box } from "@mui/material";
-import React from "react";
+import React, { FC } from "react";
 import FooterMenuItem from "./FooterMenuItem";
 
-const FooterMenu = () => {
+const FooterMenu: FC = () => {
   return (
     <Box
-      container
-      spacing="13"
       sx={{
         display: "flex",
         flexDirection: { xs: "column", md: "row" },

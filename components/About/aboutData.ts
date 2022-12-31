@@ -1,4 +1,9 @@
-export const aboutData = [
+interface IAboutData {
+  img: string;
+  title: string;
+}
+
+export const aboutData: IAboutData[] = [
   {
     img: "/about-items/fight.svg",
     title: "Секции единоборств",

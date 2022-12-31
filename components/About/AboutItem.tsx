@@ -1,8 +1,13 @@
 import { Box, Grid, Typography } from "@mui/material";
 import Image from "next/image";
-import React from "react";
+import React, { FC } from "react";
 
-const AboutItem = ({ img, title }) => {
+interface IAboutItem {
+  img: string;
+  title: string;
+}
+
+const AboutItem: FC<IAboutItem> = ({ img, title }) => {
   return (
     <Grid
       container
@@ -39,7 +44,7 @@ const AboutItem = ({ img, title }) => {
       </Grid>
       <Typography
         className="about-item"
-        variant="span"
+        component="span"
         sx={{
           display: "inline-block",
           textAlign: "center",

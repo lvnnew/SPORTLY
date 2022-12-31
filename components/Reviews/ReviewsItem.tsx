@@ -1,9 +1,16 @@
 import { Box, Grid, Rating, Typography } from "@mui/material";
 import Image from "next/image";
-import React from "react";
+import React, { FC } from "react";
 import StarRateIcon from "@mui/icons-material/StarRate";
 
-const ReviewsItem = ({ name, specialization, text, rating }) => {
+interface IReviewsItem {
+  name: string;
+  specialization: string;
+  text: string;
+  rating: number;
+}
+
+const ReviewsItem: FC<IReviewsItem> = ({ name, specialization, text, rating }) => {
   return (
     <Grid
       container
@@ -44,7 +51,7 @@ const ReviewsItem = ({ name, specialization, text, rating }) => {
           }}
         >
           <Typography
-            variant="span"
+            component="span"
             sx={{
               display: "inline-block",
               fontSize: "16px",

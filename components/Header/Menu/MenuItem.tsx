@@ -1,12 +1,18 @@
 import { Typography } from "@mui/material";
 import Link from "next/link";
-import React from "react";
+import React, { FC } from "react";
 
-const MenuItem = ({ href, title, onClick }) => {
+interface IMenuItem {
+  href: string;
+  title: string;
+  onClick: React.MouseEventHandler
+}
+
+const MenuItem: FC<IMenuItem> = ({ href, title, onClick }) => {
   return (
     <Link onClick={onClick} href={href}>
       <Typography
-        variant="span"
+        component="span"
         sx={{
           display: "inline-block",
           fontSize: "18px",

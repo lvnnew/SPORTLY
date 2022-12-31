@@ -1,14 +1,14 @@
 import { Box, Container, Grid, Typography } from "@mui/material";
-import React from "react";
-import {decisionData} from "./decisionData.js";
+import React, { FC } from "react";
+import {decisionData} from "./decisionData";
 import DecisionItem from "./DecisionTabs/DecisionItem";
 import DecisionTab from "./DecisionTabs/DecisionTab";
 
-const Decision = () => {
-  const [activeEl, setActiveEl] = React.useState(0);
+const Decision: FC = () => {
+  const [activeEl, setActiveEl] = React.useState<number>(0);
 
-  const tabHandler = (index) => {
-    setActiveEl(parseInt(index));
+  const tabHandler = (index: number) => {
+    setActiveEl(index);
   };
 
   const filteredItems = decisionData.filter((item) => {
@@ -16,7 +16,7 @@ const Decision = () => {
   });
 
   return (
-    <Box variant="section" sx={{
+    <Box component="section" sx={{
       backgroundColor: "#fff"
     }}>
       <Box

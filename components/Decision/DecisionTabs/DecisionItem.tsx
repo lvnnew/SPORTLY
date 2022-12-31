@@ -1,9 +1,14 @@
 import { Grid, Typography } from "@mui/material";
-import React from "react";
+import React, { FC } from "react";
 import CloseIcon from "@mui/icons-material/Close";
 import CheckIcon from "@mui/icons-material/Check";
 
-const DecisionItem = ({ no, ok }) => {
+interface IDecisionItem {
+  no: string;
+  ok: string;
+}
+
+const DecisionItem: FC<IDecisionItem> = ({ no, ok }) => {
   return (
     <Grid container>
       <Grid
@@ -28,7 +33,7 @@ const DecisionItem = ({ no, ok }) => {
           }}
         >
           <Typography
-            variant="p"
+            variant="body1"
             sx={{
               fontSize: { xs: "16px", lg: "17px" },
               fontWeight: 700,
@@ -62,7 +67,7 @@ const DecisionItem = ({ no, ok }) => {
           }}
         >
           <Typography
-            variant="p"
+            variant="body1"
             sx={{
               fontSize: { xs: "16px", lg: "17px" },
               fontWeight: 400,

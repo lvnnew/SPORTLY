@@ -1,7 +1,12 @@
 import { Box, Typography } from "@mui/material";
-import React from "react";
+import React, { FC } from "react";
 
-const TestItem = ({ num, title, pos }) => {
+interface ITestItem {
+  num: number;
+  title: string;
+}
+
+const TestItem: FC<ITestItem> = ({ num, title }) => {
   return (
     <Box
       sx={{
@@ -19,7 +24,7 @@ const TestItem = ({ num, title, pos }) => {
       }}
     >
       <Typography
-        variant="span"
+        component="span"
         sx={{
           display: "inline-block",
           position: "absolute",

@@ -1,12 +1,17 @@
 import { Typography } from "@mui/material";
 import Link from "next/link";
-import React from "react";
+import React, { FC } from "react";
 
-const FooterMenuItem = ({ href, title }) => {
+interface IFooterMenuItem {
+  href: string;
+  title: string;
+}
+
+const FooterMenuItem: FC<IFooterMenuItem> = ({ href, title }) => {
   return (
     <Link href={href}>
       <Typography
-        variant="span"
+        component="span"
         sx={{
           display: "inline-block",
           fontSize: { xs: "14px", md: "18px" },

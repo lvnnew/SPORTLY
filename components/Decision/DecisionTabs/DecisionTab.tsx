@@ -1,8 +1,15 @@
 import { IndeterminateCheckBoxSharp } from "@mui/icons-material";
 import { Grid, Typography } from "@mui/material";
-import React from "react";
+import React, { FC } from "react";
 
-const DecisionTab = ({ onClick, isActive, title, index }) => {
+interface IDecisionTab {
+  onClick: React.MouseEventHandler;
+  isActive: boolean;
+  title: string;
+  index: number;
+}
+
+const DecisionTab: FC<IDecisionTab> = ({ onClick, isActive, title, index }) => {
   return (
     <Grid
       onClick={onClick}
@@ -17,7 +24,6 @@ const DecisionTab = ({ onClick, isActive, title, index }) => {
         alignItems: "center",
         cursor: "pointer",
       }}
-      index={IndeterminateCheckBoxSharp}
     >
       <Grid
         item
@@ -27,7 +33,7 @@ const DecisionTab = ({ onClick, isActive, title, index }) => {
         }}
       >
         <Typography
-          variant="p"
+          variant="body1"
           sx={{
             display: "inline-block",
             fontSize: { xs: "14px", md: "18px" },

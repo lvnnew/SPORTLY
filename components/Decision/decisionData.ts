@@ -1,4 +1,10 @@
-export const decisionData = [
+interface IDecisionDataItem {
+  index: number;
+  no: string;
+  ok: string;
+}
+
+export const decisionData: IDecisionDataItem[] = [
   {
     index: 0,
     no: "Неудобно анализировать график предстоящих и совершенных мероприятий",

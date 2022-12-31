@@ -1,10 +1,10 @@
 import { Container, Grid, Menu } from "@mui/material";
-import React from "react";
+import React, { FC } from "react";
 import Tel from "../Header/Menu/Tel";
 import Logo from "../Logo";
 import FooterMenu from "./FooterMenu/FooterMenu";
 
-const Footer = () => {
+const Footer: FC = () => {
   return (
     <>
       <Grid

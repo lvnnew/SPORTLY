@@ -1,12 +1,18 @@
 import { Box, createTheme, ThemeProvider } from "@mui/material";
 import { breakpoints } from "@mui/system";
-import React from "react";
+import React, { FC } from "react";
 import MenuItem from "./MenuItem";
 
-const Menu = ({setIsOpenMenu}) => {
+interface IMenu {
+  setIsOpenMenu?: Function;
+}
+
+const Menu: FC<IMenu> = ({setIsOpenMenu}) => {
 
   const menuItemHandler = () => {
-    setIsOpenMenu(false);
+    if(setIsOpenMenu) {
+      setIsOpenMenu(false);
+    }
   }
 
   return (

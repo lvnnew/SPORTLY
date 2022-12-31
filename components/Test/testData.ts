@@ -1,4 +1,9 @@
-export const testData = [
+interface ITestDataItem {
+  num: number;
+  title: string;
+}
+
+export const testData: ITestDataItem[] = [
   {
     num: 1,
     title: "Интервью и выяснение потребностей",

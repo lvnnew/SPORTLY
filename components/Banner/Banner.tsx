@@ -1,12 +1,12 @@
 import { Box, Button, Container, Grid, Typography } from "@mui/material";
 import Link from "next/link";
-import React from "react";
+import React, { FC } from "react";
 import Advantages from "./Advantages/Advantages";
 
-const Banner = () => {
+const Banner: FC = () => {
   return (
     <Box
-      variant="section"
+      component="section"
       sx={{
         pt: { xs: "30px", md: "100px", lg: "150px" },
         pb: { xs: "53px", md: "140px", lg: "192px" },
