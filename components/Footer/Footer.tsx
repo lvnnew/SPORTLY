@@ -1,8 +1,10 @@
-import { Container, Grid, Menu } from "@mui/material";
+import { Box, Container, Grid, Menu } from "@mui/material";
 import React, { FC } from "react";
 import Tel from "../Header/Menu/Tel";
 import Logo from "../Logo";
+import AnotherLink from "./AnotherLink";
 import FooterMenu from "./FooterMenu/FooterMenu";
+import Logos from "./Logos/Logos";
 
 const Footer: FC = () => {
   return (
@@ -19,14 +21,31 @@ const Footer: FC = () => {
       >
         <Container maxWidth="lg">
           <Grid container>
-            <Grid item xs={8}>
+            <Grid item xs={8} sx={{
+              display: "grid",
+              justifyContent: "space-between"
+            }}>
               <Logo />
-              <Tel left={true} mt="48px" />
+              <Tel left={true} mt="auto" />
             </Grid>
             <Grid item xs={4}>
               <FooterMenu />
             </Grid>
           </Grid>
+          <Box
+            sx={{
+              mt: "30px",
+              display: "flex",
+              alignItems: "center",
+              gap: "20px",
+              flexWrap: "wrap",
+              justifyContent: {xs: "center", md: "start"}
+            }}
+          >
+            <AnotherLink href="/offer.pdf" title="Договор оферты" />
+            <AnotherLink href="/pay.docx" title="Проведение оплаты" />
+          </Box>
+          <Logos />
         </Container>
       </Grid>
       <Grid
@@ -57,6 +76,20 @@ const Footer: FC = () => {
               <Tel right={true} />
             </Grid>
           </Grid>
+          <Box
+            sx={{
+              mt: { xs: "10px", lg: "30px" },
+              display: "flex",
+              alignItems: "center",
+              gap: "20px",
+              flexWrap: "wrap",
+              justifyContent: {xs: "center", md: "start"}
+            }}
+          >
+            <AnotherLink href="/offer.pdf" title="Договор оферты" />
+            <AnotherLink href="/pay.docx" title="Проведение оплаты" />
+          </Box>
+          <Logos />
         </Container>
       </Grid>
     </>

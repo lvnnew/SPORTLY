@@ -16,7 +16,7 @@ const Tel: FC<ITel> = ({ left = false, mt, right = false }) => {
         display: "flex",
         flexDirection: "column",
         alignItems: { xs: left ? "start" : "center", lg: "start" },
-        mt: { xs: mt ? mt : "43px", md: "0" },
+        mt: { xs: mt ? mt : "48px", md: "0" },
         gap: "3px",
       }}
     >

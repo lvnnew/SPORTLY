@@ -20,6 +20,7 @@ const DecisionTab: FC<IDecisionTab> = ({ onClick, isActive, title, index }) => {
         border: isActive ? "2px solid #16192C" : "2px solid #16192C80",
         maxHeight: {sm: "119px" },
         minHeight: {xs: "108px", sm: "119px"},
+        height: "100%",
         justifyContent: "center",
         alignItems: "center",
         cursor: "pointer",
@@ -40,6 +41,11 @@ const DecisionTab: FC<IDecisionTab> = ({ onClick, isActive, title, index }) => {
             fontWeight: 700,
             lineHeight: { xs: "17px", lg: "22px" },
             color: isActive ? "#16192C" : "#16192C80",
+            wordBreak: "break-all",
+
+            ["@media(min-width: 360px)"]: {
+              wordBreak: "normal !important"
+            }
           }}
         >
           {title}
