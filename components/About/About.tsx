@@ -56,7 +56,6 @@ const About: FC = () => {
             onRealIndexChange={(el) => {
               setIndexSlide(el.activeIndex);
               setLastSlide(el.imagesLoaded);
-              console.log(el);
             }}
             slidesPerView={2}
             grid={{
