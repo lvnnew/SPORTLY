@@ -19,7 +19,7 @@ const Banner: FC = () => {
         backgroundPosition: { xs: "0 -50px", lg: "top right" },
         backgroundSize: { xs: "100%", lg: "contain" },
         minHeight: { xs: "auto", lg: "calc(100vh - 58px)", xl: "auto" },
-        backgroundColor: "#fff"
+        backgroundColor: {xs: "#E6F1FF", sm: "#fff"}
       }}
     >
       <Container maxWidth="lg">
@@ -68,7 +68,7 @@ const Banner: FC = () => {
                 transition: "all 0.2s ease",
 
                 ":hover": {
-                  backgroundColor: "#092553"
+                  backgroundColor: "#0B49AD"
                 }
               }}
             >
