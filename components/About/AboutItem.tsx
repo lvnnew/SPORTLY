@@ -48,13 +48,13 @@ const AboutItem: FC<IAboutItem> = ({ img, title }) => {
         sx={{
           display: "inline-block",
           textAlign: "center",
-          fontSize: {xs: "15px", lg: "22px"},
+          fontSize: { xs: "15px", lg: "22px" },
           fontWeight: 700,
-          lineHeight: {xs: "22px", lg: "26px"},
+          lineHeight: { xs: "22px", lg: "26px" },
           mb: "100%",
           mt: { xs: "26px", lg: "45px" },
-          ml: {xs: "10px"},
-          mr: {xs: "10px", sm: "0"}
+          ml: { xs: "10px" },
+          mr: { xs: "10px", sm: "0" },
         }}
       >
         {title}

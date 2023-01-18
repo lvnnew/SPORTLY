@@ -21,10 +21,14 @@ const Footer: FC = () => {
       >
         <Container maxWidth="lg">
           <Grid container>
-            <Grid item xs={8} sx={{
-              display: "grid",
-              justifyContent: "space-between"
-            }}>
+            <Grid
+              item
+              xs={8}
+              sx={{
+                display: "grid",
+                justifyContent: "space-between",
+              }}
+            >
               <Logo />
               <Tel left={true} mt="auto" />
             </Grid>
@@ -39,7 +43,7 @@ const Footer: FC = () => {
               alignItems: "center",
               gap: "20px",
               flexWrap: "wrap",
-              justifyContent: {xs: "center", md: "start"}
+              justifyContent: { xs: "center", md: "start" },
             }}
           >
             <AnotherLink href="/offer.pdf" title="Договор оферты" />
@@ -83,7 +87,7 @@ const Footer: FC = () => {
               alignItems: "center",
               gap: "20px",
               flexWrap: "wrap",
-              justifyContent: {xs: "center", md: "start"}
+              justifyContent: { xs: "center", md: "start" },
             }}
           >
             <AnotherLink href="/offer.pdf" title="Договор оферты" />

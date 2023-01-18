@@ -26,10 +26,13 @@ const About: FC = () => {
         backgroundColor: "#fff",
       }}
     >
-      <Container maxWidth="lg" sx={{
-        pl: {xs: "0", lg: "16px"},
-        pr: {xs: "0", lg: "16px"}
-      }}>
+      <Container
+        maxWidth="lg"
+        sx={{
+          pl: { xs: "0", lg: "16px" },
+          pr: { xs: "0", lg: "16px" },
+        }}
+      >
         <Title title="CRM" subTitle="идеальна для" />
 
         <Box

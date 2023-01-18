@@ -7,7 +7,7 @@ interface IAnotherLink {
   title: string;
 }
 
-const AnotherLink: FC<IAnotherLink> = ({href, title}) => {
+const AnotherLink: FC<IAnotherLink> = ({ href, title }) => {
   return (
     <Box
       sx={{
@@ -18,8 +18,8 @@ const AnotherLink: FC<IAnotherLink> = ({href, title}) => {
         transition: "all 0.2s ease",
 
         ":hover": {
-          color: "#205EDC"
-        }
+          color: "#205EDC",
+        },
       }}
     >
       <Link href={href}>{title}</Link>

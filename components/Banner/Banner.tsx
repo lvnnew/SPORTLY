@@ -19,7 +19,7 @@ const Banner: FC = () => {
         backgroundPosition: { xs: "0 -50px", lg: "top right" },
         backgroundSize: { xs: "100%", lg: "contain" },
         minHeight: { xs: "auto", lg: "calc(100vh - 58px)", xl: "auto" },
-        backgroundColor: {xs: "#E6F1FF", sm: "#fff"}
+        backgroundColor: { xs: "#E6F1FF", sm: "#fff" },
       }}
     >
       <Container maxWidth="lg">
@@ -46,34 +46,34 @@ const Banner: FC = () => {
               CRM для детских спортивных секций и образовательных центов
             </Typography>
             <Link href="#form">
-            <Button
-              variant="contained"
-              disableElevation
-              sx={{
-                fontFamily: "Nunito Sans",
-                mt: { xs: "30px", md: "50px" },
-                maxWidth: { xs: "100%", sm: "293px" },
-                width: { xs: "100%" },
-                backgroundColor: "#205EDC",
-                fontSize: { xs: "18px", md: "24px" },
-                fontWeight: 700,
-                lineHeight: { xs: "22px", md: "29px" },
-                minHeight: { xs: "48px", md: "69px" },
-                padding: { xs: "14px 69px", md: "20px 20px" },
-                textTransform: "none",
-                ml: { xs: "auto", md: "0" },
-                mr: "auto",
-                display: "flex",
-                borderRadius: "10px",
-                transition: "all 0.2s ease",
+              <Button
+                variant="contained"
+                disableElevation
+                sx={{
+                  fontFamily: "Nunito Sans",
+                  mt: { xs: "30px", md: "50px" },
+                  maxWidth: { xs: "100%", sm: "293px" },
+                  width: { xs: "100%" },
+                  backgroundColor: "#205EDC",
+                  fontSize: { xs: "18px", md: "24px" },
+                  fontWeight: 700,
+                  lineHeight: { xs: "22px", md: "29px" },
+                  minHeight: { xs: "48px", md: "69px" },
+                  padding: { xs: "14px 69px", md: "20px 20px" },
+                  textTransform: "none",
+                  ml: { xs: "auto", md: "0" },
+                  mr: "auto",
+                  display: "flex",
+                  borderRadius: "10px",
+                  transition: "all 0.2s ease",
 
-                ":hover": {
-                  backgroundColor: "#0B49AD"
-                }
-              }}
-            >
-              Начать работу
-            </Button>
+                  ":hover": {
+                    backgroundColor: "#0B49AD",
+                  },
+                }}
+              >
+                Начать работу
+              </Button>
             </Link>
           </Grid>
           <Grid item xs={12} sm={8} md={6} sx={{ margin: "0 auto" }}>

@@ -7,14 +7,7 @@ interface IMenu {
   setIsOpenMenu?: Function;
 }
 
-const Menu: FC<IMenu> = ({setIsOpenMenu}) => {
-
-  const menuItemHandler = () => {
-    if(setIsOpenMenu) {
-      setIsOpenMenu(false);
-    }
-  }
-
+const Menu: FC<IMenu> = ({ setIsOpenMenu }) => {
   return (
     <Box
       sx={{
@@ -27,10 +20,18 @@ const Menu: FC<IMenu> = ({setIsOpenMenu}) => {
         mr: { md: "50px", lg: "170px" },
       }}
     >
-      <MenuItem onClick={menuItemHandler} href="#about" title="О CRM" />
-      <MenuItem onClick={menuItemHandler} href="#test" title="Тестовый запуск" />
-      <MenuItem onClick={menuItemHandler} href="#contacts" title="Контакты" />
-      <MenuItem onClick={menuItemHandler} href="#reviews" title="Отзывы" />
+      <MenuItem href="about" title="О CRM" setIsOpenMenu={setIsOpenMenu} />
+      <MenuItem
+        href="test"
+        title="Тестовый запуск"
+        setIsOpenMenu={setIsOpenMenu}
+      />
+      <MenuItem
+        href="contacts"
+        title="Контакты"
+        setIsOpenMenu={setIsOpenMenu}
+      />
+      <MenuItem href="reviews" title="Отзывы" setIsOpenMenu={setIsOpenMenu} />
     </Box>
   );
 };

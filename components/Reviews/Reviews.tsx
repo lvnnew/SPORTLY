@@ -2,7 +2,7 @@ import { Container, Grid } from "@mui/material";
 import React, { FC } from "react";
 import Title from "../Title";
 import ReviewsItem from "./ReviewsItem";
-import {reviewsData} from "./reviewsData";
+import { reviewsData } from "./reviewsData";
 
 const Reviews: FC = () => {
   return (
@@ -12,7 +12,7 @@ const Reviews: FC = () => {
       container
       sx={{
         pb: { xs: "60px", lg: "120px" },
-        borderRadius: {xs: "0 0 20px 20px", lg: "0 0 40px 40px"},
+        borderRadius: { xs: "0 0 20px 20px", lg: "0 0 40px 40px" },
         backgroundColor: "#fff",
         mb: "-20px",
         position: "relative",
@@ -28,7 +28,7 @@ const Reviews: FC = () => {
         />
         <Grid
           container
-          spacing={{xs: "18px", lg: "26px"}}
+          spacing={{ xs: "18px", lg: "26px" }}
           sx={{
             pt: { xs: "24px", lg: "40px" },
           }}

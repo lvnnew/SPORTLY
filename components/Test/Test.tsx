@@ -2,7 +2,7 @@ import { Box, Container, Typography } from "@mui/material";
 import React, { FC } from "react";
 import Title from "../Title";
 import TestItem from "./TestItem";
-import {testData} from "./testData";
+import { testData } from "./testData";
 import Form from "../Form/Form";
 
 const Test: FC = () => {
@@ -11,8 +11,8 @@ const Test: FC = () => {
       id="test"
       component="section"
       sx={{
-        padding: {xs: "60px 0 40px", lg: "66px 0 70px"},
-        borderRadius: {xs: "20px 20px 0 0", lg: "40px 40px 0 0"},
+        padding: { xs: "60px 0 40px", lg: "66px 0 70px" },
+        borderRadius: { xs: "20px 20px 0 0", lg: "40px 40px 0 0" },
         marginTop: "-20px",
         backgroundColor: "#fff",
       }}
@@ -29,7 +29,7 @@ const Test: FC = () => {
             display: "flex",
             flexDirection: "column",
             alignItems: "center",
-            gap: {xs: "67px", lg: "42px"},
+            gap: { xs: "67px", lg: "42px" },
             position: "relative",
             mt: { xs: "34px" },
 

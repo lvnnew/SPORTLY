@@ -89,7 +89,7 @@ body {
 
 body {
   color: #16192c;
-  background-color: #E6F1FF;
+  background-color: #e6f1ff;
   overflow-x: hidden;
 }
 
@@ -173,11 +173,13 @@ a {
   margin: 0 !important;
 }
 
-.aboutSwiper .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
-  background-color: #205EDC;
+.aboutSwiper
+  .swiper-pagination
+  .swiper-pagination-bullet.swiper-pagination-bullet-active {
+  background-color: #205edc;
 }
 
-@media(min-width: 380px) {
+@media (min-width: 380px) {
   .about-item {
     font-size: 18px;
   }

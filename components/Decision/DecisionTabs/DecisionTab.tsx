@@ -18,8 +18,8 @@ const DecisionTab: FC<IDecisionTab> = ({ onClick, isActive, title, index }) => {
         padding: { xs: "10px", lg: "15px 20px" },
         borderRadius: "20px",
         border: isActive ? "2px solid #16192C" : "2px solid #16192C80",
-        maxHeight: {sm: "119px" },
-        minHeight: {xs: "108px", sm: "119px"},
+        maxHeight: { sm: "119px" },
+        minHeight: { xs: "108px", sm: "119px" },
         height: "100%",
         justifyContent: "center",
         alignItems: "center",
@@ -44,8 +44,8 @@ const DecisionTab: FC<IDecisionTab> = ({ onClick, isActive, title, index }) => {
             wordBreak: "break-all",
 
             ["@media(min-width: 360px)"]: {
-              wordBreak: "normal !important"
-            }
+              wordBreak: "normal !important",
+            },
           }}
         >
           {title}

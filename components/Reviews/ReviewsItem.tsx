@@ -10,7 +10,12 @@ interface IReviewsItem {
   rating: number;
 }
 
-const ReviewsItem: FC<IReviewsItem> = ({ name, specialization, text, rating }) => {
+const ReviewsItem: FC<IReviewsItem> = ({
+  name,
+  specialization,
+  text,
+  rating,
+}) => {
   return (
     <Grid
       container
@@ -37,7 +42,7 @@ const ReviewsItem: FC<IReviewsItem> = ({ name, specialization, text, rating }) =
           sx={{
             position: "relative",
             height: "100%",
-            maxHeight: "42px"
+            maxHeight: "42px",
           }}
         >
           <Image src="/avatar.svg" alt="avatar" fill={true} />
@@ -80,7 +85,7 @@ const ReviewsItem: FC<IReviewsItem> = ({ name, specialization, text, rating }) =
         item
         xs={12}
         sx={{
-          margin: {xs: "12px 0", lg: "15px 0"}
+          margin: { xs: "12px 0", lg: "15px 0" },
         }}
       >
         <Rating
@@ -99,7 +104,7 @@ const ReviewsItem: FC<IReviewsItem> = ({ name, specialization, text, rating }) =
         item
         xs={12}
         sx={{
-          mt: { xs: "0"},
+          mt: { xs: "0" },
           mb: {
             lg: "100%",
           },

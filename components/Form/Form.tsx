@@ -10,51 +10,65 @@ interface IFormInput {
 const Form: FC = () => {
   const [name, setName] = React.useState<IFormInput>({
     value: "",
-    isError: false
+    isError: false,
   });
-  
+
   const [tel, setTel] = React.useState<IFormInput>({
     value: "",
-    isError: false
+    isError: false,
   });
 
   const [email, setEmail] = React.useState<IFormInput>({
     value: "",
-    isError: false
+    isError: false,
   });
 
   const [website, setWebsite] = React.useState<IFormInput>({
     value: "",
-    isError: false
+    isError: false,
   });
 
   const changeName = (e: React.ChangeEvent<HTMLInputElement>) => {
     setName({
-      value: e.target.value, 
-      isError: (/^[A-Za-z\s, А-Яа-яё]+$/.test(e.target.value) || e.target.value.length === 0) ? false : true
+      value: e.target.value,
+      isError:
+        /^[A-Za-z\s, А-Яа-яё]+$/.test(e.target.value) ||
+        e.target.value.length === 0
+          ? false
+          : true,
     });
-  }
+  };
 
   const changeTel = (e: React.ChangeEvent<HTMLInputElement>) => {
     setTel({
-      value: e.target.value, 
-      isError: (/^[0-9]+$/.test(e.target.value) || e.target.value.length === 0) ? false : true
-    })
-  }
+      value: e.target.value,
+      isError:
+        /^[0-9]+$/.test(e.target.value) || e.target.value.length === 0
+          ? false
+          : true,
+    });
+  };
 
   const changeEmail = (e: React.ChangeEvent<HTMLInputElement>) => {
     setEmail({
       value: e.target.value,
-      isError: (/^\S+@\S+\.\S+$/.test(e.target.value) || e.target.value.length === 0) ? false : true
-    })
-  }
+      isError:
+        /^\S+@\S+\.\S+$/.test(e.target.value) || e.target.value.length === 0
+          ? false
+          : true,
+    });
+  };
 
   const changeWebsite = (e: React.ChangeEvent<HTMLInputElement>) => {
     setWebsite({
       value: e.target.value,
-      isError: (/^(ftp|http|https):\/\/[^ "]+$/.test(e.target.value) || e.target.value.length === 0) ? false : true 
-    })
-  }
+      isError:
+        /^(ftp|http|https):\/\/[^ "]+$/.test(e.target.value) ||
+        e.target.value.length === 0
+          ? false
+          : true,
+    });
+  };
 
   return (
     <Grid

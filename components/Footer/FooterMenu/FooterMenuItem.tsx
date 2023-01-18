@@ -1,5 +1,5 @@
 import { Typography } from "@mui/material";
-import Link from "next/link";
+import { Link } from "react-scroll";
 import React, { FC } from "react";
 
 interface IFooterMenuItem {
@@ -9,7 +9,7 @@ interface IFooterMenuItem {
 
 const FooterMenuItem: FC<IFooterMenuItem> = ({ href, title }) => {
   return (
-    <Link href={href}>
+    <Link href={href} to={href} spy={true} smooth={true} duration={500}>
       <Typography
         component="span"
         sx={{
@@ -18,11 +18,11 @@ const FooterMenuItem: FC<IFooterMenuItem> = ({ href, title }) => {
           lineHeight: { xs: "18px", md: "25px" },
           color: "#16192C80",
           transition: "all 0.2s ease",
-          textAlign: {xs: "right", md: "center"},
+          textAlign: { xs: "right", md: "center" },
 
           ":hover": {
-            color: "#205EDC"
-          }
+            color: "#205EDC",
+          },
         }}
       >
         {title}

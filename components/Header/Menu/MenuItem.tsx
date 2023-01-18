@@ -1,16 +1,28 @@
 import { Typography } from "@mui/material";
-import Link from "next/link";
+import { Link } from "react-scroll";
 import React, { FC } from "react";
 
 interface IMenuItem {
   href: string;
   title: string;
-  onClick: React.MouseEventHandler
+  setIsOpenMenu?: Function;
 }
 
-const MenuItem: FC<IMenuItem> = ({ href, title, onClick }) => {
+const MenuItem: FC<IMenuItem> = ({ href, title, setIsOpenMenu }) => {
   return (
-    <Link onClick={onClick} href={href}>
+    <Link
+      href={href}
+      activeClass="active"
+      to={href}
+      spy={true}
+      smooth={true}
+      duration={500}
+      onClick={() => {
+        if (setIsOpenMenu) {
+          setIsOpenMenu(false);
+        }
+      }}
+    >
       <Typography
         component="span"
         sx={{
