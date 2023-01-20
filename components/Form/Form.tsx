@@ -2,6 +2,7 @@ import { Box, Button, Grid, TextField, Typography } from "@mui/material";
 import Link from "next/link";
 import React, { FC } from "react";
 import axios from "axios";
+import { useForm } from "react-hook-form";
 
 interface IFormInput {
   value: string;
@@ -9,77 +10,24 @@ interface IFormInput {
 }
 
 const Form: FC = () => {
-  const [name, setName] = React.useState<IFormInput>({
-    value: "",
-    isError: false,
-  });
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm();
 
-  const [tel, setTel] = React.useState<IFormInput>({
-    value: "",
-    isError: false,
-  });
-
-  const [email, setEmail] = React.useState<IFormInput>({
-    value: "",
-    isError: false,
-  });
-
-  const [website, setWebsite] = React.useState<IFormInput>({
-    value: "",
-    isError: false,
-  });
-
-  const changeName = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setName({
-      value: e.target.value,
-      isError:
-        /^[A-Za-z\s, А-Яа-яё]+$/.test(e.target.value) ||
-        e.target.value.length === 0
-          ? false
-          : true,
-    });
-  };
-
-  const changeTel = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setTel({
-      value: e.target.value,
-      isError:
-        /^[0-9]+$/.test(e.target.value) || e.target.value.length === 0
-          ? false
-          : true,
-    });
-  };
-
-  const changeEmail = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setEmail({
-      value: e.target.value,
-      isError:
-        /^\S+@\S+\.\S+$/.test(e.target.value) || e.target.value.length === 0
-          ? false
-          : true,
-    });
-  };
-
-  const changeWebsite = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setWebsite({
-      value: e.target.value,
-      isError:
-        /^(ftp|http|https):\/\/[^ "]+$/.test(e.target.value) ||
-        e.target.value.length === 0
-          ? false
-          : true,
-    });
-  };
-
-  const formHandler = (e: React.MouseEvent<HTMLButtonElement>) => {
-    e.preventDefault();
-
+  const onSubmit = async (data: {
+    name: string;
+    tel: string;
+    email: string;
+    website: string;
+  }) => {
     try {
-      axios.post("/api/form", {
-        name: name.value,
-        tel: tel.value,
-        email: email.value,
-        website: website.value,
+      await axios.post("/api/form", {
+        name: data.name,
+        tel: data.tel,
+        email: data.email,
+        website: data.website,
       });
     } catch (err) {
       console.log(err);
@@ -89,6 +37,7 @@ const Form: FC = () => {
   return (
     <Grid
       id="form"
+      onSubmit={handleSubmit(onSubmit)}
       container
       component="form"
       sx={{
@@ -121,9 +70,11 @@ const Form: FC = () => {
             id="standard-basic"
             label="Имя"
             variant="standard"
-            value={name.value}
-            onChange={changeName}
-            error={name.isError}
+            {...register("name", {
+              required: true,
+              pattern: /^[A-Za-z\s, А-Яа-яё]+$/,
+            })}
+            error={errors.name ? true : false}
             sx={{
               fontFamily: "Nunito Sans",
               width: "100%",
@@ -140,9 +91,8 @@ const Form: FC = () => {
             id="standard-basic"
             label="Телефон"
             variant="standard"
-            value={tel.value}
-            onChange={changeTel}
-            error={tel.isError}
+            {...register("tel", { required: true, pattern: /^[0-9]+$/ })}
+            error={errors.tel ? true : false}
             sx={{
               fontFamily: "Nunito Sans",
               width: "100%",
@@ -160,9 +110,11 @@ const Form: FC = () => {
             label="E-mail"
             variant="standard"
             type="email"
-            value={email.value}
-            onChange={changeEmail}
-            error={email.isError}
+            {...register("email", {
+              required: true,
+              pattern: /^\S+@\S+\.\S+$/,
+            })}
+            error={errors.email ? true : false}
             sx={{
               fontFamily: "Nunito Sans",
               width: "100%",
@@ -179,9 +131,11 @@ const Form: FC = () => {
             id="standard-basic"
             label="Ваш сайт"
             variant="standard"
-            value={website.value}
-            onChange={changeWebsite}
-            error={website.isError}
+            {...register("website", {
+              required: true,
+              pattern: /^(ftp|http|https):\/\/[^ "]+$/,
+            })}
+            error={errors.website ? true : false}
             sx={{
               fontFamily: "Nunito Sans",
               width: "100%",
@@ -229,7 +183,7 @@ const Form: FC = () => {
           }}
         >
           <Button
-            onClick={formHandler}
+            type="submit"
             variant="contained"
             disableElevation
             sx={{
