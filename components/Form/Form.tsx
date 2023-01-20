@@ -1,6 +1,7 @@
 import { Box, Button, Grid, TextField, Typography } from "@mui/material";
 import Link from "next/link";
 import React, { FC } from "react";
+import axios from "axios";
 
 interface IFormInput {
   value: string;
@@ -68,6 +69,21 @@ const Form: FC = () => {
           ? false
           : true,
     });
+  };
+
+  const formHandler = (e: React.MouseEvent<HTMLButtonElement>) => {
+    e.preventDefault();
+
+    try {
+      axios.post("/api/form", {
+        name: name.value,
+        tel: tel.value,
+        email: email.value,
+        website: website.value,
+      });
+    } catch (err) {
+      console.log(err);
+    }
   };
 
   return (
@@ -213,6 +229,7 @@ const Form: FC = () => {
           }}
         >
           <Button
+            onClick={formHandler}
             variant="contained"
             disableElevation
             sx={{
