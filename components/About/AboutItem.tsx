@@ -46,6 +46,7 @@ const AboutItem: FC<IAboutItem> = ({ img, title }) => {
         className="about-item"
         component="span"
         sx={{
+          fontFamily: {xs: "Gotham Pro", lg: "Nunito Sans"},
           display: "inline-block",
           textAlign: "center",
           fontSize: { xs: "15px", lg: "22px" },
@@ -53,8 +54,9 @@ const AboutItem: FC<IAboutItem> = ({ img, title }) => {
           lineHeight: { xs: "22px", lg: "26px" },
           mb: "100%",
           mt: { xs: "26px", lg: "45px" },
-          ml: { xs: "10px" },
-          mr: { xs: "10px", sm: "0" },
+          ml: { xs: "10px", lg: "auto" },
+          mr: { xs: "10px", lg: "auto" },
+          maxWidth: {lg: "206px"}
         }}
       >
         {title}
