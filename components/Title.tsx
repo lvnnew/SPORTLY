@@ -15,7 +15,7 @@ const Title = ({ title, subTitle, left, leftDesk }: ITitle) => {
         <Typography
           variant="h3"
           sx={{
-            fontFamily: "Nunito Sans",
+            fontFamily: "Gotham Pro",
             fontSize: { xs: "26px", lg: "56px" },
             fontWeight: 700,
             lineHeight: { xs: "31px", lg: "62px" },
@@ -33,8 +33,8 @@ const Title = ({ title, subTitle, left, leftDesk }: ITitle) => {
         <Typography
           variant="h4"
           sx={{
-            fontFamily: "Nunito Sans",
-            fontSize: { xs: "16px", lg: "24px" },
+            fontFamily: "Gotham Pro",
+            fontSize: { xs: "18px", lg: "24px" },
             fontWeight: 700,
             lineHeight: { xs: "22px", lg: "29px" },
             textAlign: {

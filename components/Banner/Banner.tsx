@@ -10,7 +10,7 @@ const Banner: FC = () => {
       sx={{
         position: "relative",
         pt: { xs: "30px", md: "100px", lg: "150px" },
-        pb: { xs: "60px", md: "140px", lg: "192px" },
+        pb: { xs: "53px", md: "140px", lg: "192px" },
         backgroundImage: {
           xs: "url(/banner-bg.svg)",
           lg: "url(/banner-bg-big.svg)",
@@ -20,7 +20,7 @@ const Banner: FC = () => {
         backgroundPosition: { xs: "0 -50px", lg: "top right" },
         backgroundSize: { xs: "100%", lg: "contain" },
         minHeight: { xs: "auto", lg: "calc(100vh - 58px)", xl: "auto" },
-        backgroundColor: { xs: "#fff"},
+        backgroundColor: { xs: "#6788FF", md: "#fff"},
       }}
     >
       <Container maxWidth="lg">
@@ -37,12 +37,12 @@ const Banner: FC = () => {
             <Typography
               variant="h1"
               sx={{
-                fontFamily: "Gotham Pro",
+                fontFamily: {xs: "Gotham Pro", md: "Nunito Sans"},
                 fontSize: { xs: "24px", md: "35px", lg: "60px" },
                 fontWeight: 700,
                 lineHeight: { xs: "29px", lg: "66px" },
                 textAlign: { xs: "center", md: "left" },
-                color: "#fff"
+                color: {xs: "#fff", lg: "#0D052B"}
               }}
             >
               CRM для детских спортивных секций и образовательных центов
@@ -56,7 +56,7 @@ const Banner: FC = () => {
                   mt: { xs: "30px", md: "50px" },
                   maxWidth: { xs: "100%", sm: "293px" },
                   width: { xs: "100%" },
-                  backgroundColor: {xs: "rgba(255, 255, 255, 0.5)"},
+                  backgroundColor: {xs: "rgba(255, 255, 255, 0.5)", lg: "#6788FF"},
                   fontSize: { xs: "18px", md: "24px" },
                   fontWeight: 700,
                   lineHeight: { xs: "22px", md: "29px" },
