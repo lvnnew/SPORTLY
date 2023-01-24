@@ -21,11 +21,12 @@ const AdvantagesItem: FC<IAdvantagesItem> = ({ num, title }) => {
         <Typography
           component="span"
           sx={{
+            fontFamily: "Gotham Pro",
             display: "inline-block",
             fontSize: { xs: "32px", lg: "48px" },
             fontWeight: 700,
             lineHeight: { xs: "38px", lg: "58px" },
-            color: "#16192C80",
+            color: "#fff",
             position: "absolute",
             right: { xs: "22px", lg: "15px" },
             top: { xs: "-15px", lg: "-25px" },
@@ -52,7 +53,7 @@ const AdvantagesItem: FC<IAdvantagesItem> = ({ num, title }) => {
             fontSize: "18px",
             fontWeight: { xs: 400, lg: 700 },
             lineHeight: { xs: "22px" },
-            color: "#16192C",
+            color: "#fff",
             position: "relative",
             zIndex: 3,
             maxWidth: { lg: "248px" },

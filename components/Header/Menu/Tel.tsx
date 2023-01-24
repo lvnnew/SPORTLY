@@ -27,16 +27,26 @@ const Tel: FC<ITel> = ({ left = false, mt, right = false }) => {
           gap: "12px",
         }}
       >
-        <Image src="/tel.svg" alt="tel" width="19" height="19" />
+        <Box sx={{
+          display: {xs: "flex", lg: "none"}
+        }}>
+          <Image src="/tel-white.svg" alt="tel" width="24" height="24" />
+        </Box>
+        <Box sx={{
+          display: {xs: "none", lg: "flex"}
+        }}>
+          <Image src="/tel-black.svg" alt="tel" width="24" height="24" />
+        </Box>
         <Link href="tel:79877655432">
           <Typography
             component="span"
             sx={{
+              fontFamily: {xs: "Nunito Sans", lg: "Gotham Pro"},
               display: "inline-block",
               fontSize: "16px",
               fontWeight: 700,
               lineHeight: "19px",
-              color: "#16192C",
+              color: { xs: "#fff", lg: "#0D052B" },
             }}
           >
             +7 987 765 54 32
@@ -46,11 +56,12 @@ const Tel: FC<ITel> = ({ left = false, mt, right = false }) => {
       <Typography
         component="span"
         sx={{
+          fontFamily: {xs: "Gotham Pro", lg: "Nunito Sans"},
           display: "inline-block",
           fontWeight: { xs: 400, lg: 600 },
-          fontSize: "14px",
-          lineHeight: "18px",
-          color: "#16192C",
+          fontSize: {xs: "12px", lg: "14px"},
+          lineHeight: {xs: "16px", lg: "20px"},
+          color: { xs: "#fff", lg: "#0D052B" },
         }}
       >
         Заказать обратный звонок

@@ -11,7 +11,7 @@ const Logo: FC = () => {
           fontSize: "32px",
           fontWeight: 900,
           lineHeight: "38px",
-          color: "#205EDC",
+          color: "#6788FF",
           fontFamily: "Nunito Sans",
         }}
       >
