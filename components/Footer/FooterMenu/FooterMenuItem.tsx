@@ -13,15 +13,16 @@ const FooterMenuItem: FC<IFooterMenuItem> = ({ href, title }) => {
       <Typography
         component="span"
         sx={{
+          fontFamily: "Gotham Pro",
           display: "inline-block",
-          fontSize: { xs: "14px", md: "18px" },
-          lineHeight: { xs: "18px", md: "25px" },
-          color: "#16192C80",
+          fontSize: { xs: "14px", md: "16px" },
+          lineHeight: { xs: "18px", md: "23px" },
+          color: "rgba(255, 255, 255, 0.5)",
           transition: "all 0.2s ease",
           textAlign: { xs: "right", md: "center" },
 
           ":hover": {
-            color: "#205EDC",
+            color: "#fff",
           },
         }}
       >

@@ -2,7 +2,11 @@ import { Typography } from "@mui/material";
 import Link from "next/link";
 import React, { FC } from "react";
 
-const Logo: FC = () => {
+interface ILogo {
+  white?: boolean
+}
+
+const Logo: FC<ILogo> = ({white}) => {
   return (
     <Link href="/">
       <Typography
@@ -11,7 +15,7 @@ const Logo: FC = () => {
           fontSize: "32px",
           fontWeight: 900,
           lineHeight: "38px",
-          color: "#6788FF",
+          color: white ? "#fff" : "#6788FF",
           fontFamily: "Nunito Sans",
         }}
       >

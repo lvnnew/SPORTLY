@@ -13,7 +13,7 @@ const Footer: FC = () => {
         component="footer"
         container
         sx={{
-          backgroundColor: "#E6F1FF",
+          backgroundColor: "#6788FF",
           pt: "40px",
           pb: "20px",
           display: { md: "none" },
@@ -30,7 +30,7 @@ const Footer: FC = () => {
               }}
             >
               <Logo />
-              <Tel left={true} mt="auto" />
+              <Tel left={true} mt="auto" white />
             </Grid>
             <Grid item xs={4}>
               <FooterMenu />
@@ -56,7 +56,7 @@ const Footer: FC = () => {
         component="footer"
         container
         sx={{
-          backgroundColor: "#E6F1FF",
+          backgroundColor: "#6788FF",
           pt: "80px",
           pb: "40px",
           display: { xs: "none", md: "grid" },
@@ -71,13 +71,13 @@ const Footer: FC = () => {
             }}
           >
             <Grid item md={2}>
-              <Logo />
+              <Logo white />
             </Grid>
             <Grid item md={8}>
               <FooterMenu />
             </Grid>
             <Grid item md={2}>
-              <Tel right={true} />
+              <Tel right={true} white />
             </Grid>
           </Grid>
           <Box

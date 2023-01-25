@@ -7,9 +7,10 @@ interface ITel {
   left?: boolean;
   mt?: string;
   right?: boolean;
+  white?: boolean;
 }
 
-const Tel: FC<ITel> = ({ left = false, mt, right = false }) => {
+const Tel: FC<ITel> = ({ left = false, mt, right = false, white = false }) => {
   return (
     <Box
       sx={{
@@ -28,12 +29,12 @@ const Tel: FC<ITel> = ({ left = false, mt, right = false }) => {
         }}
       >
         <Box sx={{
-          display: {xs: "flex", md: "none"}
+          display: {xs: "flex", md: `${white ? "flex" : "none"}`}
         }}>
           <Image src="/tel-white.svg" alt="tel" width="24" height="24" />
         </Box>
         <Box sx={{
-          display: {xs: "none", md: "flex"}
+          display: {xs: "none", md: `${white ? "none" : "flex"}`}
         }}>
           <Image src="/tel-black.svg" alt="tel" width="24" height="24" />
         </Box>
@@ -46,7 +47,7 @@ const Tel: FC<ITel> = ({ left = false, mt, right = false }) => {
               fontSize: "16px",
               fontWeight: 700,
               lineHeight: "19px",
-              color: { xs: "#fff", md: "#0D052B" },
+              color: { xs: "#fff", md: `${white ? "#fff" : "#0D052B"}` },
             }}
           >
             +7 987 765 54 32
@@ -61,7 +62,7 @@ const Tel: FC<ITel> = ({ left = false, mt, right = false }) => {
           fontWeight: { xs: 400, md: 600 },
           fontSize: {xs: "12px", md: "14px"},
           lineHeight: {xs: "16px", md: "20px"},
-          color: { xs: "#fff", md: "#0D052B" },
+          color: { xs: "#fff", md: `${white ? "#fff" : "#0D052B"}` },
         }}
       >
         Заказать обратный звонок
