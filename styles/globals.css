@@ -88,8 +88,8 @@ body {
 }
 
 body {
-  color: #16192c;
-  background-color: #e6f1ff;
+  color: #0D052B;
+  background-color: #6788FF;
   overflow-x: hidden;
 }
 
@@ -176,7 +176,7 @@ a {
 .aboutSwiper
   .swiper-pagination
   .swiper-pagination-bullet.swiper-pagination-bullet-active {
-  background-color: #205edc;
+  background-color: #6788FF;
 }
 
 @media (min-width: 380px) {

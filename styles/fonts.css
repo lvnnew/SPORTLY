@@ -28,3 +28,18 @@
   src: url("../fonts/NunitoSans-Black.woff2") format("woff2");
   font-weight: 900;
 }
+@font-face {
+  font-family: "Gotham Pro";
+  src: url("../fonts/GothamPro/GothamProRegular.woff2") format("woff2");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Gotham Pro";
+  src: url("../fonts/GothamPro/GothamPro-Medium.woff2") format("woff2");
+  font-weight: 500;
+}
+@font-face {
+  font-family: "Gotham Pro";
+  src: url("../fonts/GothamPro/GothamPro-Bold.woff2") format("woff2");
+  font-weight: 700;
+}

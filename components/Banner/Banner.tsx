@@ -8,6 +8,7 @@ const Banner: FC = () => {
     <Box
       component="section"
       sx={{
+        position: "relative",
         pt: { xs: "30px", md: "100px", lg: "150px" },
         pb: { xs: "53px", md: "140px", lg: "192px" },
         backgroundImage: {
@@ -19,7 +20,7 @@ const Banner: FC = () => {
         backgroundPosition: { xs: "0 -50px", lg: "top right" },
         backgroundSize: { xs: "100%", lg: "contain" },
         minHeight: { xs: "auto", lg: "calc(100vh - 58px)", xl: "auto" },
-        backgroundColor: { xs: "#E6F1FF", sm: "#fff" },
+        backgroundColor: { xs: "#6788FF", md: "#fff"},
       }}
     >
       <Container maxWidth="lg">
@@ -36,11 +37,12 @@ const Banner: FC = () => {
             <Typography
               variant="h1"
               sx={{
-                fontFamily: "Nunito Sans",
-                fontSize: { xs: "26px", md: "35px", lg: "60px" },
+                fontFamily: {xs: "Gotham Pro", md: "Nunito Sans"},
+                fontSize: { xs: "24px", md: "35px", lg: "60px" },
                 fontWeight: 700,
-                lineHeight: { xs: "31px", lg: "66px" },
+                lineHeight: { xs: "29px", md: "35px", lg: "66px" },
                 textAlign: { xs: "center", md: "left" },
+                color: {xs: "#fff", lg: "#0D052B"}
               }}
             >
               CRM для детских спортивных секций и образовательных центов
@@ -50,11 +52,11 @@ const Banner: FC = () => {
                 variant="contained"
                 disableElevation
                 sx={{
-                  fontFamily: "Nunito Sans",
+                  fontFamily: "Gotham Pro",
                   mt: { xs: "30px", md: "50px" },
                   maxWidth: { xs: "100%", sm: "293px" },
                   width: { xs: "100%" },
-                  backgroundColor: "#205EDC",
+                  backgroundColor: {xs: "rgba(255, 255, 255, 0.5)", lg: "#6788FF"},
                   fontSize: { xs: "18px", md: "24px" },
                   fontWeight: 700,
                   lineHeight: { xs: "22px", md: "29px" },

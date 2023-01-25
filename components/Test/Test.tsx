@@ -41,7 +41,7 @@ const Test: FC = () => {
               transform: "translateX(-50%)",
               height: "100%",
               width: "2px",
-              backgroundColor: "#205EDC",
+              backgroundColor: "#6788FF",
               zIndex: 1,
             },
           }}

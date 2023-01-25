@@ -20,11 +20,11 @@ const ReviewsItem: FC<IReviewsItem> = ({
     <Grid
       container
       sx={{
-        backgroundColor: "#E6F1FF",
+        backgroundColor: "#FEFBFF",
         boxShadow: "0px 1px 15px rgba(22, 25, 44, 0.18)",
         borderRadius: "10px",
         padding: { xs: "14px", lg: "20px" },
-        maxHeight: { lg: "233px" },
+        maxHeight: { lg: "250px" },
       }}
     >
       <Grid
@@ -32,25 +32,27 @@ const ReviewsItem: FC<IReviewsItem> = ({
         container
         sx={{
           justifyContent: "start",
-          alignItems: "start",
+          alignItems: "center",
         }}
       >
         <Grid
           item
-          xs={1}
-          lg={2}
+          xs={2}
+          sm={1}
+          lg={3}
           sx={{
             position: "relative",
             height: "100%",
-            maxHeight: "42px",
+            minHeight: {xs: "61px", lg: "73px"},
           }}
         >
           <Image src="/avatar.svg" alt="avatar" fill={true} />
         </Grid>
         <Grid
           item
-          xs={10}
-          lg={9}
+          xs={9}
+          sm={10}
+          lg={8}
           sx={{
             ml: "12px",
           }}
@@ -58,10 +60,11 @@ const ReviewsItem: FC<IReviewsItem> = ({
           <Typography
             component="span"
             sx={{
+              fontFamily: "Gotham Pro",
               display: "inline-block",
-              fontSize: "16px",
-              fontWeight: 700,
-              lineHeight: "19px",
+              fontSize: {xs: "20px", md: "22px"},
+              fontWeight: 400,
+              lineHeight: {xs: "24px", md: "26px"},
             }}
           >
             {name}
@@ -69,10 +72,10 @@ const ReviewsItem: FC<IReviewsItem> = ({
           <Typography
             variant="body1"
             sx={{
-              fontFamily: "Nunito Sans",
-              fontSize: "14px",
-              fontWeight: 700,
-              lineHeight: "17px",
+              fontFamily: "Gotham Pro",
+              fontSize: {xs: "14px", md: "16px"},
+              fontWeight: 400,
+              lineHeight: {xs: "17px", md: "23px"},
               color: "rgba(22, 25, 44, 0.5)",
               mt: "3px",
             }}
@@ -85,7 +88,8 @@ const ReviewsItem: FC<IReviewsItem> = ({
         item
         xs={12}
         sx={{
-          margin: { xs: "12px 0", lg: "15px 0" },
+          margin: { xs: "12px 0" },
+          lineHeight: "1px"
         }}
       >
         <Rating
@@ -113,9 +117,9 @@ const ReviewsItem: FC<IReviewsItem> = ({
         <Typography
           variant="body1"
           sx={{
-            fontFamily: "Nunito Sans",
-            fontSize: "16px",
-            lineHeight: "21px",
+            fontFamily: "Gotham Pro",
+            fontSize: {xs: "14px", md: "16px"},
+            lineHeight: {xs: "18px", md: "23px"},
           }}
         >
           {text}

@@ -26,7 +26,7 @@ const Decision: FC = () => {
         sx={{
           pt: { xs: "24px", lg: "50px" },
           pb: { xs: "60px", lg: "78px" },
-          backgroundColor: "#E6F1FF",
+          backgroundColor: "#6788FF",
           borderRadius: { xs: "20px 20px 0 0", lg: "40px 40px 0 0" },
         }}
       >
@@ -34,10 +34,11 @@ const Decision: FC = () => {
           <Typography
             variant="h3"
             sx={{
-              fontFamily: "Nunito Sans",
+              fontFamily: "Gotham Pro",
               fontSize: { xs: "24px", lg: "48px" },
               fontWeight: 700,
               lineHeight: { xs: "29px", lg: "58px" },
+              color: "#fff"
             }}
           >
             Какие проблемы решает наша CRM?

@@ -15,7 +15,7 @@ const Menu: FC<IMenu> = ({ setIsOpenMenu }) => {
         flexDirection: { xs: "column", md: "row" },
         justifyContent: "center",
         alignItems: "center",
-        gap: { xs: "32px", md: "50px" },
+        gap: { xs: "32px", md: "40px" },
         mt: { xs: "43px", md: "0" },
         mr: { md: "50px", lg: "170px" },
       }}

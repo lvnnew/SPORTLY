@@ -17,7 +17,7 @@ const DecisionTab: FC<IDecisionTab> = ({ onClick, isActive, title, index }) => {
       sx={{
         padding: { xs: "10px", lg: "15px 20px" },
         borderRadius: "20px",
-        border: isActive ? "2px solid #16192C" : "2px solid #16192C80",
+        border: isActive ? "2px solid #fff" : "2px solid rgba(255, 255, 255, 0.5)",
         maxHeight: { sm: "119px" },
         minHeight: { xs: "108px", sm: "119px" },
         height: "100%",
@@ -36,11 +36,12 @@ const DecisionTab: FC<IDecisionTab> = ({ onClick, isActive, title, index }) => {
         <Typography
           variant="body1"
           sx={{
+            fontFamily: "Gotham Pro",
             display: "inline-block",
-            fontSize: { xs: "14px", md: "18px" },
+            fontSize: { xs: "12px", md: "16px" },
             fontWeight: 700,
-            lineHeight: { xs: "17px", lg: "22px" },
-            color: isActive ? "#16192C" : "#16192C80",
+            lineHeight: { xs: "15px", lg: "19px" },
+            color: isActive ? "#fff" : "rgba(255, 255, 255, 0.5)",
             wordBreak: "break-all",
 
             ["@media(min-width: 360px)"]: {

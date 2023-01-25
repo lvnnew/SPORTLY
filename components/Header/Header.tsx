@@ -58,14 +58,14 @@ const Header: FC = () => {
             {!isOpenMenu ? (
               <MenuIcon
                 className="burgerItem"
-                sx={{ color: "#205EDC" }}
+                sx={{ color: "#6788FF" }}
                 fontSize="medium"
                 onClick={burgerHandler}
               />
             ) : (
               <CloseOutlinedIcon
                 className="burgerItem"
-                sx={{ color: "#205EDC" }}
+                sx={{ color: "#6788FF" }}
                 fontSize="medium"
                 onClick={burgerHandler}
               />
@@ -79,7 +79,7 @@ const Header: FC = () => {
             display: "flex",
             flexDirection: "column",
 
-            backgroundColor: "#E6F1FF",
+            backgroundColor: "#6788FF",
             position: "absolute",
             top: "58px",
             left: 0,

@@ -14,11 +14,11 @@ const AnotherLink: FC<IAnotherLink> = ({ href, title }) => {
         display: "inline-block",
         fontSize: { xs: "14px", md: "18px" },
         lineHeight: { xs: "18px", md: "25px" },
-        color: "#16192C80",
+        color: "rgba(255, 255, 255, 0.5)",
         transition: "all 0.2s ease",
 
         ":hover": {
-          color: "#205EDC",
+          color: "#fff",
         },
       }}
     >

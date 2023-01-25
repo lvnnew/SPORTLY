@@ -35,9 +35,10 @@ const DecisionItem: FC<IDecisionItem> = ({ no, ok }) => {
           <Typography
             variant="body1"
             sx={{
-              fontSize: { xs: "16px", lg: "17px" },
+              fontFamily: "Gotham Pro",
+              fontSize: { xs: "16px", lg: "16px" },
               fontWeight: 700,
-              lineHeight: { xs: "19px", lg: "22px" },
+              lineHeight: { xs: "19px", lg: "19px" },
               color: "#fff",
             }}
           >
@@ -69,10 +70,11 @@ const DecisionItem: FC<IDecisionItem> = ({ no, ok }) => {
           <Typography
             variant="body1"
             sx={{
-              fontSize: { xs: "16px", lg: "17px" },
+              fontFamily: "Gotham Pro",
+              fontSize: { xs: "14px", lg: "16px" },
               fontWeight: 400,
-              lineHeight: { xs: "21px", lg: "25px" },
-              color: "#16192C",
+              lineHeight: { xs: "18px", lg: "23px" },
+              color: "#0D052B",
             }}
           >
             {ok}
