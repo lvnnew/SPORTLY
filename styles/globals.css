@@ -176,7 +176,7 @@ a {
 .aboutSwiper
   .swiper-pagination
   .swiper-pagination-bullet.swiper-pagination-bullet-active {
-  background-color: #205edc;
+  background-color: #6788FF;
 }
 
 @media (min-width: 380px) {
