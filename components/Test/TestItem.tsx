@@ -13,7 +13,7 @@ const TestItem: FC<ITestItem> = ({ num, title }) => {
         position: "relative",
         width: { xs: "30px", lg: "38px" },
         height: { xs: "30px", lg: "38px" },
-        backgroundColor: "#205EDC",
+        backgroundColor: "#6788FF",
         borderRadius: "50%",
         zIndex: 2,
 
@@ -26,14 +26,15 @@ const TestItem: FC<ITestItem> = ({ num, title }) => {
       <Typography
         component="span"
         sx={{
+          fontFamily: "Gotham Pro",
           display: "inline-block",
           position: "absolute",
           top: "50%",
           left: "50%",
           transform: "translate(-50%, -50%)",
-          fontSize: { xs: "14px", lg: "18px" },
+          fontSize: { xs: "12px", lg: "16px" },
           fontWeight: 400,
-          lineHeight: { xs: "18px", lg: "25px" },
+          lineHeight: { xs: "16px", lg: "23px" },
           color: "#fff",
         }}
       >
