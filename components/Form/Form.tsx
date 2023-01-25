@@ -165,7 +165,7 @@ const Form: FC = () => {
               lineHeight: "18px",
 
               "&>a": {
-                color: "#205EDC",
+                color: "#6788FF",
               },
             }}
           >
@@ -190,7 +190,7 @@ const Form: FC = () => {
               fontFamily: "Nunito Sans",
               maxWidth: { xs: "100%", sm: "325px" },
               width: { xs: "100%" },
-              backgroundColor: "#205EDC",
+              backgroundColor: "#6788FF",
               fontSize: { xs: "16px", md: "18px" },
               fontWeight: 400,
               lineHeight: { xs: "21px", md: "25px" },
