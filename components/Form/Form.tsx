@@ -3,7 +3,7 @@ import Link from "next/link";
 import React, { FC } from "react";
 import axios from "axios";
 import { useForm } from "react-hook-form";
-import InputMask from "react-input-mask";
+import InputMask, { ReactInputMask } from "react-input-mask";
 
 interface IFormInput {
   value: string;
@@ -20,16 +20,16 @@ const Form: FC = () => {
 
   const [tel, setTel] = React.useState<IFormInput>({
     value: "",
-    isError: false
+    isError: false,
   });
 
   const onChangeTel = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setTel(prev => ({...prev, value: e.target.value}));
+    setTel((prev) => ({ ...prev, value: e.target.value }));
 
-    if((/^[0-9]+$/.test(tel.value))) {
-      setTel(prev => ({...prev, isError: false}));
+    if (/^[0-9]+$/.test(tel.value)) {
+      setTel((prev) => ({ ...prev, isError: false }));
     }
-  }
+  };
 
   const onSubmit = async (data: {
     name: string;
@@ -39,7 +39,7 @@ const Form: FC = () => {
   }) => {
     try {
       data.tel = tel.value;
-      if(tel.isError === false) {
+      if (tel.isError === false) {
         await axios.post("/api/form", {
           name: data.name,
           tel: data.tel,
@@ -105,26 +105,27 @@ const Form: FC = () => {
           />
         </Grid>
         <Grid item xs={12} md={6}>
-          <InputMask mask="99999999999" maskChar="" value={tel.value} onChange={onChangeTel}>
-            {() => {
-              return (
-                <TextField
-                  id="standard-basic"
-                  label="Телефон"
-                  variant="standard"
-                  error={tel.isError ? true : false}
-                  sx={{
-                    fontFamily: "Nunito Sans",
-                    width: "100%",
-                    padding: "10px 0",
-                    pt: "0px",
-                    "::placeholder": {
-                      fontFamily: "Nunito Sans",
-                    },
-                  }}
-                />
-              );
-            }}
+          <InputMask
+            mask="+9 999 999 99 99"
+            maskPlaceholder={null}
+            value={tel.value}
+            onChange={onChangeTel}
+          >
+            <TextField
+              id="standard-basic"
+              label="Телефон"
+              variant="standard"
+              error={tel.isError ? true : false}
+              sx={{
+                fontFamily: "Nunito Sans",
+                width: "100%",
+                padding: "10px 0",
+                pt: "0px",
+                "::placeholder": {
+                  fontFamily: "Nunito Sans",
+                },
+              }}
+            />
           </InputMask>
         </Grid>
         <Grid item xs={12} md={6}>
@@ -207,10 +208,10 @@ const Form: FC = () => {
         >
           <Button
             onClick={() => {
-              if(!(/^[0-9]+$/.test(tel.value)) || tel.value.length === 0) { 
-                setTel(prev => ({...prev, isError: true}));
+              if (!/^\+[0-9 ]+$/.test(tel.value) || tel.value.length === 0 || tel.value.length < 16) {
+                setTel((prev) => ({ ...prev, isError: true }));
               } else {
-                setTel(prev => ({...prev, isError: false}));
+                setTel((prev) => ({ ...prev, isError: false }));
               }
             }}
             type="submit"
