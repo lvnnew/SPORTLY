@@ -16,7 +16,7 @@ export default function Home() {
   React.useEffect(() => {
     setTimeout(() => {
       setIsShowModal(true);
-    }, 2000);
+    }, 6000);
   }, []);
 
   return (

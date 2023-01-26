@@ -3,7 +3,7 @@ import { Box } from "@mui/system";
 import axios from "axios";
 import Image from "next/image";
 import Link from "next/link";
-import React, { FC } from "react";
+import React, { FC, Ref } from "react";
 import { useForm } from "react-hook-form";
 import InputMask from "react-input-mask";
 
@@ -28,6 +28,7 @@ export const FormModal: FC<IFormModal> = ({ setIsShowModal }) => {
     value: "",
     isError: false,
   });
+  const modalRef = React.useRef<any>(null);
 
   const onChangeTel = (e: React.ChangeEvent<HTMLInputElement>) => {
     setTel((prev) => ({ ...prev, value: e.target.value }));
@@ -37,12 +38,13 @@ export const FormModal: FC<IFormModal> = ({ setIsShowModal }) => {
     }
   };
 
-  const closeModal = (e: React.MouseEvent) => {
-    console.log(e.target);
-    if(!e.target) {
-      setIsShowModal(false);
-    }
-  }
+  React.useEffect(() => {
+    const onClick = (e: any) => !modalRef.current.contains(e.target) && setIsShowModal(false);
+
+    document.addEventListener("click", onClick);
+    
+    return () => document.removeEventListener("click", onClick);
+  }, [setIsShowModal]);
 
   const onSubmit = async (data: {
     name: string;
@@ -81,6 +83,7 @@ export const FormModal: FC<IFormModal> = ({ setIsShowModal }) => {
       }}
     >
       <Grid
+        ref={modalRef}
         id="form"
         onSubmit={handleSubmit(onSubmit)}
         container
@@ -101,7 +104,6 @@ export const FormModal: FC<IFormModal> = ({ setIsShowModal }) => {
           top: "45%",
           transform: "translateY(-50%)",
         }}
-        onClick={closeModal}
       >
         <Box
           sx={{
