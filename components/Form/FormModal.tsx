@@ -39,10 +39,11 @@ export const FormModal: FC<IFormModal> = ({ setIsShowModal }) => {
   };
 
   React.useEffect(() => {
-    const onClick = (e: any) => !modalRef.current.contains(e.target) && setIsShowModal(false);
+    const onClick = (e: any) =>
+      !modalRef.current.contains(e.target) && setIsShowModal(false);
 
     document.addEventListener("click", onClick);
-    
+
     return () => document.removeEventListener("click", onClick);
   }, [setIsShowModal]);
 

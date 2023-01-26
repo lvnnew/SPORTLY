@@ -24,7 +24,7 @@ const Title = ({ title, subTitle, left, leftDesk }: ITitle) => {
               md: "center",
               lg: leftDesk ? "left" : "center",
             },
-            color: "#0D052B"
+            color: "#0D052B",
           }}
         >
           {title}
@@ -44,7 +44,7 @@ const Title = ({ title, subTitle, left, leftDesk }: ITitle) => {
               lg: leftDesk ? "left" : "center",
             },
             mt: { xs: "6px", lg: "12px" },
-            color: "#0D052B"
+            color: "#0D052B",
           }}
         >
           {subTitle}

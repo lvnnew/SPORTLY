@@ -17,7 +17,9 @@ const DecisionTab: FC<IDecisionTab> = ({ onClick, isActive, title, index }) => {
       sx={{
         padding: { xs: "10px", lg: "15px 20px" },
         borderRadius: "20px",
-        border: isActive ? "2px solid #fff" : "2px solid rgba(255, 255, 255, 0.5)",
+        border: isActive
+          ? "2px solid #fff"
+          : "2px solid rgba(255, 255, 255, 0.5)",
         maxHeight: { sm: "119px" },
         minHeight: { xs: "108px", sm: "119px" },
         height: "100%",

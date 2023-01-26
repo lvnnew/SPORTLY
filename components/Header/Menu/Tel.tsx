@@ -28,21 +28,25 @@ const Tel: FC<ITel> = ({ left = false, mt, right = false, white = false }) => {
           gap: "12px",
         }}
       >
-        <Box sx={{
-          display: {xs: "flex", md: `${white ? "flex" : "none"}`}
-        }}>
+        <Box
+          sx={{
+            display: { xs: "flex", md: `${white ? "flex" : "none"}` },
+          }}
+        >
           <Image src="/tel-white.svg" alt="tel" width="24" height="24" />
         </Box>
-        <Box sx={{
-          display: {xs: "none", md: `${white ? "none" : "flex"}`}
-        }}>
+        <Box
+          sx={{
+            display: { xs: "none", md: `${white ? "none" : "flex"}` },
+          }}
+        >
           <Image src="/tel-black.svg" alt="tel" width="24" height="24" />
         </Box>
         <Link href="tel:79877655432">
           <Typography
             component="span"
             sx={{
-              fontFamily: {xs: "Nunito Sans", md: "Gotham Pro"},
+              fontFamily: { xs: "Nunito Sans", md: "Gotham Pro" },
               display: "inline-block",
               fontSize: "16px",
               fontWeight: 700,
@@ -57,11 +61,11 @@ const Tel: FC<ITel> = ({ left = false, mt, right = false, white = false }) => {
       <Typography
         component="span"
         sx={{
-          fontFamily: {xs: "Gotham Pro", md: "Nunito Sans"},
+          fontFamily: { xs: "Gotham Pro", md: "Nunito Sans" },
           display: "inline-block",
           fontWeight: { xs: 400, md: 600 },
-          fontSize: {xs: "12px", md: "14px"},
-          lineHeight: {xs: "16px", md: "20px"},
+          fontSize: { xs: "12px", md: "14px" },
+          lineHeight: { xs: "16px", md: "20px" },
           color: { xs: "#fff", md: `${white ? "#fff" : "#0D052B"}` },
         }}
       >

@@ -33,9 +33,7 @@ export default function Home() {
       <Test />
       <Reviews />
       <Footer />
-      {
-        isShowModal && <FormModal setIsShowModal={setIsShowModal} />
-      }
+      {isShowModal && <FormModal setIsShowModal={setIsShowModal} />}
     </>
   );
 }

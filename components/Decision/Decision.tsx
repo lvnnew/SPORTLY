@@ -38,7 +38,7 @@ const Decision: FC = () => {
               fontSize: { xs: "24px", lg: "48px" },
               fontWeight: 700,
               lineHeight: { xs: "29px", lg: "58px" },
-              color: "#fff"
+              color: "#fff",
             }}
           >
             Какие проблемы решает наша CRM?

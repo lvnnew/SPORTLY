@@ -3,10 +3,10 @@ import Link from "next/link";
 import React, { FC } from "react";
 
 interface ILogo {
-  white?: boolean
+  white?: boolean;
 }
 
-const Logo: FC<ILogo> = ({white}) => {
+const Logo: FC<ILogo> = ({ white }) => {
   return (
     <Link href="/">
       <Typography

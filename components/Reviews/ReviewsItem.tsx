@@ -43,7 +43,7 @@ const ReviewsItem: FC<IReviewsItem> = ({
           sx={{
             position: "relative",
             height: "100%",
-            minHeight: {xs: "61px", lg: "73px"},
+            minHeight: { xs: "61px", lg: "73px" },
           }}
         >
           <Image src="/avatar.svg" alt="avatar" fill={true} />
@@ -62,9 +62,9 @@ const ReviewsItem: FC<IReviewsItem> = ({
             sx={{
               fontFamily: "Gotham Pro",
               display: "inline-block",
-              fontSize: {xs: "20px", md: "22px"},
+              fontSize: { xs: "20px", md: "22px" },
               fontWeight: 400,
-              lineHeight: {xs: "24px", md: "26px"},
+              lineHeight: { xs: "24px", md: "26px" },
             }}
           >
             {name}
@@ -73,9 +73,9 @@ const ReviewsItem: FC<IReviewsItem> = ({
             variant="body1"
             sx={{
               fontFamily: "Gotham Pro",
-              fontSize: {xs: "14px", md: "16px"},
+              fontSize: { xs: "14px", md: "16px" },
               fontWeight: 400,
-              lineHeight: {xs: "17px", md: "23px"},
+              lineHeight: { xs: "17px", md: "23px" },
               color: "rgba(22, 25, 44, 0.5)",
               mt: "3px",
             }}
@@ -89,7 +89,7 @@ const ReviewsItem: FC<IReviewsItem> = ({
         xs={12}
         sx={{
           margin: { xs: "12px 0" },
-          lineHeight: "1px"
+          lineHeight: "1px",
         }}
       >
         <Rating
@@ -118,8 +118,8 @@ const ReviewsItem: FC<IReviewsItem> = ({
           variant="body1"
           sx={{
             fontFamily: "Gotham Pro",
-            fontSize: {xs: "14px", md: "16px"},
-            lineHeight: {xs: "18px", md: "23px"},
+            fontSize: { xs: "14px", md: "16px" },
+            lineHeight: { xs: "18px", md: "23px" },
           }}
         >
           {text}
