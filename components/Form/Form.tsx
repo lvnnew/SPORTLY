@@ -83,7 +83,7 @@ const Form: FC = () => {
         Заполните форму, и мы перезвоним
       </Typography>
       <Grid container spacing="40">
-        <Grid item xs={12} md={6}>
+        <Grid item xs={12} md={6} sx={{ position: "relative" }}>
           <TextField
             id="standard-basic"
             label="Имя"
@@ -103,8 +103,25 @@ const Form: FC = () => {
               },
             }}
           />
+          {errors.name && (
+            <Typography
+              component="span"
+              sx={{
+                display: "inline-block",
+                fontSize: "14px",
+                fontWeight: 400,
+                lineHeight: "20px",
+                color: "#E53939",
+                position: "absolute",
+                left: "40px",
+                bottom: "-13px",
+              }}
+            >
+              Возможно написание только букв
+            </Typography>
+          )}
         </Grid>
-        <Grid item xs={12} md={6}>
+        <Grid item xs={12} md={6} sx={{ position: "relative" }}>
           <InputMask
             mask="+9 999 999 99 99"
             maskPlaceholder={null}
@@ -127,8 +144,25 @@ const Form: FC = () => {
               }}
             />
           </InputMask>
+          {tel.isError && (
+            <Typography
+              component="span"
+              sx={{
+                display: "inline-block",
+                fontSize: "14px",
+                fontWeight: 400,
+                lineHeight: "20px",
+                color: "#E53939",
+                position: "absolute",
+                left: "40px",
+                bottom: "-13px",
+              }}
+            >
+              Введите номер полностью
+            </Typography>
+          )}
         </Grid>
-        <Grid item xs={12} md={6}>
+        <Grid item xs={12} md={6} position="relative">
           <TextField
             id="standard-basic"
             label="E-mail"
@@ -149,9 +183,34 @@ const Form: FC = () => {
               },
             }}
           />
+          {errors.email && (
+            <Typography
+              component="span"
+              sx={{
+                display: "inline-block",
+                fontSize: "14px",
+                fontWeight: 400,
+                lineHeight: "20px",
+                color: "#E53939",
+                position: "absolute",
+                left: "40px",
+                bottom: "-13px",
+              }}
+            >
+              Пример: user@mail.ru
+            </Typography>
+          )}
         </Grid>
-        <Grid item xs={12} md={6}>
+        <Grid
+          item
+          xs={12}
+          md={6}
+          sx={{
+            position: "relative",
+          }}
+        >
           <TextField
+            type="url"
             id="standard-basic"
             label="Ваш сайт"
             variant="standard"
@@ -170,6 +229,23 @@ const Form: FC = () => {
               },
             }}
           />
+          {errors.website && (
+            <Typography
+              component="span"
+              sx={{
+                display: "inline-block",
+                fontSize: "14px",
+                fontWeight: 400,
+                lineHeight: "20px",
+                color: "#E53939",
+                position: "absolute",
+                left: "40px",
+                bottom: "-13px",
+              }}
+            >
+              Введите URL
+            </Typography>
+          )}
         </Grid>
         <Grid
           item
@@ -208,7 +284,11 @@ const Form: FC = () => {
         >
           <Button
             onClick={() => {
-              if (!/^\+[0-9 ]+$/.test(tel.value) || tel.value.length === 0 || tel.value.length < 16) {
+              if (
+                !/^\+[0-9 ]+$/.test(tel.value) ||
+                tel.value.length === 0 ||
+                tel.value.length < 16
+              ) {
                 setTel((prev) => ({ ...prev, isError: true }));
               } else {
                 setTel((prev) => ({ ...prev, isError: false }));
