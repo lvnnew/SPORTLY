@@ -15,6 +15,7 @@ export default function Home() {
 
   React.useEffect(() => {
     setTimeout(() => {
+      document.body.style.overflow = "hidden";
       setIsShowModal(true);
     }, 6000);
   }, []);

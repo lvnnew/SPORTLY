@@ -28,7 +28,7 @@ export const FormModal: FC<IFormModal> = ({ setIsShowModal }) => {
     value: "",
     isError: false,
   });
-  const modalRef = React.useRef<any>(null);
+  const modalRef = React.useRef<null | HTMLFormElement>(null);
 
   const onChangeTel = (e: React.ChangeEvent<HTMLInputElement>) => {
     setTel((prev) => ({ ...prev, value: e.target.value }));
@@ -39,8 +39,14 @@ export const FormModal: FC<IFormModal> = ({ setIsShowModal }) => {
   };
 
   React.useEffect(() => {
-    const onClick = (e: any) =>
-      !modalRef.current.contains(e.target) && setIsShowModal(false);
+    const onClick = (e: any) => {
+      if (modalRef.current) {
+        if (!modalRef.current.contains(e.target)) {
+          setIsShowModal(false);
+          document.body.style.overflow = "auto";
+        }
+      }
+    };
 
     document.addEventListener("click", onClick);
 
@@ -94,8 +100,8 @@ export const FormModal: FC<IFormModal> = ({ setIsShowModal }) => {
           borderRadius: "20px",
           padding: "40px",
           mt: { xs: "55px", lg: "75px" },
-          minWidth: "330px",
-          maxWidth: "465px",
+          minWidth: { xs: "auto", sm: "330px" },
+          maxWidth: { xs: "85%", md: "465px" },
           ml: "auto",
           mr: "auto",
           justifyContent: { md: "center" },
