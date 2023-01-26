@@ -1,9 +1,9 @@
-import { Box, Button, Grid, TextField, Typography } from "@mui/material";
+import { Button, Grid, TextField, Typography } from "@mui/material";
 import Link from "next/link";
 import React, { FC } from "react";
 import axios from "axios";
 import { useForm } from "react-hook-form";
-import InputMask, { ReactInputMask } from "react-input-mask";
+import InputMask from "react-input-mask";
 
 interface IFormInput {
   value: string;
@@ -46,6 +46,8 @@ const Form: FC = () => {
           email: data.email,
           website: data.website,
         });
+
+        alert("Успешно!");
       }
     } catch (err) {
       console.log(err);

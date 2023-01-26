@@ -1,3 +1,4 @@
+import React from "react";
 import Head from "next/head";
 import styles from "../styles/Home.module.css";
 import Header from "../components/Header/Header";
@@ -7,8 +8,17 @@ import Decision from "../components/Decision/Decision";
 import Test from "../components/Test/Test";
 import Reviews from "../components/Reviews/Reviews";
 import Footer from "../components/Footer/Footer";
+import { FormModal } from "../components/Form/FormModal";
 
 export default function Home() {
+  const [isShowModal, setIsShowModal] = React.useState<boolean>(false);
+
+  React.useEffect(() => {
+    setTimeout(() => {
+      setIsShowModal(true);
+    }, 2000);
+  }, []);
+
   return (
     <>
       <Head>
@@ -23,6 +33,9 @@ export default function Home() {
       <Test />
       <Reviews />
       <Footer />
+      {
+        isShowModal && <FormModal setIsShowModal={setIsShowModal} />
+      }
     </>
   );
 }
