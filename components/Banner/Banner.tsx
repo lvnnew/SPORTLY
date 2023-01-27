@@ -14,13 +14,13 @@ const Banner: FC = () => {
         backgroundImage: {
           xs: "url(/banner-bg.svg)",
           lg: "url(/banner-bg-big.svg)",
-          xl: "none",
         },
         backgroundRepeat: "no-repeat",
-        backgroundPosition: { xs: "0 -50px", lg: "top right" },
-        backgroundSize: { xs: "100%", lg: "contain" },
+        backgroundPosition: { xs: "0 -50px", lg: "top right", xl: "right -58px"},
+        backgroundSize: { xs: "100%", lg: "contain", xl: "50%" },
         minHeight: { xs: "auto", lg: "calc(100vh - 58px)", xl: "auto" },
-        backgroundColor: { xs: "#6788FF", md: "#fff" },
+        height: {xl: "calc(100vh)"},
+        backgroundColor: { xs: "#6788FF", lg: "#fff" },
       }}
     >
       <Container maxWidth="lg">

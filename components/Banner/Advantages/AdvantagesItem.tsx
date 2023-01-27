@@ -26,7 +26,7 @@ const AdvantagesItem: FC<IAdvantagesItem> = ({ num, title }) => {
             fontSize: { xs: "32px", lg: "48px" },
             fontWeight: 700,
             lineHeight: { xs: "38px", lg: "58px" },
-            color: { xs: "#fff", xl: "#16192C80" },
+            color: { xs: "#fff" },
             position: "absolute",
             right: { xs: "22px", lg: "15px" },
             top: { xs: "-15px", lg: "-25px" },
@@ -37,7 +37,7 @@ const AdvantagesItem: FC<IAdvantagesItem> = ({ num, title }) => {
         </Typography>
         <Box
           sx={{
-            display: { xs: "flex", xl: "none" },
+            display: { xs: "flex" },
             position: "absolute",
             top: "-10px",
             right: { xs: "-15px", lg: "-15px" },
@@ -45,22 +45,6 @@ const AdvantagesItem: FC<IAdvantagesItem> = ({ num, title }) => {
           }}
         >
           <Image src="/advantages-img.svg" alt="adv" width="53" height="60" />
-        </Box>
-        <Box
-          sx={{
-            display: { xs: "none", xl: "flex" },
-            position: "absolute",
-            top: "-10px",
-            right: { xs: "-15px", lg: "-15px" },
-            zIndex: 1,
-          }}
-        >
-          <Image
-            src="/advantages-img-old.svg"
-            alt="adv"
-            width="53"
-            height="60"
-          />
         </Box>
       </Grid>
       <Grid item xs={9} lg={11}>
@@ -70,7 +54,7 @@ const AdvantagesItem: FC<IAdvantagesItem> = ({ num, title }) => {
             fontSize: "18px",
             fontWeight: { xs: 400, lg: 700 },
             lineHeight: { xs: "22px" },
-            color: { xs: "#fff", xl: "#16192C" },
+            color: { xs: "#fff" },
             position: "relative",
             zIndex: 3,
             maxWidth: { lg: "248px" },
