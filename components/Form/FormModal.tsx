@@ -1,4 +1,4 @@
-import { Button, Grid, TextField, Typography } from "@mui/material";
+import { Alert, Button, Grid, TextField, Typography } from "@mui/material";
 import { Box } from "@mui/system";
 import axios from "axios";
 import Image from "next/image";
@@ -28,6 +28,7 @@ export const FormModal: FC<IFormModal> = ({ setIsShowModal }) => {
     value: "",
     isError: false,
   });
+  const [isShowSuccess, setIsShowSuccess] = React.useState<boolean>(false);
   const modalRef = React.useRef<null | HTMLFormElement>(null);
 
   const onChangeTel = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -74,7 +75,11 @@ export const FormModal: FC<IFormModal> = ({ setIsShowModal }) => {
           website: data.website,
         });
 
-        alert("Успешно!");
+        setIsShowSuccess(true);
+
+        setTimeout(() => {
+          setIsShowSuccess(false);
+        }, 3000); 
       }
     } catch (err) {
       console.log(err);
@@ -94,6 +99,13 @@ export const FormModal: FC<IFormModal> = ({ setIsShowModal }) => {
         backgroundColor: "rgba(0,0,0,0.5)",
       }}
     >
+      <Alert severity="success" color="info" sx={{
+        position: "fixed",
+        top: "0",
+        right: `${isShowSuccess ? "0" : "-100%"}`,
+        transition: "all 0.4s ease",
+        borderRadius: "0"
+      }}>Успешно!</Alert>
       <Grid
         ref={modalRef}
         id="form"

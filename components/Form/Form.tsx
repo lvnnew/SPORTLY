@@ -1,4 +1,4 @@
-import { Button, Grid, TextField, Typography } from "@mui/material";
+import { Alert, Button, Grid, TextField, Typography } from "@mui/material";
 import Link from "next/link";
 import React, { FC } from "react";
 import axios from "axios";
@@ -22,6 +22,7 @@ const Form: FC = () => {
     value: "",
     isError: false,
   });
+  const [isShowSuccess, setIsShowSuccess] = React.useState<boolean>(false);
 
   const onChangeTel = (e: React.ChangeEvent<HTMLInputElement>) => {
     setTel((prev) => ({ ...prev, value: e.target.value }));
@@ -47,7 +48,11 @@ const Form: FC = () => {
           website: data.website,
         });
 
-        alert("Успешно!");
+        setIsShowSuccess(true);
+
+        setTimeout(() => {
+          setIsShowSuccess(false);
+        }, 3000); 
       }
     } catch (err) {
       console.log(err);
@@ -71,6 +76,13 @@ const Form: FC = () => {
         justifyContent: { md: "center" },
       }}
     >
+      <Alert severity="success" color="info" sx={{
+        position: "fixed",
+        top: "0",
+        right: `${isShowSuccess ? "0" : "-100%"}`,
+        transition: "all 0.4s ease",
+        borderRadius: "0"
+      }}>Успешно!</Alert>
       <Typography
         variant="h3"
         sx={{
