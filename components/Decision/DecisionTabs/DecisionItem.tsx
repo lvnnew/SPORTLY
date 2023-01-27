@@ -80,7 +80,8 @@ const DecisionItem: FC<IDecisionItem> = ({ no, ok, list }) => {
             }}
           >
             {ok}
-            {list && (
+          </Typography>
+          {list && (
               <Box component="ul">
                 {list.map((li, index) => {
                   return (
@@ -102,7 +103,6 @@ const DecisionItem: FC<IDecisionItem> = ({ no, ok, list }) => {
                 })}
               </Box>
             )}
-          </Typography>
         </Grid>
       </Grid>
       )}
