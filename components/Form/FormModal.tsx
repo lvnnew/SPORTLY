@@ -53,6 +53,11 @@ export const FormModal: FC<IFormModal> = ({ setIsShowModal }) => {
     return () => document.removeEventListener("click", onClick);
   }, [setIsShowModal]);
 
+  const closeModalForm = () => {
+    setIsShowModal(false);
+    document.body.style.overflow = "auto";
+  }
+
   const onSubmit = async (data: {
     name: string;
     tel: string;
@@ -118,11 +123,24 @@ export const FormModal: FC<IFormModal> = ({ setIsShowModal }) => {
             height: { xs: "75px", md: "88px" },
             position: "absolute",
             top: { xs: "-33px", md: "-36px" },
-            right: { xs: "-33px", md: "-36px" },
+            left: { xs: "-33px", md: "-36px" },
+            transform: "rotate(-45deg)"
           }}
         >
           <Image src="/notification.svg" alt="notification" fill={true} />
         </Box>
+        <Box
+          onClick={closeModalForm}
+          sx={{
+            position: "absolute",
+            right: "20px",
+            top: "5px",
+            fontSize: "35px",
+            transform: "rotate(-45deg)",
+            color: "#6788FF",
+            cursor: "pointer"
+          }}
+        >+</Box>
         <Typography
           variant="h3"
           sx={{
