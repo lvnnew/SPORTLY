@@ -16,10 +16,14 @@ const Banner: FC = () => {
           lg: "url(/banner-bg-big.svg)",
         },
         backgroundRepeat: "no-repeat",
-        backgroundPosition: { xs: "0 -50px", lg: "top right", xl: "right -67px"},
+        backgroundPosition: {
+          xs: "0 -50px",
+          lg: "top right",
+          xl: "right -67px",
+        },
         backgroundSize: { xs: "100%", lg: "contain", xl: "50%" },
         minHeight: { xs: "auto", lg: "calc(100vh - 58px)", xl: "auto" },
-        height: {xl: "calc(100vh - 67px)"},
+        height: { xl: "calc(100vh - 67px)" },
         backgroundColor: { xs: "#6788FF", lg: "#fff" },
       }}
     >
@@ -45,7 +49,7 @@ const Banner: FC = () => {
                 color: { xs: "#fff", lg: "#0D052B" },
               }}
             >
-              CRM для детских спортивных секций и образовательных центов
+              SPORTLY сервис управления спортивными и образовательными секциями
             </Typography>
             <Link href="#form">
               <Button

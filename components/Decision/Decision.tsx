@@ -51,36 +51,29 @@ const Decision: FC = () => {
               mt: { xs: "3px", lg: "20px" },
             }}
           >
-            <Grid item xs={6} lg={3}>
+            <Grid item xs={6} lg={4}>
               <DecisionTab
                 onClick={() => tabHandler(0)}
                 isActive={activeEl === 0 ? true : false}
-                title="Проблемы графика и расписания при использовании Exel или блокнота"
+                title="Бесконечные таблицы в Excel или блокноте"
                 index={0}
               />
             </Grid>
-            <Grid item xs={6} lg={3}>
+            <Grid item xs={6} lg={4}>
               <DecisionTab
                 onClick={() => tabHandler(1)}
                 isActive={activeEl === 1 ? true : false}
-                title="Административные проблемы при отсутствии автоматизации"
+                title="Рутинная работа, которая отнимает все время
+                "
                 index={1}
               />
             </Grid>
-            <Grid item xs={6} lg={3}>
+            <Grid item xs={6} lg={4}>
               <DecisionTab
                 onClick={() => tabHandler(2)}
                 isActive={activeEl === 2 ? true : false}
-                title="Проблемы абонементов"
+                title="Контроль за истечением абонементов"
                 index={2}
-              />
-            </Grid>
-            <Grid item xs={6} lg={3}>
-              <DecisionTab
-                onClick={() => tabHandler(3)}
-                isActive={activeEl === 3 ? true : false}
-                title="Страх трудностей в обучении программой, ее сложный интерфейс"
-                index={3}
               />
             </Grid>
           </Grid>
@@ -100,7 +93,7 @@ const Decision: FC = () => {
                   sm={6}
                   lg={activeEl === 0 || activeEl === 2 ? 4 : 6}
                 >
-                  <DecisionItem no={item.no} ok={item.ok} />
+                  <DecisionItem no={item.no} ok={item.ok ? item.ok : undefined} list={item.list ? item.list : undefined} />
                 </Grid>
               );
             })}

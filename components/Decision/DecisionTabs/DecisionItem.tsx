@@ -1,14 +1,15 @@
-import { Grid, Typography } from "@mui/material";
+import { Box, Grid, Typography } from "@mui/material";
 import React, { FC } from "react";
 import CloseIcon from "@mui/icons-material/Close";
 import CheckIcon from "@mui/icons-material/Check";
 
 interface IDecisionItem {
   no: string;
-  ok: string;
+  ok?: string;
+  list?: string[];
 }
 
-const DecisionItem: FC<IDecisionItem> = ({ no, ok }) => {
+const DecisionItem: FC<IDecisionItem> = ({ no, ok, list }) => {
   return (
     <Grid container>
       <Grid
@@ -46,7 +47,8 @@ const DecisionItem: FC<IDecisionItem> = ({ no, ok }) => {
           </Typography>
         </Grid>
       </Grid>
-      <Grid
+      {ok && (
+        <Grid
         container
         sx={{
           padding: { xs: "12px", lg: "20px" },
@@ -78,9 +80,32 @@ const DecisionItem: FC<IDecisionItem> = ({ no, ok }) => {
             }}
           >
             {ok}
+            {list && (
+              <Box component="ul">
+                {list.map((li, index) => {
+                  return (
+                    <Typography
+                      component="li"
+                      key={index}
+                      sx={{
+                        fontFamily: "Gotham Pro",
+                        fontSize: { xs: "14px", lg: "16px" },
+                        fontWeight: 400,
+                        lineHeight: { xs: "18px", lg: "23px" },
+                        color: "#0D052B",
+                        ml: "17px"
+                      }}
+                    >
+                      {li}
+                    </Typography>
+                  );
+                })}
+              </Box>
+            )}
           </Typography>
         </Grid>
       </Grid>
+      )}
     </Grid>
   );
 };

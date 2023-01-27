@@ -2,7 +2,7 @@ import { Grid, Typography } from "@mui/material";
 import React from "react";
 
 interface ITitle {
-  title: string;
+  title?: string;
   subTitle?: string;
   left?: boolean;
   leftDesk?: boolean;

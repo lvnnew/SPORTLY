@@ -19,8 +19,7 @@ const Test: FC = () => {
     >
       <Container maxWidth="lg">
         <Title
-          title="Тестовый запуск CRM"
-          subTitle="включает в себя "
+          subTitle="Что включает в себя тестовый запуск?"
           left={true}
         />
 
