@@ -2,7 +2,7 @@ interface IDecisionDataItem {
   index: number;
   no: string;
   ok?: string | undefined;
-  list?: string[] | undefined
+  list?: string[] | undefined;
 }
 
 export const decisionData: IDecisionDataItem[] = [
@@ -39,8 +39,8 @@ export const decisionData: IDecisionDataItem[] = [
       "Расписание занятий,",
       "карточки клиентов,",
       "активные и закончившиеся абонементы,",
-      "истории посещений, бронирования занятий, оплаты счета,покупки услуг или товаров."
-    ]
+      "истории посещений, бронирования занятий, оплаты счета,покупки услуг или товаров.",
+    ],
   },
   {
     index: 1,

@@ -24,7 +24,7 @@ const Form: FC = () => {
   });
   const [website, setWebsite] = React.useState<IFormInput>({
     value: "",
-    isError: false
+    isError: false,
   });
   const [isShowSuccess, setIsShowSuccess] = React.useState<boolean>(false);
 
@@ -39,19 +39,20 @@ const Form: FC = () => {
   const onChangeWebsite = (e: React.ChangeEvent<HTMLInputElement>) => {
     const mask = "http://";
 
-    setWebsite((prev) => ({...prev, value: mask + e.target.value.slice(mask.length)}));
-  }
-
-  console.log(website.value);
+    setWebsite((prev) => ({
+      ...prev,
+      value: mask + e.target.value.slice(mask.length),
+    }));
+  };
 
   const deleteMaskWebsite = () => {
-    if(website.value === "http://") {
+    if (website.value === "http://") {
       setWebsite({
         value: "",
-        isError: false
+        isError: false,
       });
     }
-  }
+  };
 
   const onSubmit = async (data: {
     name: string;
@@ -74,7 +75,7 @@ const Form: FC = () => {
 
         setTimeout(() => {
           setIsShowSuccess(false);
-        }, 3000); 
+        }, 3000);
       }
     } catch (err) {
       console.log(err);
@@ -98,13 +99,20 @@ const Form: FC = () => {
         justifyContent: { md: "center" },
       }}
     >
-      <Alert severity="success" color="info" sx={{
-        position: "fixed",
-        top: "0",
-        right: `${isShowSuccess ? "0" : "-100%"}`,
-        transition: "all 0.4s ease",
-        borderRadius: "0"
-      }}>Успешно!</Alert>
+      <Alert
+        severity="success"
+        color="info"
+        sx={{
+          position: "fixed",
+          top: "0",
+          right: `${isShowSuccess ? "0" : "-100%"}`,
+          transition: "all 0.4s ease",
+          borderRadius: "0",
+          zIndex: "1000",
+        }}
+      >
+        Успешно!
+      </Alert>
       <Typography
         variant="h3"
         sx={{
@@ -254,7 +262,10 @@ const Form: FC = () => {
             onChange={onChangeWebsite}
             onBlur={deleteMaskWebsite}
             onFocus={(e: React.FocusEvent<HTMLInputElement>) => {
-              setWebsite((prev) => ({...prev, value: "http://" + e.target.value.slice(7)}))
+              setWebsite((prev) => ({
+                ...prev,
+                value: "http://" + e.target.value.slice(7),
+              }));
             }}
             error={website.isError ? true : false}
             sx={{
@@ -331,13 +342,15 @@ const Form: FC = () => {
               } else {
                 setTel((prev) => ({ ...prev, isError: false }));
               }
-              
-              if(website.value.length === 0) {
-                setWebsite((prev) => ({...prev, isErro: false}));
-              } else if(!/^(ftp|http|https):\/\/[^ "]+\.[a-z а-я]+$/.test(website.value)) {
-                setWebsite((prev) => ({...prev, isError: true}));
+
+              if (website.value.length === 0) {
+                setWebsite((prev) => ({ ...prev, isErro: false }));
+              } else if (
+                !/^(ftp|http|https):\/\/[^ "]+\.[a-z а-я]+$/.test(website.value)
+              ) {
+                setWebsite((prev) => ({ ...prev, isError: true }));
               } else {
-                setWebsite((prev) => ({...prev, isError: false}));
+                setWebsite((prev) => ({ ...prev, isError: false }));
               }
             }}
             type="submit"

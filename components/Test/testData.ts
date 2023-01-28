@@ -22,7 +22,6 @@ export const testData: ITestDataItem[] = [
   },
   {
     num: 5,
-    title:
-      "Обучение персонала работе со Sportly",
+    title: "Обучение персонала работе со Sportly",
   },
 ];

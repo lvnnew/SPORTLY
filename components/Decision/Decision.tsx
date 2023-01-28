@@ -93,7 +93,11 @@ const Decision: FC = () => {
                   sm={6}
                   lg={activeEl === 0 || activeEl === 2 ? 4 : 6}
                 >
-                  <DecisionItem no={item.no} ok={item.ok ? item.ok : undefined} list={item.list ? item.list : undefined} />
+                  <DecisionItem
+                    no={item.no}
+                    ok={item.ok ? item.ok : undefined}
+                    list={item.list ? item.list : undefined}
+                  />
                 </Grid>
               );
             })}

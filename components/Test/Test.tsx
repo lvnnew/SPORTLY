@@ -18,10 +18,7 @@ const Test: FC = () => {
       }}
     >
       <Container maxWidth="lg">
-        <Title
-          subTitle="Что включает в себя тестовый запуск?"
-          left={true}
-        />
+        <Title subTitle="Что включает в себя тестовый запуск?" left={true} />
 
         <Box
           sx={{

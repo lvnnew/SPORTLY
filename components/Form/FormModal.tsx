@@ -28,6 +28,10 @@ export const FormModal: FC<IFormModal> = ({ setIsShowModal }) => {
     value: "",
     isError: false,
   });
+  const [website, setWebsite] = React.useState<IFormInput>({
+    value: "",
+    isError: false,
+  });
   const [isShowSuccess, setIsShowSuccess] = React.useState<boolean>(false);
   const modalRef = React.useRef<null | HTMLFormElement>(null);
 
@@ -36,6 +40,24 @@ export const FormModal: FC<IFormModal> = ({ setIsShowModal }) => {
 
     if (/^[0-9]+$/.test(tel.value)) {
       setTel((prev) => ({ ...prev, isError: false }));
+    }
+  };
+
+  const onChangeWebsite = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const mask = "http://";
+
+    setWebsite((prev) => ({
+      ...prev,
+      value: mask + e.target.value.slice(mask.length),
+    }));
+  };
+
+  const deleteMaskWebsite = () => {
+    if (website.value === "http://") {
+      setWebsite({
+        value: "",
+        isError: false,
+      });
     }
   };
 
@@ -57,7 +79,7 @@ export const FormModal: FC<IFormModal> = ({ setIsShowModal }) => {
   const closeModalForm = () => {
     setIsShowModal(false);
     document.body.style.overflow = "auto";
-  }
+  };
 
   const onSubmit = async (data: {
     name: string;
@@ -67,19 +89,20 @@ export const FormModal: FC<IFormModal> = ({ setIsShowModal }) => {
   }) => {
     try {
       data.tel = tel.value;
-      if (tel.isError === false) {
+      data.website = website.value;
+      if (tel.isError === false && website.isError === false) {
         await axios.post("/api/form", {
           name: data.name,
           tel: data.tel,
           email: data.email,
-          website: data.website,
+          website: data.website || "Не указан",
         });
 
         setIsShowSuccess(true);
 
         setTimeout(() => {
           setIsShowSuccess(false);
-        }, 3000); 
+        }, 3000);
       }
     } catch (err) {
       console.log(err);
@@ -99,13 +122,20 @@ export const FormModal: FC<IFormModal> = ({ setIsShowModal }) => {
         backgroundColor: "rgba(0,0,0,0.5)",
       }}
     >
-      <Alert severity="success" color="info" sx={{
-        position: "fixed",
-        top: "0",
-        right: `${isShowSuccess ? "0" : "-100%"}`,
-        transition: "all 0.4s ease",
-        borderRadius: "0"
-      }}>Успешно!</Alert>
+      <Alert
+        severity="success"
+        color="info"
+        sx={{
+          position: "fixed",
+          top: "0",
+          right: `${isShowSuccess ? "0" : "-100%"}`,
+          transition: "all 0.4s ease",
+          borderRadius: "0",
+          zIndex: "1000",
+        }}
+      >
+        Успешно!
+      </Alert>
       <Grid
         ref={modalRef}
         id="form"
@@ -136,7 +166,7 @@ export const FormModal: FC<IFormModal> = ({ setIsShowModal }) => {
             position: "absolute",
             top: { xs: "-33px", md: "-36px" },
             left: { xs: "-33px", md: "-36px" },
-            transform: "rotate(-45deg)"
+            transform: "rotate(-45deg)",
           }}
         >
           <Image src="/notification.svg" alt="notification" fill={true} />
@@ -150,9 +180,11 @@ export const FormModal: FC<IFormModal> = ({ setIsShowModal }) => {
             fontSize: "35px",
             transform: "rotate(-45deg)",
             color: "#6788FF",
-            cursor: "pointer"
+            cursor: "pointer",
           }}
-        >+</Box>
+        >
+          +
+        </Box>
         <Typography
           variant="h3"
           sx={{
@@ -299,11 +331,16 @@ export const FormModal: FC<IFormModal> = ({ setIsShowModal }) => {
               id="standard-basic"
               label="Ваш сайт"
               variant="standard"
-              {...register("website", {
-                required: true,
-                pattern: /^(ftp|http|https):\/\/[^ "]+$/,
-              })}
-              error={errors.website ? true : false}
+              value={website.value}
+              onChange={onChangeWebsite}
+              onBlur={deleteMaskWebsite}
+              onFocus={(e: React.FocusEvent<HTMLInputElement>) => {
+                setWebsite((prev) => ({
+                  ...prev,
+                  value: "http://" + e.target.value.slice(7),
+                }));
+              }}
+              error={website.isError ? true : false}
               sx={{
                 fontFamily: "Nunito Sans",
                 width: "100%",
@@ -314,7 +351,7 @@ export const FormModal: FC<IFormModal> = ({ setIsShowModal }) => {
                 },
               }}
             />
-            {errors.website && (
+            {website.isError && (
               <Typography
                 component="span"
                 sx={{
@@ -324,7 +361,7 @@ export const FormModal: FC<IFormModal> = ({ setIsShowModal }) => {
                   lineHeight: "20px",
                   color: "#E53939",
                   position: "absolute",
-                  left: "10px",
+                  left: "40px",
                   bottom: "-13px",
                 }}
               >
@@ -377,6 +414,18 @@ export const FormModal: FC<IFormModal> = ({ setIsShowModal }) => {
                   setTel((prev) => ({ ...prev, isError: true }));
                 } else {
                   setTel((prev) => ({ ...prev, isError: false }));
+                }
+
+                if (website.value.length === 0) {
+                  setWebsite((prev) => ({ ...prev, isErro: false }));
+                } else if (
+                  !/^(ftp|http|https):\/\/[^ "]+\.[a-z а-я]+$/.test(
+                    website.value
+                  )
+                ) {
+                  setWebsite((prev) => ({ ...prev, isError: true }));
+                } else {
+                  setWebsite((prev) => ({ ...prev, isError: false }));
                 }
               }}
               type="submit"

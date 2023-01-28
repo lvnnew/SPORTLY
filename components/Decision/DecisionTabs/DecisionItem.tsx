@@ -49,39 +49,39 @@ const DecisionItem: FC<IDecisionItem> = ({ no, ok, list }) => {
       </Grid>
       {ok && (
         <Grid
-        container
-        sx={{
-          padding: { xs: "12px", lg: "20px" },
-          pl: { xs: "17px", lg: "25px" },
-          backgroundColor: "#fff",
-          borderRadius: "0 0 20px 20px",
-          alignItems: "start",
-          minHeight: "auto",
-        }}
-      >
-        <Grid item xs={1}>
-          <CheckIcon sx={{ color: "#439F6E" }} />
-        </Grid>
-        <Grid
-          item
-          xs={10}
+          container
           sx={{
-            ml: "15px",
+            padding: { xs: "12px", lg: "20px" },
+            pl: { xs: "17px", lg: "25px" },
+            backgroundColor: "#fff",
+            borderRadius: "0 0 20px 20px",
+            alignItems: "start",
+            minHeight: "auto",
           }}
         >
-          <Typography
-            variant="body1"
+          <Grid item xs={1}>
+            <CheckIcon sx={{ color: "#439F6E" }} />
+          </Grid>
+          <Grid
+            item
+            xs={10}
             sx={{
-              fontFamily: "Gotham Pro",
-              fontSize: { xs: "14px", lg: "16px" },
-              fontWeight: 400,
-              lineHeight: { xs: "18px", lg: "23px" },
-              color: "#0D052B",
+              ml: "15px",
             }}
           >
-            {ok}
-          </Typography>
-          {list && (
+            <Typography
+              variant="body1"
+              sx={{
+                fontFamily: "Gotham Pro",
+                fontSize: { xs: "14px", lg: "16px" },
+                fontWeight: 400,
+                lineHeight: { xs: "18px", lg: "23px" },
+                color: "#0D052B",
+              }}
+            >
+              {ok}
+            </Typography>
+            {list && (
               <Box component="ul">
                 {list.map((li, index) => {
                   return (
@@ -94,7 +94,7 @@ const DecisionItem: FC<IDecisionItem> = ({ no, ok, list }) => {
                         fontWeight: 400,
                         lineHeight: { xs: "18px", lg: "23px" },
                         color: "#0D052B",
-                        ml: "17px"
+                        ml: "17px",
                       }}
                     >
                       {li}
@@ -103,8 +103,8 @@ const DecisionItem: FC<IDecisionItem> = ({ no, ok, list }) => {
                 })}
               </Box>
             )}
+          </Grid>
         </Grid>
-      </Grid>
       )}
     </Grid>
   );
