@@ -22,6 +22,10 @@ const Form: FC = () => {
     value: "",
     isError: false,
   });
+  const [website, setWebsite] = React.useState<IFormInput>({
+    value: "",
+    isError: false
+  });
   const [isShowSuccess, setIsShowSuccess] = React.useState<boolean>(false);
 
   const onChangeTel = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -32,6 +36,23 @@ const Form: FC = () => {
     }
   };
 
+  const onChangeWebsite = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const mask = "http://";
+
+    setWebsite((prev) => ({...prev, value: mask + e.target.value.slice(mask.length)}));
+  }
+
+  console.log(website.value);
+
+  const deleteMaskWebsite = () => {
+    if(website.value === "http://") {
+      setWebsite({
+        value: "",
+        isError: false
+      });
+    }
+  }
+
   const onSubmit = async (data: {
     name: string;
     tel: string;
@@ -40,12 +61,13 @@ const Form: FC = () => {
   }) => {
     try {
       data.tel = tel.value;
-      if (tel.isError === false) {
+      data.website = website.value;
+      if (tel.isError === false && website.isError === false) {
         await axios.post("/api/form", {
           name: data.name,
           tel: data.tel,
           email: data.email,
-          website: data.website,
+          website: data.website || "Не указан",
         });
 
         setIsShowSuccess(true);
@@ -228,11 +250,13 @@ const Form: FC = () => {
             id="standard-basic"
             label="Ваш сайт"
             variant="standard"
-            {...register("website", {
-              required: true,
-              pattern: /^(ftp|http|https):\/\/[^ "]+$/,
-            })}
-            error={errors.website ? true : false}
+            value={website.value}
+            onChange={onChangeWebsite}
+            onBlur={deleteMaskWebsite}
+            onFocus={(e: React.FocusEvent<HTMLInputElement>) => {
+              setWebsite((prev) => ({...prev, value: "http://" + e.target.value.slice(7)}))
+            }}
+            error={website.isError ? true : false}
             sx={{
               fontFamily: "Nunito Sans",
               width: "100%",
@@ -243,7 +267,7 @@ const Form: FC = () => {
               },
             }}
           />
-          {errors.website && (
+          {website.isError && (
             <Typography
               component="span"
               sx={{
@@ -306,6 +330,14 @@ const Form: FC = () => {
                 setTel((prev) => ({ ...prev, isError: true }));
               } else {
                 setTel((prev) => ({ ...prev, isError: false }));
+              }
+              
+              if(website.value.length === 0) {
+                setWebsite((prev) => ({...prev, isErro: false}));
+              } else if(!/^(ftp|http|https):\/\/[^ "]+\.[a-z а-я]+$/.test(website.value)) {
+                setWebsite((prev) => ({...prev, isError: true}));
+              } else {
+                setWebsite((prev) => ({...prev, isError: false}));
               }
             }}
             type="submit"
