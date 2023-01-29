@@ -43,7 +43,7 @@ const Banner: FC = () => {
               sx={{
                 fontFamily: { xs: "Gotham Pro", md: "Nunito Sans" },
                 fontSize: { xs: "24px", md: "35px", lg: "60px" },
-                fontWeight: 700,
+                fontWeight: 600,
                 lineHeight: { xs: "29px", md: "35px", lg: "66px" },
                 textAlign: { xs: "center", md: "left" },
                 color: { xs: "#fff", lg: "#0D052B" },

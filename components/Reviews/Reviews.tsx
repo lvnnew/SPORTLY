@@ -21,8 +21,8 @@ const Reviews: FC = () => {
     >
       <Container maxWidth="lg">
         <Title
-          title="Польза от использования CRM "
-          subTitle="которую отметили участники в ходе CustDev исследования"
+          title="Польза от использования SPORTLY"
+          subTitle="которую отметили пользователи"
           left={true}
           leftDesk={true}
         />

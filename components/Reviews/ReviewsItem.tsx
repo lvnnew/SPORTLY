@@ -88,7 +88,7 @@ const ReviewsItem: FC<IReviewsItem> = ({
         item
         xs={12}
         sx={{
-          mt: { xs: "0" },
+          mt: { xs: "10px" },
           mb: {
             lg: "100%",
           },

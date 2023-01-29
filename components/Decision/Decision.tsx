@@ -41,7 +41,7 @@ const Decision: FC = () => {
               color: "#fff",
             }}
           >
-            Какие проблемы решает наша SPORTLY?
+            Какие проблемы решает SPORTLY?
           </Typography>
 
           <Grid

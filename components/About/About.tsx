@@ -33,7 +33,7 @@ const About: FC = () => {
           pr: { xs: "0", lg: "16px" },
         }}
       >
-        <Title title="CRM" subTitle="идеальна для" />
+        <Title title="Идеально для" />
 
         <Box
           sx={{
