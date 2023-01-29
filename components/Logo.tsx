@@ -19,7 +19,7 @@ const Logo: FC<ILogo> = ({ white }) => {
           fontFamily: "Nunito Sans",
         }}
       >
-        CRM.
+        SPORTLY
       </Typography>
     </Link>
   );

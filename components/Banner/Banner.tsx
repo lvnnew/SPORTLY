@@ -49,7 +49,14 @@ const Banner: FC = () => {
                 color: { xs: "#fff", lg: "#0D052B" },
               }}
             >
-              SPORTLY сервис управления спортивными и образовательными секциями
+              <Typography component="span" sx={{
+                fontFamily: { xs: "Gotham Pro", md: "Nunito Sans" },
+                fontSize: { xs: "24px", md: "35px", lg: "60px" },
+                fontWeight: 800,
+                lineHeight: { xs: "29px", md: "35px", lg: "66px" },
+                textAlign: { xs: "center", md: "left" },
+                color: { xs: "#fff", lg: "#0D052B" },
+              }}>SPORTLY</Typography> <br /> сервис управления спортивными и образовательными секциями
             </Typography>
             <Link href="#form">
               <Button

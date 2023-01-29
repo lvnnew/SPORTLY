@@ -88,26 +88,6 @@ const ReviewsItem: FC<IReviewsItem> = ({
         item
         xs={12}
         sx={{
-          margin: { xs: "12px 0" },
-          lineHeight: "1px",
-        }}
-      >
-        <Rating
-          name="text-feedback"
-          value={rating}
-          readOnly
-          precision={0.5}
-          emptyIcon={<StarRateIcon sx={{ color: "#fff" }} fontSize="inherit" />}
-          sx={{
-            color: "#F2D11D",
-            height: "max-content",
-          }}
-        />
-      </Grid>
-      <Grid
-        item
-        xs={12}
-        sx={{
           mt: { xs: "0" },
           mb: {
             lg: "100%",

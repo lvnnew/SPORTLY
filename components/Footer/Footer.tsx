@@ -29,7 +29,7 @@ const Footer: FC = () => {
                 justifyContent: "space-between",
               }}
             >
-              <Logo />
+              <Logo white/>
               <Tel left={true} mt="auto" white />
             </Grid>
             <Grid item xs={4}>

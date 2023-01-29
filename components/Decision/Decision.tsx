@@ -41,7 +41,7 @@ const Decision: FC = () => {
               color: "#fff",
             }}
           >
-            Какие проблемы решает наша CRM?
+            Какие проблемы решает наша SPORTLY?
           </Typography>
 
           <Grid

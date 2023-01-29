@@ -20,7 +20,7 @@ const Menu: FC<IMenu> = ({ setIsOpenMenu }) => {
         mr: { md: "50px", lg: "170px" },
       }}
     >
-      <MenuItem href="about" title="О CRM" setIsOpenMenu={setIsOpenMenu} />
+      <MenuItem href="about" title="О проекте" setIsOpenMenu={setIsOpenMenu} />
       <MenuItem
         href="test"
         title="Тестовый запуск"
