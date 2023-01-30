@@ -1,9 +1,8 @@
 import { NextApiRequest, NextApiResponse } from "next";
-import TelegramBot from "node-telegram-bot-api";
-import config from "config";
+const TelegramBot = require("node-telegram-bot-api");
 
-const TOKEN: string = config.get("TOKEN");
-const CHAT_ID: string = config.get("CHAT_ID");
+const TOKEN = process.env.TOKEN;
+const CHAT_ID = process.env.CHAT_ID;
 
 const bot = new TelegramBot(TOKEN, { polling: true });
 
