@@ -15,6 +15,7 @@ const Form: FC = () => {
     register,
     handleSubmit,
     setError,
+    reset,
     formState: { errors },
   } = useForm();
 
@@ -72,6 +73,10 @@ const Form: FC = () => {
         });
 
         setIsShowSuccess(true);
+
+        reset();
+
+        setTel({value: '', isError: false});
 
         setTimeout(() => {
           setIsShowSuccess(false);

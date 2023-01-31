@@ -21,6 +21,7 @@ export const FormModal: FC<IFormModal> = ({ setIsShowModal }) => {
     register,
     handleSubmit,
     setError,
+    reset,
     formState: { errors },
   } = useForm();
 
@@ -99,6 +100,10 @@ export const FormModal: FC<IFormModal> = ({ setIsShowModal }) => {
         });
 
         setIsShowSuccess(true);
+
+        reset();
+
+        setTel({value: '', isError: false});
 
         setTimeout(() => {
           setIsShowSuccess(false);
