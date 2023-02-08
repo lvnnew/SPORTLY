@@ -22,7 +22,7 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
         Website-ссылка: ${body.website}
       `;
 
-      bot.sendMessage(CHAT_ID, text);
+      await bot.sendMessage(CHAT_ID, text);
 
       res.status(200).json({ message: "Успешно" });
       bot.stopPulling();
