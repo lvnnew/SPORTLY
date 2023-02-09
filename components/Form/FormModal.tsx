@@ -14,9 +14,10 @@ interface IFormInput {
 
 interface IFormModal {
   setIsShowModal: Function;
+  setIsShowSuccess: Function;
 }
 
-export const FormModal: FC<IFormModal> = ({ setIsShowModal }) => {
+export const FormModal: FC<IFormModal> = ({ setIsShowModal, setIsShowSuccess }) => {
   const {
     register,
     handleSubmit,
@@ -33,7 +34,6 @@ export const FormModal: FC<IFormModal> = ({ setIsShowModal }) => {
     value: "",
     isError: false,
   });
-  const [isShowSuccess, setIsShowSuccess] = React.useState<boolean>(false);
   const modalRef = React.useRef<null | HTMLFormElement>(null);
 
   const onChangeTel = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -103,7 +103,10 @@ export const FormModal: FC<IFormModal> = ({ setIsShowModal }) => {
 
         reset();
 
-        setTel({value: '', isError: false});
+        setTel({ value: "", isError: false });
+
+        setIsShowModal(false);
+        document.body.style.overflow = "auto";
 
         setTimeout(() => {
           setIsShowSuccess(false);
@@ -127,20 +130,6 @@ export const FormModal: FC<IFormModal> = ({ setIsShowModal }) => {
         backgroundColor: "rgba(0,0,0,0.5)",
       }}
     >
-      <Alert
-        severity="success"
-        color="info"
-        sx={{
-          position: "fixed",
-          top: "0",
-          right: `${isShowSuccess ? "0" : "-100%"}`,
-          transition: "all 0.4s ease",
-          borderRadius: "0",
-          zIndex: "1000",
-        }}
-      >
-        Успешно!
-      </Alert>
       <Grid
         ref={modalRef}
         id="form"
