@@ -9,9 +9,11 @@ import Test from "../components/Test/Test";
 import Reviews from "../components/Reviews/Reviews";
 import Footer from "../components/Footer/Footer";
 import { FormModal } from "../components/Form/FormModal";
+import { Alert } from "@mui/material";
 
 export default function Home() {
   const [isShowModal, setIsShowModal] = React.useState<boolean>(false);
+  const [isShowSuccess, setIsShowSuccess] = React.useState<boolean>(false);
 
   React.useEffect(() => {
     setTimeout(() => {
@@ -34,7 +36,21 @@ export default function Home() {
       <Test />
       <Reviews />
       <Footer />
-      {isShowModal && <FormModal setIsShowModal={setIsShowModal} />}
+      <Alert
+        severity="success"
+        color="info"
+        sx={{
+          position: "fixed",
+          top: "0",
+          right: `${isShowSuccess ? "0" : "-100%"}`,
+          transition: "all 0.4s ease",
+          borderRadius: "0",
+          zIndex: "1000",
+        }}
+      >
+        Успешно!
+      </Alert>
+      {isShowModal && <FormModal setIsShowModal={setIsShowModal} setIsShowSuccess={setIsShowSuccess} />}
     </>
   );
 }
