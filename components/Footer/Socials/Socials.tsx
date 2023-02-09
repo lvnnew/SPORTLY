@@ -34,7 +34,7 @@ const Socials: FC = () => {
           img="/socials/telegram.svg"
           alt="telegram"
         />
-        <SocialsLink href="#" img="/socials/whatsapp.svg" alt="whatsapp" />
+        <SocialsLink href="https://wa.me/905067053512" img="/socials/whatsapp.svg" alt="whatsapp" />
       </Box>
     </Box>
   );
