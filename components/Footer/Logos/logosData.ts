@@ -13,9 +13,6 @@ const logosData: ILogosDataItem[] = [
     img: "/footer-items/MIR_png.png",
   },
   {
-    img: "/footer-items/Modulbank-logo-en-black.png",
-  },
-  {
     img: "/footer-items/visa_PNG.png",
   },
 ];

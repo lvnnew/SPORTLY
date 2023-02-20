@@ -43,7 +43,7 @@ const Banner: FC = () => {
               sx={{
                 fontFamily: { xs: "Gotham Pro", md: "Nunito Sans" },
                 fontSize: { xs: "24px", md: "35px", lg: "60px" },
-                fontWeight: 600,
+                fontWeight: {xs: 500, md: 600},
                 lineHeight: { xs: "29px", md: "35px", lg: "66px" },
                 textAlign: { xs: "center", md: "left" },
                 color: { xs: "#fff", lg: "#0D052B" },
@@ -51,7 +51,7 @@ const Banner: FC = () => {
             >
               <Typography component="span" sx={{
                 fontFamily: { xs: "Gotham Pro", md: "Nunito Sans" },
-                fontSize: { xs: "24px", md: "35px", lg: "60px" },
+                fontSize: { xs: "32px", md: "35px", lg: "60px" },
                 fontWeight: 800,
                 lineHeight: { xs: "29px", md: "35px", lg: "66px" },
                 textAlign: { xs: "center", md: "left" },
