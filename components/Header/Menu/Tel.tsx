@@ -58,7 +58,7 @@ const Tel: FC<ITel> = ({ left = false, mt, right = false, white = false }) => {
           </Typography>
         </Link>
       </Box>
-      <Typography
+      {/* <Typography
         component="span"
         sx={{
           fontFamily: { xs: "Gotham Pro", md: "Nunito Sans" },
@@ -70,7 +70,7 @@ const Tel: FC<ITel> = ({ left = false, mt, right = false, white = false }) => {
         }}
       >
         Заказать обратный звонок
-      </Typography>
+      </Typography> */}
     </Box>
   );
 };

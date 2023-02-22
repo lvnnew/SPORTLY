@@ -6,7 +6,7 @@ interface IAboutData {
 export const aboutData: IAboutData[] = [
   {
     img: "/about-items/fight.svg",
-    title: "Единоборство",
+    title: "Единоборства",
   },
   {
     img: "/about-items/football.svg",
