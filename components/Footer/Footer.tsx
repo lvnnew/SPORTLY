@@ -114,6 +114,7 @@ const Footer: FC = () => {
             <Logos />
             <Socials />
           </Box>
+          <div id="socials"></div>
         </Container>
       </Grid>
     </Box>

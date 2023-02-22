@@ -5,7 +5,6 @@ import SocialsLink from "./SocialsLink";
 const Socials: FC = () => {
   return (
     <Box
-      id="socials"
       sx={{
         margin: { xs: "30px auto 0 auto", lg: "30px 0 0" },
       }}

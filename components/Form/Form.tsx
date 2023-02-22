@@ -261,7 +261,7 @@ const Form: FC = () => {
           <TextField
             type="url"
             id="standard-basic"
-            label="Ваш сайт"
+            label="Ваш сайт (необязательно)"
             variant="standard"
             value={website.value}
             onChange={onChangeWebsite}
@@ -325,7 +325,7 @@ const Form: FC = () => {
           >
             Оставляя заявку, вы даете нам разрешение связаться с вами
             и соглашаетесь с 
-            <Link href="/politics">Политикой конфиденциальности</Link>
+            <Link href="/policy.docx">Политикой конфиденциальности</Link>
           </Typography>
         </Grid>
         <Grid
