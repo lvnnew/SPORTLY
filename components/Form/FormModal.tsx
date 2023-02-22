@@ -323,7 +323,7 @@ export const FormModal: FC<IFormModal> = ({ setIsShowModal, setIsShowSuccess }) 
             <TextField
               type="url"
               id="standard-basic"
-              label="Ваш сайт"
+              label="Ваш сайт (необязательно)"
               variant="standard"
               value={website.value}
               onChange={onChangeWebsite}
