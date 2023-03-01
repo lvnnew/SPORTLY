@@ -31,7 +31,6 @@ const Footer: FC = () => {
               }}
             >
               <Logo white />
-              <Tel left={true} mt="auto" white />
             </Grid>
             <Grid item xs={4}>
               <FooterMenu />
@@ -77,6 +76,7 @@ const Footer: FC = () => {
           <Grid
             container
             sx={{
+              justifyContent: "space-between",
               alignItems: "center",
               mt: "-20px",
             }}
@@ -84,11 +84,11 @@ const Footer: FC = () => {
             <Grid item md={2}>
               <Logo white />
             </Grid>
-            <Grid item md={8}>
+            <Grid item md={10} sx={{
+              display: "grid", 
+              justifyContent: "end",
+            }}>
               <FooterMenu />
-            </Grid>
-            <Grid item md={2}>
-              <Tel right={true} white />
             </Grid>
           </Grid>
           <Box

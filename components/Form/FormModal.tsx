@@ -192,7 +192,7 @@ export const FormModal: FC<IFormModal> = ({ setIsShowModal, setIsShowSuccess }) 
         >
           Первые полгода бесплатно
         </Typography>
-        <Grid container spacing="10">
+        <Grid container spacing="10" sx={{gap: "10px"}}>
           <Grid item xs={12} md={12} sx={{ position: "relative" }}>
             <TextField
               id="standard-basic"
@@ -388,7 +388,7 @@ export const FormModal: FC<IFormModal> = ({ setIsShowModal, setIsShowSuccess }) 
             >
               Оставляя заявку, вы даете нам разрешение связаться с вами
               и соглашаетесь с 
-              <Link href="/politics">Политикой конфиденциальности</Link>
+              <Link href="/policy.docx">Политикой конфиденциальности</Link>
             </Typography>
           </Grid>
           <Grid

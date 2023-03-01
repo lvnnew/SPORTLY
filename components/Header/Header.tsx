@@ -52,7 +52,6 @@ const Header: FC = () => {
               }}
             >
               <Menu />
-              <Tel />
             </Box>
 
             {!isOpenMenu ? (
@@ -91,7 +90,6 @@ const Header: FC = () => {
           }}
         >
           <Menu setIsOpenMenu={setIsOpenMenu} />
-          <Tel />
         </Box>
       )}
     </>

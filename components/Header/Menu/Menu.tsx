@@ -17,7 +17,6 @@ const Menu: FC<IMenu> = ({ setIsOpenMenu }) => {
         alignItems: "center",
         gap: { xs: "32px", md: "40px" },
         mt: { xs: "43px", md: "0" },
-        mr: { md: "50px", lg: "170px" },
       }}
     >
       <MenuItem href="about" title="О проекте" setIsOpenMenu={setIsOpenMenu} />

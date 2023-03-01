@@ -17,6 +17,7 @@ const Logo: FC<ILogo> = ({ white }) => {
           lineHeight: "38px",
           color: white ? "#fff" : "#6788FF",
           fontFamily: "Nunito Sans",
+          cursor: "default"
         }}
       >
         SPORTLY
