@@ -31,7 +31,6 @@ const Footer: FC = () => {
               }}
             >
               <Logo white />
-              <Tel left={true} mt="auto" white />
             </Grid>
             <Grid item xs={4}>
               <FooterMenu />
@@ -86,9 +85,6 @@ const Footer: FC = () => {
             </Grid>
             <Grid item md={8}>
               <FooterMenu />
-            </Grid>
-            <Grid item md={2}>
-              <Tel right={true} white />
             </Grid>
           </Grid>
           <Box

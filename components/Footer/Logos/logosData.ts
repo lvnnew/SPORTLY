@@ -4,9 +4,6 @@ interface ILogosDataItem {
 
 const logosData: ILogosDataItem[] = [
   {
-    img: "/footer-items/Maestro.png",
-  },
-  {
     img: "/footer-items/mastercard_PNG.png",
   },
   {
