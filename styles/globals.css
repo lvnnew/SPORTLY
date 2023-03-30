@@ -179,6 +179,81 @@ a {
   background-color: #6788ff;
 }
 
+.quick-call-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  z-index: 1100;
+}
+
+.quick-call-wrapper:before {
+  content: "";
+  position: absolute;
+  top: -8px;
+  left: -8px;
+  right: -8px;
+  bottom: -8px;
+  border-radius: 50%;
+  opacity: 0;
+  animation: pulseBig 2s infinite;
+}
+
+.quick-call-wrapper:after {
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  right: -5px;
+  bottom: -5px;
+  border-radius: 50%;
+  opacity: 0;
+  animation: pulseSmall 2s infinite;
+}
+
+.quick-call-wrapper:first-child::before,
+.quick-call-wrapper:first-child::after {
+  border: 1px solid #2ca5e0;
+}
+
+.quick-call-wrapper:last-child::before,
+.quick-call-wrapper:last-child::after {
+  border: 1px solid #25D366;
+}
+
+@keyframes pulseBig {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+
+  100% {
+    opacity: 0;
+    transform: scale(1.3);
+  }
+}
+
+@keyframes pulseSmall {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+
+  50% {
+    opacity: 0.5
+  }
+
+  100% {
+    opacity: 0;
+    transform: scale(1.15);
+  }
+}
+
 @media (min-width: 380px) {
   .about-item {
     font-size: 18px;
