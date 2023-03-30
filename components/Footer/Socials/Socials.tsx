@@ -14,7 +14,7 @@ const Socials: FC = () => {
           fontSize: "18px",
           color: "#fff",
 
-          textAlign: {xs: "center", md: "left"}
+          textAlign: { xs: "center", md: "left" },
         }}
       >
         Есть вопросы? Напишите нам
@@ -25,7 +25,7 @@ const Socials: FC = () => {
           alignItems: "center",
           gap: "15px",
           margin: { xs: "15px auto 0 auto", lg: "15px 0 0" },
-          justifyContent: {xs: "center", md: "flex-start"}
+          justifyContent: { xs: "center", md: "flex-start" },
         }}
       >
         <SocialsLink
@@ -33,7 +33,11 @@ const Socials: FC = () => {
           img="/socials/telegram.svg"
           alt="telegram"
         />
-        <SocialsLink href="https://wa.me/905067053512" img="/socials/whatsapp.svg" alt="whatsapp" />
+        <SocialsLink
+          href="https://wa.me/905067053512"
+          img="/socials/whatsapp.svg"
+          alt="whatsapp"
+        />
       </Box>
     </Box>
   );

@@ -12,7 +12,7 @@ interface IQuickCall {
 const QuickCall: FC<IQuickCall> = ({ background, img, href }) => {
   return (
     <Box
-        className="quick-call-wrapper"
+      className="quick-call-wrapper"
       sx={{
         display: "flex",
         justifyContent: "center",
@@ -21,7 +21,7 @@ const QuickCall: FC<IQuickCall> = ({ background, img, href }) => {
         width: "60px",
         height: "60px",
         borderRadius: "50%",
-        position: "relative"
+        position: "relative",
       }}
     >
       <Link className="quick-call-link" href={href}>

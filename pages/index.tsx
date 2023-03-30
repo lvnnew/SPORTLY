@@ -51,7 +51,12 @@ export default function Home() {
       >
         Успешно!
       </Alert>
-      {isShowModal && <FormModal setIsShowModal={setIsShowModal} setIsShowSuccess={setIsShowSuccess} />}
+      {isShowModal && (
+        <FormModal
+          setIsShowModal={setIsShowModal}
+          setIsShowSuccess={setIsShowSuccess}
+        />
+      )}
       <QuickCalls />
     </>
   );

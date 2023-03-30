@@ -219,7 +219,7 @@ a {
 
 .quick-call-wrapper:last-child::before,
 .quick-call-wrapper:last-child::after {
-  border: 1px solid #25D366;
+  border: 1px solid #25d366;
 }
 
 @keyframes pulseBig {
@@ -245,7 +245,7 @@ a {
   }
 
   50% {
-    opacity: 0.5
+    opacity: 0.5;
   }
 
   100% {
