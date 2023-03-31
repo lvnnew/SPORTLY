@@ -76,7 +76,7 @@ const Form: FC = () => {
 
         reset();
 
-        setTel({value: '', isError: false});
+        setTel({ value: "", isError: false });
 
         setTimeout(() => {
           setIsShowSuccess(false);

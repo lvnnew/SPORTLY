@@ -84,10 +84,14 @@ const Footer: FC = () => {
             <Grid item md={2}>
               <Logo white />
             </Grid>
-            <Grid item md={10} sx={{
-              display: "grid", 
-              justifyContent: "end",
-            }}>
+            <Grid
+              item
+              md={10}
+              sx={{
+                display: "grid",
+                justifyContent: "end",
+              }}
+            >
               <FooterMenu />
             </Grid>
           </Grid>
@@ -108,7 +112,7 @@ const Footer: FC = () => {
             sx={{
               display: "flex",
               justifyContent: "space-between",
-              alignItems: {md: "flex-start", lg: "center"},
+              alignItems: { md: "flex-start", lg: "center" },
             }}
           >
             <Logos />

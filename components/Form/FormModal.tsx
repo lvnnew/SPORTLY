@@ -17,7 +17,10 @@ interface IFormModal {
   setIsShowSuccess: Function;
 }
 
-export const FormModal: FC<IFormModal> = ({ setIsShowModal, setIsShowSuccess }) => {
+export const FormModal: FC<IFormModal> = ({
+  setIsShowModal,
+  setIsShowSuccess,
+}) => {
   const {
     register,
     handleSubmit,
@@ -192,7 +195,7 @@ export const FormModal: FC<IFormModal> = ({ setIsShowModal, setIsShowSuccess }) 
         >
           Первые полгода бесплатно
         </Typography>
-        <Grid container spacing="10" sx={{gap: "10px"}}>
+        <Grid container spacing="10" sx={{ gap: "10px" }}>
           <Grid item xs={12} md={12} sx={{ position: "relative" }}>
             <TextField
               id="standard-basic"

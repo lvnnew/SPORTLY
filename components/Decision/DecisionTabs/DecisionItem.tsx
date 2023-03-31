@@ -18,7 +18,7 @@ const DecisionItem: FC<IDecisionItem> = ({ no, ok, list }) => {
           padding: { xs: "12px", lg: "20px" },
           pl: { xs: "17px", lg: "25px" },
           backgroundColor: "#7DAEFF",
-          borderRadius: (!ok || !no) ? "20px" : "20px 20px 0 0",
+          borderRadius: !ok || !no ? "20px" : "20px 20px 0 0",
           alignItems: "start",
           minHeight: { xs: "auto", lg: "106px" },
         }}

@@ -10,6 +10,7 @@ import Reviews from "../components/Reviews/Reviews";
 import Footer from "../components/Footer/Footer";
 import { FormModal } from "../components/Form/FormModal";
 import { Alert } from "@mui/material";
+import QuickCalls from "../components/QuickCalls/QuickCalls";
 
 export default function Home() {
   const [isShowModal, setIsShowModal] = React.useState<boolean>(false);
@@ -50,7 +51,13 @@ export default function Home() {
       >
         Успешно!
       </Alert>
-      {isShowModal && <FormModal setIsShowModal={setIsShowModal} setIsShowSuccess={setIsShowSuccess} />}
+      {isShowModal && (
+        <FormModal
+          setIsShowModal={setIsShowModal}
+          setIsShowSuccess={setIsShowSuccess}
+        />
+      )}
+      <QuickCalls />
     </>
   );
 }
